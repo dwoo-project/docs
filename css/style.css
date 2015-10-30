@@ -8359,6 +8359,7 @@ blockquote p {
 .bs-docs-container > .content {
 	display: table-cell;
 	padding-left: 15px;
+	width: inherit;
 }
 .bs-docs-section img {
 	border: solid 5px #000;
