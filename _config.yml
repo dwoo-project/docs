@@ -6,15 +6,127 @@ navigation:
     url: /
   -
     title: Documentation
-    url: /documentation/
-
+    url: /documentation/2.x-dev/
 documentation:
-  v1:
-    - title: 1.x
-    - title: Index
-      url: /documentation/v1/index.html
-
-  current:
-  -
-    title: Introduction
-    url: /documentation/introduction.html
+  1.x:
+    -
+      title: "Dwoo users"
+      children:
+        -
+          title: "Getting Started"
+          url: "getting-started.html"
+          children:
+            - {title: "Using Dwoo with your framework of choice", url: ""}
+        - {title: "API Docs - Learn the ins and outs of Dwoo's classes", url: ""}
+        - {title: "Extending - How to write plugins", url: ""}
+    -
+      title: "Smarty user ?"
+      children:
+        - {title: "Using the Smarty Adapter to convert your Smarty code", url: ""}
+        - {title: "List of unsupported Smarty features", url: ""}
+    -
+      title: "Quick Links"
+      children:
+        - {title: "List of $dwoo and other reserved variables", url: ""}
+        - {title: "List of iterator variables (loop, for and foreach)", url: ""}
+        - {title: "Shortened syntax for power users", url: ""}
+    -
+      title: "Designers Documentation"
+      children:
+        - {title: "Syntax", url: ""}
+        - {title: "Plugins", url: ""}
+    -
+      title: "Stuff"
+      children:
+        - {title: "Dwoo Users / Sites built with it", url: ""}
+        - {title: "Dwoo syntax file for GeSHI", url: ""}
+  2.x-dev:
+    - {title: "Introduction / Installation", url: "introduction.html"}
+    - {title: "Dwoo for Designers", url: "dwoo-for-designers.html"}
+    - {title: "Dwoo for Developers", url: "dwoo-for-developers.html"}
+    - {title: "Smarty user?", url: "smarty-user.html"}
+    - {title: "Extending Dwoo", url: "extending-dwoo.html"}
+    - {title: "Writing your own plugins", url: "writing-your-own-plugins.html"}
+    - {title: "License", url: "license.html"}
+    -
+      title: "Reference"
+      children:
+        - {title: "Iterator Variables", url: ""}
+        - {title: "Dwoo Variables", url: ""}
+        - {title: "Shortcuts", url: ""}
+        - {title: "Using Dwoo with your framework of choice", url: ""}
+    -
+      title: "Blocks/Tags"
+      children:
+        - {title: "a", url: ""}
+        - {title: "autoEscape", url: ""}
+        - {title: "block", url: ""}
+        - {title: "capture", url: ""}
+        - {title: "{* comments *}", url: ""}
+        - {title: "dynamic", url: ""}
+        - {title: "else", url: ""}
+        - {title: "for", url: ""}
+        - {title: "foreach", url: ""}
+        - {title: "foreachelse", url: ""}
+        - {title: "forelse", url: ""}
+        - {title: "function", url: ""}
+        - {title: "if, elseif", url: ""}
+        - {title: "literal", url: ""}
+        - {title: "loop", url: ""}
+        - {title: "strip", url: ""}
+        - {title: "textformat", url: ""}
+        - {title: "with", url: ""}
+    -
+      title: "Functions/Modifiers"
+      children:
+        - {title: "assign", url: ""}
+        - {title: "capitalize", url: ""}
+        - {title: "cat", url: ""}
+        - {title: "countCharacters", url: ""}
+        - {title: "countParagraphs", url: ""}
+        - {title: "countSentences", url: ""}
+        - {title: "countWords", url: ""}
+        - {title: "counter", url: ""}
+        - {title: "cycle", url: ""}
+        - {title: "dateFormat", url: ""}
+        - {title: "default", url: ""}
+        - {title: "do", url: ""}
+        - {title: "docType", url: ""}
+        - {title: "dump", url: ""}
+        - {title: "escape", url: ""}
+        - {title: "eval", url: ""}
+        - {title: "exectime", url: ""}
+        - {title: "extends", url: ""}
+        - {title: "fetch", url: ""}
+        - {title: "formatSize", url: ""}
+        - {title: "googleAnalytics", url: ""}
+        - {title: "gravatar", url: ""}
+        - {title: "htmlStateSelect", url: ""}
+        - {title: "htmlSelectTime", url: ""}
+        - {title: "include", url: ""}
+        - {title: "indent", url: ""}
+        - {title: "isset", url: ""}
+        - {title: "loadTemplates", url: ""}
+        - {title: "lower", url: ""}
+        - {title: "mailto", url: ""}
+        - {title: "math", url: ""}
+        - {title: "nl2br", url: ""}
+        - {title: "optional", url: ""}
+        - {title: "regexReplace", url: ""}
+        - {title: "replace", url: ""}
+        - {title: "reverse", url: ""}
+        - {title: "safe", url: ""}
+        - {title: "spacify", url: ""}
+        - {title: "stringFormat", url: ""}
+        - {title: "stripTags", url: ""}
+        - {title: "tif", url: ""}
+        - {title: "truncate", url: ""}
+        - {title: "upper", url: ""}
+        - {title: "whitespace (strip)", url: ""}
+        - {title: "wordwrap", url: ""}
+    -
+      title: "Helpers"
+      children:
+        - {title: "array", url: "helpers/array.html"}
+    - {title: "Changelog", url: "changelog.html"}
+  3.x-dev:
