@@ -1,5 +1,6 @@
 ---
 layout: documentation
+title: List of unsupported Smarty features
 ---
 
 ## Smarty Support

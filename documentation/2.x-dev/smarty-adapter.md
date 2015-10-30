@@ -1,5 +1,6 @@
 ---
 layout: documentation
+title: Using the Smarty Adapter to convert your Smarty code
 ---
 
 It is perfectly understandable that some people are relunctant to leave Smarty because they have a big codebase using it. Dwoo is compatible syntax-wise and supports most of Smarty's plugins, but on the PHP end things are indeed quite different. To ease that up Dwoo has an adapter class, that adapter mimics a Smarty object in order for your code to keep working as if you were running on Smarty, while in fact it runs on Dwoo.

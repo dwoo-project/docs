@@ -1,5 +1,6 @@
 ---
 layout: documentation
+title: Writing your own plugins
 ---
 
 Dwoo plugins come in different flavours, **functions/modifiers**, **blocks/tags** and **filters**. All of those need to be build with classes.

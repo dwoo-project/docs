@@ -1,5 +1,6 @@
 ---
 layout: documentation
+title: Dwoo for Developers
 ---
 
 This chapter describes the API to Dwoo and not the template language. It will be most useful as reference to those implementing the template interface to the application and not those who are creating Dwoo templates.

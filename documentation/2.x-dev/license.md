@@ -1,5 +1,6 @@
 ---
 layout: documentation
+title: License
 ---
 
 **Copyright (c) 2013, David Sanchez / Jordi Boggiano**  

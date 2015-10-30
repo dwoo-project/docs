@@ -1,5 +1,6 @@
 ---
 layout: documentation
+title: Extending Dwoo
 ---
 
 Dwoo can be extended in many ways; you can add extra `blocks` or `functions`. You can even extend the `Core` itself for your application.
