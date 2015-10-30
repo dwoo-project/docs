@@ -1,0 +1,20 @@
+permalink: /404.html
+highlighter: pygments
+navigation:
+  -
+    title: Home
+    url: /
+  -
+    title: Documentation
+    url: /documentation/
+
+documentation:
+  v1:
+    - title: 1.x
+    - title: Index
+      url: /documentation/v1/index.html
+
+  current:
+  -
+    title: Introduction
+    url: /documentation/introduction.html
