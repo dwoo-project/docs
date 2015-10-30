@@ -2,12 +2,53 @@
 layout: default
 ---
 
-{% assign current = '' %}
-
 <div class="header-line header-line-big">
 	<div class="wrapper">
-		{% for link in site %}
-			{{ link }}
+		{% for versions in site.documentation %}
+			{% assign current = null %}
+			{% if page.url contains versions[0] %}
+				{% assign current = ' class="active"' %}
+			{% endif %}
+			<a href="/documentation/{{ versions[0] }}/"{{ current }}>{{ versions[0] }}</a>
 		{% endfor %}
+	</div>
+</div>
+
+<div class="main">
+	<section class="hgroup">
+		<div class="container-fluid">
+			<h1>{{ page.title }}</h1>
+
+			{% if page.subtitle != null %}<h2>{{ page.subtitle }}</h2>{% endif %}
+		</div>
+	</section>
+	<div class="container-fluid bs-docs-container">
+		<aside class="hidden-sm hidden-xs">
+			<div class="bs-docs-sidebar hidden-print" role="complementary">
+				<ul class="nav bs-docs-sidenav">
+					{% for versions in site.documentation %}
+						{% if page.url contains versions[0] %}
+							{% for menu in versions[1] %}
+									<li>
+										{% if menu.url != null %}
+											<a href="/documentation/{{ versions[0] }}/{{ menu.url }}">{{ menu.title }}</a>
+										{% else %}
+											<span><i class="fa fa-book"></i> {{ menu.title }}</span>
+										{% endif %}
+										{% if menu.children != null %}
+											<ul>
+											{% for child in menu.children %}
+												<li><a href="/documentation/{{ versions[0] }}/{{ child.url }}">{{ child.title }}</a></li>
+											{% endfor %}
+											</ul>
+										{% endif %}
+									</li>
+							{% endfor %}
+						{% endif %}
+					{% endfor %}
+				</ul>
+			</div>
+		</aside>
+		<div class="content" role="main">{{ content }}</div>
 	</div>
 </div>
