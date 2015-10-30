@@ -41,10 +41,13 @@ documentation:
         - {title: "Dwoo Users / Sites built with it", url: ""}
         - {title: "Dwoo syntax file for GeSHI", url: ""}
   2.x-dev:
-    - {title: "Introduction / Installation", url: "introduction.html"}
     - {title: "Dwoo for Designers", url: "dwoo-for-designers.html"}
     - {title: "Dwoo for Developers", url: "dwoo-for-developers.html"}
-    - {title: "Smarty user?", url: "smarty-user.html"}
+    -
+      title: "Smarty user?"
+      children:
+        - {title: "Using the Smarty Adapter to convert your Smarty code", url: "smarty-adapter.html"}
+        - {title: "List of unsupported Smarty features", url: "smarty-support.html"}
     - {title: "Extending Dwoo", url: "extending-dwoo.html"}
     - {title: "Writing your own plugins", url: "writing-your-own-plugins.html"}
     - {title: "License", url: "license.html"}
