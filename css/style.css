@@ -8352,6 +8352,7 @@ blockquote p {
 .bs-docs-container {
 	display: table;
 	width: 100%;
+	padding-left: 0;
 }
 .bs-docs-container > aside {
 	width: 300px;
@@ -8360,13 +8361,13 @@ blockquote p {
 	display: table-cell;
 	padding-left: 15px;
 	width: inherit;
+	vertical-align: top;
 }
 .bs-docs-section img {
 	border: solid 5px #000;
 	border-radius: 6px;
 }
 .bs-docs-sidebar {
-	padding: 40px 0;
 	border-right: dashed 1px #ccc;
 }
 .bs-docs-sidebar.affix {
@@ -8378,6 +8379,37 @@ blockquote p {
 .bs-docs-sidebar li.active {
 	border-left: solid 1px #428bca;
 	background-color: #eeeeee;
+}
+.bs-docs-sidebar > .nav span {
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+}
+.bs-docs-sidebar > .nav span:after {
+	content: '\f0d7';
+	float: right;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.bs-docs-sidebar > .nav ul {
+	list-style: none;
+	padding-left: 15px;
+}
+.bs-docs-sidebar > .nav ul > li > a {
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+}
+.bs-docs-sidebar > .nav ul > li > a:hover,
+.bs-docs-sidebar > .nav ul > li > a:focus {
+	text-decoration: none;
+	background-color: #eeeeee;
+}
+.bs-docs-sidebar > .nav ul > li:last-child {
+	border-bottom: 0;
 }
 /* =Responsive: Large desktop and up
 -------------------------------------------------------------- */

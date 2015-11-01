@@ -11,7 +11,7 @@ A template is simply a text file. It can generate any text-based format (HTML, X
 A template contains `variables` or `expressions`, which get replaced with values when the template is evaluated, and `tags`, which control the logic of the template.
 
 Below is a minimal template that illustrates a few basics. We will cover the details later on:
-{% highlight html %}
+{% highlight smarty %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -42,7 +42,7 @@ Seeing that Dwoo use the same syntax as Smarty, you can find many support of syn
 The application passes variables to the templates you can mess around in the template. Variables may have attributes or elements on them you can access too. How a variable looks like heavily depends on the application providing those.
 
 You can use a dot (.) to access attributes of a variable (methods or properties of a PHP object, or items of a PHP array), or the so-called "subscript" syntax ([]):
-{% highlight html %}
+{% highlight smarty %}
 {$foo}
 {$foo.bar}
 {$foor['bar']}
@@ -58,18 +58,18 @@ The following variables are always available in templates:
 ##Functions
 Functions can be called to generate content. Functions are called by their name followed by parentheses and may have arguments.  
 For example with the function `date_format`:
-{% highlight html %}
+{% highlight smarty %}
 {date_format "now" "Y-m-j"}
 {% endhighlight %}
 
 ##Named Arguments
 Using named arguments makes your templates more explicit about the meaning of the values you pass as arguments:
-{% highlight html %}
+{% highlight smarty %}
 {date_format value="now" format"Y-m-j"}
 {% endhighlight %}
 
 Named arguments also allow you to skip some arguments for which you don't want to change the default value:
-{% highlight html %}
+{% highlight smarty %}
 {date_format format="m/d/y" timestamp=$.now modify="+150 day"}
 {% endhighlight %}
 
@@ -77,7 +77,7 @@ Named arguments also allow you to skip some arguments for which you don't want t
 To comment-out part of a line in a template, use the comment syntax {* ... *}.  
 These comments are handled by Dwoo, and are not sent as output to the browser, unlike HTML comments.  
 This is useful for debugging or to add information for other template designers or yourself:
-{% highlight html %}
+{% highlight smarty %}
 {* This is a Dwoo comment *}
  
 {*
@@ -92,12 +92,12 @@ This is useful for debugging or to add information for other template designers 
 
 ##Including other Templates
 The include function is useful to include a template and return the rendered content of that template into the current one:
-{% highlight html %}
+{% highlight smarty %}
 {include('header.html')}
 {% endhighlight %}
 
 Sometimes you may need to pass variables to another template without wanting to include them in the data parameter of the get or output methods of the Dwoo class. This can be done by adding them in as parameters as the following example illustrates:
-{% highlight html %}
+{% highlight smarty %}
 {include(file='site_header.tpl' title='About Us')}
 {% endhighlight %}
 
@@ -107,7 +107,7 @@ The most powerful part of Dwoo is template inheritance. Template inheritance all
 Sounds complicated but is very basic. It's easier to understand it by starting with an example.
 
 Let's define a base template, base.html, which defines a simple HTML skeleton document that you might use for a simple two-column page:
-{% highlight html %}
+{% highlight smarty %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -128,7 +128,7 @@ Let's define a base template, base.html, which defines a simple HTML skeleton do
 In this example, the block tags define four blocks that child templates can fill in. All the block tag does is to tell the template engine that a child template may override those portions of the template.
 
 A child template might look like this:
-{% highlight html %}
+{% highlight smarty %}
 {extends "base.html"}
  
 {block "title"}
@@ -137,7 +137,7 @@ Gallery
 {% endhighlight %}
 
 It's possible to render the contents of the parent block by using the parent function. This gives back the results of the parent block:
-{% highlight html %}
+{% highlight smarty %}
 {extends "base.html"}
  
 {block "title"}Home - {$dwoo.parent}{/block}
@@ -145,7 +145,7 @@ It's possible to render the contents of the parent block by using the parent fun
 
 ##HTML Escaping
 If you want to display, for some reasons the HTML code of a part of a code, you can use the function `escape`:
-{% highlight html %}
+{% highlight smarty %}
 {"some <strong>html</strong> tags"|escape}
 {% endhighlight %}
 will output: 

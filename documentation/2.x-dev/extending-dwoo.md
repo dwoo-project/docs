@@ -42,7 +42,7 @@ try {
 {% endhighlight %}
 
 Here, the fix_address() function replaces common email address characters with human-readable words, in order to make it harder for spammers to harvest these addresses from Web pages. The addPlugin() method takes care of adding this function to Dwoo’s plugin list, specifying both the local plugin name and the function callback. Here’s how you’d use it in a template:
-{% highlight html %}
+{% highlight smarty %}
 {email_safe($string)}
 {% endhighlight %}
 

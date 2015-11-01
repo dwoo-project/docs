@@ -1,12 +1,13 @@
-permalink: /404.html
 highlighter: pygments
+gems:
+  - jekyll-redirect-from
 navigation:
   -
     title: Home
     url: /
   -
     title: Documentation
-    url: /documentation/2.x-dev/
+    url: /documentation/
 documentation:
   1.x:
     -
@@ -40,6 +41,9 @@ documentation:
       children:
         - {title: "Dwoo Users / Sites built with it", url: ""}
         - {title: "Dwoo syntax file for GeSHI", url: ""}
+    -
+      title: "Changelog"
+      url: "changelog.html"
   2.x-dev:
     - {title: "Introduction / Installation", url: "introduction-installation.html"}
     - {title: "Dwoo for Designers", url: "dwoo-for-designers.html"}
@@ -58,7 +62,6 @@ documentation:
         - {title: "Iterator Variables", url: "reference/iterator-variables.html"}
         - {title: "Dwoo Variables", url: "reference/dwoo-variables.html"}
         - {title: "Shortcuts", url: "reference/shortcuts.html"}
-        - {title: "Using Dwoo with your framework of choice", url: "reference/frameworks.html"}
     -
       title: "Blocks/Tags"
       children:
@@ -74,7 +77,7 @@ documentation:
         - {title: "foreachelse", url: "blocks/foreachelse.html"}
         - {title: "forelse", url: "blocks/forelse.html"}
         - {title: "function", url: "blocks/function.html"}
-        - {title: "if, elseif", url: "blocks/id-elseif.html"}
+        - {title: "if, elseif", url: "blocks/if.html"}
         - {title: "literal", url: "blocks/literal.html"}
         - {title: "loop", url: "blocks/loop.html"}
         - {title: "strip", url: "blocks/strip.html"}
@@ -83,51 +86,51 @@ documentation:
     -
       title: "Functions/Modifiers"
       children:
-        - {title: "assign", url: "functions/"}
-        - {title: "capitalize", url: "functions/"}
-        - {title: "cat", url: "functions/"}
-        - {title: "countCharacters", url: "functions/"}
-        - {title: "countParagraphs", url: "functions/"}
-        - {title: "countSentences", url: "functions/"}
-        - {title: "countWords", url: "functions/"}
-        - {title: "counter", url: "functions/"}
-        - {title: "cycle", url: "functions/"}
-        - {title: "dateFormat", url: "functions/"}
-        - {title: "default", url: "functions/"}
-        - {title: "do", url: "functions/"}
-        - {title: "docType", url: "functions/"}
-        - {title: "dump", url: "functions/"}
-        - {title: "escape", url: "functions/"}
-        - {title: "eval", url: "functions/"}
-        - {title: "exectime", url: "functions/"}
-        - {title: "extends", url: "functions/"}
-        - {title: "fetch", url: "functions/"}
-        - {title: "formatSize", url: "functions/"}
-        - {title: "googleAnalytics", url: "functions/"}
-        - {title: "gravatar", url: "functions/"}
-        - {title: "htmlStateSelect", url: "functions/"}
-        - {title: "htmlSelectTime", url: "functions/"}
-        - {title: "include", url: "functions/"}
-        - {title: "indent", url: "functions/"}
-        - {title: "isset", url: "functions/"}
-        - {title: "loadTemplates", url: "functions/"}
-        - {title: "lower", url: "functions/"}
-        - {title: "mailto", url: "functions/"}
-        - {title: "math", url: "functions/"}
-        - {title: "nl2br", url: "functions/"}
-        - {title: "optional", url: "functions/"}
-        - {title: "regexReplace", url: "functions/"}
-        - {title: "replace", url: "functions/"}
-        - {title: "reverse", url: "functions/"}
-        - {title: "safe", url: "functions/"}
-        - {title: "spacify", url: "functions/"}
-        - {title: "stringFormat", url: "functions/"}
-        - {title: "stripTags", url: "functions/"}
-        - {title: "tif", url: "functions/"}
-        - {title: "truncate", url: "functions/"}
-        - {title: "upper", url: "functions/"}
-        - {title: "whitespace (strip)", url: "functions/"}
-        - {title: "wordwrap", url: "functions/"}
+        - {title: "assign", url: "functions/assign.html"}
+        - {title: "capitalize", url: "functions/capitalize.html"}
+        - {title: "cat", url: "functions/cat.html"}
+        - {title: "countCharacters", url: "functions/count-characters.html"}
+        - {title: "countParagraphs", url: "functions/count-paragraphs.html"}
+        - {title: "countSentences", url: "functions/count-sentences.html"}
+        - {title: "countWords", url: "functions/count-words.html"}
+        - {title: "counter", url: "functions/counter.html"}
+        - {title: "cycle", url: "functions/cycle.html"}
+        - {title: "dateFormat", url: "functions/date-format.html"}
+        - {title: "default", url: "functions/default.html"}
+        - {title: "do", url: "functions/do.html"}
+        - {title: "docType", url: "functions/doc-type.html"}
+        - {title: "dump", url: "functions/dump.html"}
+        - {title: "escape", url: "functions/escape.html"}
+        - {title: "eval", url: "functions/eval.html"}
+        - {title: "exectime", url: "functions/exectime.html"}
+        - {title: "extends", url: "functions/extends.html"}
+        - {title: "fetch", url: "functions/fetch.html"}
+        - {title: "formatSize", url: "functions/format-size.html"}
+        - {title: "googleAnalytics", url: "functions/google-analytics.html"}
+        - {title: "gravatar", url: "functions/gravatar.html"}
+        - {title: "htmlStateSelect", url: "functions/html-state-select.html"}
+        - {title: "htmlSelectTime", url: "functions/html-select-time.html"}
+        - {title: "include", url: "functions/include.html"}
+        - {title: "indent", url: "functions/indent.html"}
+        - {title: "isset", url: "functions/isset.html"}
+        - {title: "loadTemplates", url: "functions/load-templates.html"}
+        - {title: "lower", url: "functions/lower.html"}
+        - {title: "mailto", url: "functions/mailto.html"}
+        - {title: "math", url: "functions/math.html"}
+        - {title: "nl2br", url: "functions/nl2br.html"}
+        - {title: "optional", url: "functions/optional.html"}
+        - {title: "regexReplace", url: "functions/regex-replace.html"}
+        - {title: "replace", url: "functions/replace.html"}
+        - {title: "reverse", url: "functions/reverse.html"}
+        - {title: "safe", url: "functions/safe.html"}
+        - {title: "spacify", url: "functions/spacify.html"}
+        - {title: "stringFormat", url: "functions/string-format.html"}
+        - {title: "stripTags", url: "functions/strip-tags.html"}
+        - {title: "tif", url: "functions/tif.html"}
+        - {title: "truncate", url: "functions/truncate.html"}
+        - {title: "upper", url: "functions/upper.html"}
+        - {title: "whitespace (strip)", url: "functions/whitespace.html"}
+        - {title: "wordwrap", url: "functions/wordwrap.html"}
     -
       title: "Helpers"
       children:

@@ -11,7 +11,7 @@ Before we start, you should know about those general plugin features:
 However, for those plugins to work correctly, they must follow some naming conventions. The function plugins must be declared as `Function<name>`, block plugins must be declared as `Block<name>` while the filters use `Filter<name>` and processors use `Processor<name>`. Plugins added manually must follow those rules when using `\Dwoo\Loader::addDirectory` method.
 * The parameter names that you define in your plugin and the default values as well are important, because that will define the parameter names to use in the template when you call that plugin, and it will also allow the compiler to detect when a required argument is missing, so that plugins don't have to handle that logic.
 * All plugins **always have access to the Core class**.
-* The main functions for each plugin, the ones that accept the parameters, can have a rest array parameters, which aggregates all unmapped parameters. It has to be declared as `array $rest` or `array $rest=array()` to work as it should. See the [array](https://github.com/emulienfou/dwoo/wiki/Helpers:array) and [math](https://github.com/emulienfou/dwoo/wiki/Functions:math) plugins for examples.
+* The main functions for each plugin, the ones that accept the parameters, can have a rest array parameters, which aggregates all unmapped parameters. It has to be declared as `array $rest` or `array $rest=array()` to work as it should. See the [array](/documentation/2.x-dev/helpers/array.html) and [math](/documentation/2.x-dev/functions/math.html) plugins for examples.
 
 ## Blocks vs Functions
 

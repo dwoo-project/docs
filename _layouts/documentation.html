@@ -15,30 +15,23 @@ layout: default
 </div>
 
 <div class="main">
-	<section class="hgroup">
-		<div class="container-fluid">
-			<h1>{{ page.title }}</h1>
-
-			{% if page.subtitle != null %}<h2>{{ page.subtitle }}</h2>{% endif %}
-		</div>
-	</section>
 	<div class="container-fluid bs-docs-container">
 		<aside class="hidden-sm hidden-xs">
 			<div class="bs-docs-sidebar hidden-print" role="complementary">
-				<ul class="nav bs-docs-sidenav">
+				<ul class="nav">
 					{% for versions in site.documentation %}
 						{% if page.url contains versions[0] %}
 							{% for menu in versions[1] %}
 									<li>
 										{% if menu.url != null %}
-											<a href="/documentation/{{ versions[0] }}/{{ menu.url }}">{{ menu.title }}</a>
+											<a href="/documentation/{{ versions[0] }}/{{ menu.url }}"><i class="fa fa-file"></i> {{ menu.title }}</a>
 										{% else %}
 											<span><i class="fa fa-book"></i> {{ menu.title }}</span>
 										{% endif %}
 										{% if menu.children != null %}
 											<ul>
 											{% for child in menu.children %}
-												<li><a href="/documentation/{{ versions[0] }}/{{ child.url }}">{{ child.title }}</a></li>
+												<li><a href="/documentation/{{ versions[0] }}/{{ child.url }}"><i class="fa fa-file"></i> {{ child.title }}</a></li>
 											{% endfor %}
 											</ul>
 										{% endif %}
@@ -49,6 +42,17 @@ layout: default
 				</ul>
 			</div>
 		</aside>
-		<div class="content" role="main">{{ content }}</div>
+		<div class="content" role="main">
+			{% if page.title != null %}
+			<section class="hgroup">
+				<div class="container-fluid">
+					<h1>{{ page.title }}</h1>
+
+					{% if page.subtitle != null %}<h2>{{ page.subtitle }}</h2>{% endif %}
+				</div>
+			</section>
+			{% endif %}
+			{{ content }}
+		</div>
 	</div>
 </div>

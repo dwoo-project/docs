@@ -1,5 +1,10 @@
+{% assign container = "container" %}
+{% if page.url contains "documentation" %}
+	{% assign container = "container-fluid" %}
+{% endif %}
+
 <header>
-	<div class="container">
+	<div class="{{ container }}">
 		<div class="navbar navbar-default" role="navigation">
 			<div class="navbar-header"><a class="navbar-brand" href="/">
 				<img src="/images/logo.png" alt="optional logo" height="90" width="90"> <span
@@ -11,7 +16,7 @@
 				<ul class="nav pull-right navbar-nav">
 					{% for link in site.navigation %}
 						{% assign current = null %}
-						{% if page.url == link.url %}
+						{% if page.url contains link.url %}
 							{% assign current = ' class="active"' %}
 						{% endif %}
 						<li{{ current }}><a href="{{ link.url }}">{{ link.title }}</a></li>

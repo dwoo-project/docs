@@ -3,7 +3,7 @@ layout: documentation
 title: Iterator Variables
 ---
 
-Those variables are special variables that are automatically added to the [$dwoo variables](https://github.com/emulienfou/dwoo2/wiki/Dwoo-Variables) when you run an iterator plugin ([foreach](https://github.com/emulienfou/dwoo2/wiki/Blocks:foreach), [loop](https://github.com/emulienfou/dwoo2/wiki/Blocks:loop) or [for](https://github.com/emulienfou/dwoo2/wiki/Blocks:for)).
+Those variables are special variables that are automatically added to the [$dwoo variables](/documentation/2.x-dev/reference/dwoo-variables.html) when you run an iterator plugin ([foreach](/documentation/2.x-dev/blocks/foreach.html), [loop](/documentation/2.x-dev/blocks/loop.html) or [for](/documentation/2.x-dev/blocks/for.html)).
 
 ## Variables
 * **first** _(bool)_ : true if the item being processed is the first, false otherwise
@@ -16,7 +16,7 @@ Those variables are special variables that are automatically added to the [$dwoo
 ## Facts
 * You access them through `{$dwoo.<plugin (foreach, loop or for)>.<foreach name>.<var>}`
 * If you don't provide the name argument to a plugin, it will use the name "default" by default, which means that for example you can access a foreach var with `{$dwoo.foreach.default.first}`
-* The `$dwoo` var can be [shortened](https://github.com/emulienfou/dwoo2/wiki/Shortcuts) as `$` which means that `{$.foreach.default.first}` would also work.
+* The `$dwoo` var can be [shortened](/documentation/2.x-dev/reference/shortcuts.html) as `$` which means that `{$.foreach.default.first}` would also work.
 
 ## Examples
 {% highlight smarty %}
