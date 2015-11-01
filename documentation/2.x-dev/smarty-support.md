@@ -4,7 +4,7 @@ title: List of unsupported Smarty features
 ---
 
 ## Smarty Support
-Dwoo supports the Smarty template syntax and extends it to provide some other possibilities. Read the [[Syntax|Dwoo syntax]] and [[Shortcuts|syntax shortcuts]] pages for more info on that.
+Dwoo supports the Smarty template syntax and extends it to provide some other possibilities. Read the [Syntax](/documentation/1.x/designers/syntax.html) and [Shortcuts](/documentation/2.x-dev/reference/shortcuts.html) pages for more info on that.
 
 ### Partially Supported
 These are supported by Dwoo but in a different way than the original Smarty features, so they might or might not work using the Adapter class depending on what you do with them.

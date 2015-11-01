@@ -9,10 +9,10 @@ dateFormat([string $value = 'now', [ string $format = 'M n, Y', [ int $timestamp
 {% endhighlight %}
 
 * **value** : a date/time string, as a datetime formats or whatever the class `\DateTime` can support
-* **format** : output format, see [http://www.php.net/manual/en/function.date.php](http://www.php.net/manual/en/function.date.php) for details
+* **format** : output format, see [http://www.php.net/manual/en/function.date.php](http://www.php.net/manual/en/function.date.php){:target="_blank"} for details
 * **timestamp** : a valid timestamp value (int) needed
 * **timeZone** : a datetimezone supported by the `\DateTimeZone` class
-* **modify** : Alters the timestamp, see [http://www.php.net/manual/en/datetime.modify.php](http://www.php.net/manual/en/datetime.modify.php) for details
+* **modify** : Alters the timestamp, see [http://www.php.net/manual/en/datetime.modify.php](http://www.php.net/manual/en/datetime.modify.php){:target="_blank"} for details
 
 ##Example:
 {% highlight smarty %}

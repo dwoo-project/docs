@@ -3,7 +3,7 @@ layout: documentation
 title: Blocks:if
 ---
 
-Conditional block, the syntax is very similar to the php one, allowing `()` `||` `&&` and other [php operators](http://php.net/operators). Additional Dwoo operators and their equivalent php syntax are as follow :
+Conditional block, the syntax is very similar to the php one, allowing `()` `||` `&&` and other [php operators](http://php.net/operators){:target="_blank"}. Additional Dwoo operators and their equivalent php syntax are as follow :
 
 * eq → ==
 * neq or ne → !=

@@ -9,7 +9,7 @@ math(string $equation, [ string $format = "", [ string $assign = "", [ array $re
 {% endhighlight %}
 
 * **equation** : the equation to compute, it can include normal variables with $foo or special math variables without the dollar sign
-* **format** : output format, see [sprintf()](http://php.net/sprintf) for details
+* **format** : output format, see [sprintf()](http://php.net/sprintf){:target="_blank"} for details
 * **assign** : if set, the output is assigned into the given variable name instead of being output
 * **rest** : all math specific variables that you use must be defined, see the example
 

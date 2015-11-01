@@ -34,7 +34,7 @@ In Dwoo there is only one kind of delimiter: `{...}` used `variables`, `expressi
 
 ##IDEs Integration
 Seeing that Dwoo use the same syntax as Smarty, you can find many support of syntax highlighting and auto-completion such as :
-* Eclipse via the [Smarty Plugin](https://code.google.com/p/smartypdt/)
+* Eclipse via the [Smarty Plugin](https://code.google.com/p/smartypdt/){:target="_blank"}
 * PhpStorm (native)
 * and more ...
 

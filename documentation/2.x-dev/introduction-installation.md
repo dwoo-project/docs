@@ -14,7 +14,7 @@ Developing with Dwoo can be broken up into two parts:
 
 ## A bit of history
 Dwoo is a PHP5 Template Engine that was started in early 2008.  
-The idea came from the fact that [Smarty](http://www.smarty.net/), a well known template engine, is getting older and older.  
+The idea came from the fact that [Smarty](http://www.smarty.net/){:target="_blank"}, a well known template engine, is getting older and older.  
 It carries the weight of it's age, having old features that are inconsistent compared to newer ones, being written for PHP4 its Object Oriented aspect doesn't take advantage of PHP5's more advanced features in the area, etc.  
 Hence Dwoo was born, hoping to provide a more up to date and stronger engine.  
 So far it has proven to be faster than Smarty in many areas, and it provides a compatibility layer to allow developers that have been using Smarty for years to switch their application over to Dwoo progressively.
@@ -23,7 +23,7 @@ So far it has proven to be faster than Smarty in many areas, and it provides a c
 Dwoo 2.0 embedded new features of PHP like Namespaces, so it need at least **PHP 5.3** to run.
 
 ## Installation
-1. Dwoo include a `composer.json` file to easily install Dwoo on your server. It's also available on [packagist.org](https://packagist.org/packages/dwoo/dwoo).
+1. Dwoo include a `composer.json` file to easily install Dwoo on your server. It's also available on [packagist.org](https://packagist.org/packages/dwoo/dwoo){:target="_blank"}.
 2. A PHAR archive of Dwoo is also available.
 
 ## Usage
