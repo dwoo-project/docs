@@ -7044,6 +7044,16 @@ header .container {
 .main section .container {
 	position: relative;
 }
+.main a[target="_blank"]:after {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	content: "\f08e";
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	padding-left: 3px;
+}
 section.call_to_action {
 	text-align: center;
 	padding: 35px 0 45px 0;
