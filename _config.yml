@@ -13,34 +13,30 @@ documentation:
     -
       title: "Dwoo users"
       children:
-        -
-          title: "Getting Started"
-          url: "getting-started.html"
-          children:
-            - {title: "Using Dwoo with your framework of choice", url: ""}
-        - {title: "API Docs - Learn the ins and outs of Dwoo's classes", url: ""}
-        - {title: "Extending - How to write plugins", url: ""}
+        - {title: "Getting Started", url: "getting-started.html"}
+        - {title: "Using Dwoo with your framework of choice", url: "frameworks.html"}
+        - {title: "Extending - How to write plugins", url: "writing-plugins.html"}
     -
       title: "Smarty user ?"
       children:
-        - {title: "Using the Smarty Adapter to convert your Smarty code", url: ""}
-        - {title: "List of unsupported Smarty features", url: ""}
+        - {title: "Using the Smarty Adapter to convert your Smarty code", url: "smarty-adapter.html"}
+        - {title: "List of unsupported Smarty features", url: "smarty-support.html"}
     -
       title: "Quick Links"
       children:
-        - {title: "List of $dwoo and other reserved variables", url: ""}
-        - {title: "List of iterator variables (loop, for and foreach)", url: ""}
-        - {title: "Shortened syntax for power users", url: ""}
+        - {title: "List of $dwoo and other reserved variables", url: "dwoo-variables.html"}
+        - {title: "List of iterator variables (loop, for and foreach)", url: "iterator-variables.html"}
+        - {title: "Shortened syntax for power users", url: "shortcuts.html"}
     -
       title: "Designers Documentation"
       children:
-        - {title: "Syntax", url: ""}
-        - {title: "Plugins", url: ""}
+        - {title: "Syntax", url: "syntax.html"}
+        - {title: "Plugins", url: "plugins.html"}
     -
       title: "Stuff"
       children:
-        - {title: "Dwoo Users / Sites built with it", url: ""}
-        - {title: "Dwoo syntax file for GeSHI", url: ""}
+        - {title: "Dwoo Users / Sites built with it", url: "users.html"}
+        - {title: "Dwoo syntax file for GeSHI", url: "files/dwoo-geshi-1.0.0.tar.gz"}
     -
       title: "Changelog"
       url: "changelog.html"
