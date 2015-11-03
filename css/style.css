@@ -8866,8 +8866,14 @@ blockquote p {
 	.flexslider .item {
 		height: 350px;
 	}
+	.team_members .row {
+		display: block;
+	}
 	.team_member {
 		margin-bottom: 30px;
+	}
+	.team_member + .team_member {
+		margin-left: 0;
 	}
 	.team_member figure {
 		margin: 0 auto;
