@@ -7267,6 +7267,13 @@ section.parallax-window {
 }
 /* =Our Team
 ------------ */
+.team_members .row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 0;
+}
 .team_member {
 	text-align: center;
 	background-color: #000;
@@ -7277,6 +7284,9 @@ section.parallax-window {
 	-o-transition: all 500ms linear;
 	transition: all 500ms linear;
 	border-radius: 6px;
+}
+.team_member + .team_member {
+	margin-left: 15px;
 }
 .team_member figure {
 	margin: 0;
@@ -7331,6 +7341,9 @@ section.parallax-window {
 	color: #428bca;
 	text-decoration: none;
 	background-color: #ffffff;
+}
+.team_member .team_social a:after {
+	content: normal;
 }
 /* =Service Page elements
 -------------------------------------------------------------- */
