@@ -8871,4 +8871,7 @@ blockquote p {
 	.portfolio_slider_wrapper #carousel {
 		display: none;
 	}
+    footer .text-right {
+	    text-align: left;
+    }
 }
