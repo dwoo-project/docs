@@ -2,9 +2,9 @@ highlighter: pygments
 gems:
   - jekyll-redirect-from
 navigation:
-  - {title: Home, url: /}
-  - {title: Documentation, url: /documentation/}
-  - {title: About, url: /about/}
+  - {title: Home, url: "/index.html"}
+  - {title: Documentation, url: "/documentation/"}
+  - {title: About, url: "/about.html"}
 documentation:
   1.x:
     -
@@ -34,21 +34,19 @@ documentation:
       children:
         - {title: "Dwoo Users / Sites built with it", url: "users.html"}
         - {title: "Dwoo syntax file for GeSHI", url: "files/dwoo-geshi-1.0.0.tar.gz"}
-    -
-      title: "Changelog"
-      url: "changelog.html"
+    - {title: "Changelog", url: "changelog.html"}
+    - {title: "License", url: "license.html"}
   2.x-dev:
     - {title: "Introduction / Installation", url: "introduction-installation.html"}
     - {title: "Dwoo for Designers", url: "dwoo-for-designers.html"}
     - {title: "Dwoo for Developers", url: "dwoo-for-developers.html"}
+    - {title: "Extending Dwoo", url: "extending-dwoo.html"}
+    - {title: "Writing your own plugins", url: "writing-your-own-plugins.html"}
     -
       title: "Smarty user?"
       children:
         - {title: "Using the Smarty Adapter to convert your Smarty code", url: "smarty-adapter.html"}
         - {title: "List of unsupported Smarty features", url: "smarty-support.html"}
-    - {title: "Extending Dwoo", url: "extending-dwoo.html"}
-    - {title: "Writing your own plugins", url: "writing-your-own-plugins.html"}
-    - {title: "License", url: "license.html"}
     -
       title: "Reference"
       children:
@@ -129,4 +127,4 @@ documentation:
       children:
         - {title: "array", url: "helpers/array.html"}
     - {title: "Changelog", url: "changelog.html"}
-  3.x-dev:
+    - {title: "License", url: "license.html"}

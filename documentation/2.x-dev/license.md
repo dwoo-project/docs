@@ -1,6 +1,7 @@
 ---
 layout: documentation
 title: License
+subtitle: "License for <strong>Dwoo 2.x</strong>"
 ---
 
 **Copyright (c) 2013, David Sanchez / Jordi Boggiano**  
