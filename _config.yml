@@ -1,3 +1,4 @@
+name: "dwoo.org"
 highlighter: pygments
 gems:
   - jekyll-redirect-from

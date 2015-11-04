@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<div class="main">
+	<section class="hgroup">
+		<div class="container">
+			<h1>{{ page.title }}</h1>
+			<h2><i class="fa-time"></i> {{ page.date | date_to_long_string }}</h2>
+			<ul class="breadcrumb pull-right">
+				<li><a href="/">Home</a> </li>
+				<li><a href="/blog.html">Blog</a></li>
+			</ul>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			{{ content }}
+		</div>
+	</section>
+</div>
