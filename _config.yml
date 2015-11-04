@@ -3,7 +3,7 @@ gems:
   - jekyll-redirect-from
 navigation:
   - {title: Home, url: "/index.html"}
-  - {title: Download, url: "/download.html"}
+  - {title: Downloads, url: "/downloads.html"}
   - {title: Blog, url: "/blog.html"}
   - {title: Documentation, url: "/documentation/"}
   - {title: About, url: "/about.html"}
