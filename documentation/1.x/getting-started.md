@@ -11,6 +11,18 @@ Dwoo is a templating system used to make creating websites easier and more struc
 
 Dwoo relies on [plugins](/documentation/1.x/plugins.html) to provide useful functionality, examples may include: if-else blocks, include functionality, string manipulation and loops. For a full list see the [plugins](/documentation/1.x/plugins.html) page.
 
+## Install
+
+### PEAR install **(DEPRECATED)**
+Dwoo is now available on [pearhub](http://web.archive.org/web/20130315111540/http://pearhub.org/projects/Dwoo), you can install it by executing:
+{% highlight bash %}
+pear channel-discover pearhub.org
+pear install pearhub/Dwoo
+{% endhighlight %}
+
+### Manual install
+To install Dwoo manually, you can go to the [downloads page](/downloads.html) to get the latest version of Dwoo 1.x branch. 
+
 ## Running Dwoo
 
 ### Dwoo at its simplest
