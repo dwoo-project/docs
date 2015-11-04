@@ -7181,6 +7181,11 @@ section.features_teasers_wrapper .feature_teaser h3 {
 section.clients_section .clients_list {
 	text-align: center;
 }
+section.clients_section .clients_list img {
+	width: 140px;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
 section.clients_section .clients_list a {
 	display: inline-block;
 	padding: 10px;
