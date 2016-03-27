@@ -16,7 +16,7 @@ include(string $file [, int $cache_time = null [, string $cache_id = null [, str
 * **assign** : if set, the included file will be assigned to the given variable and it will not be output
 * **rest** : any number of values that will override the $data argument (see below)
 
-> **Note:** All assigned variables are past and available from the included file !  
+> **Note:** All assigned variables are passed and available from the included file !  
 > **Note:** You cannot include a parent template using `../`. However to refer to the root directory you can use `./`.
 
 As an example, you may have a common header that you would like to include into all of your pages. This can be accomplished like this :
