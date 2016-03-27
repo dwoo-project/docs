@@ -1,5 +1,5 @@
 name: "dwoo.org"
-highlighter: pygments
+highlighter: rouge
 gems:
   - jekyll-redirect-from
   - jekyll-sitemap
