@@ -10,8 +10,7 @@ cat(array $rest)
 
 * **rest** : two or more strings that will be merged into one.
 
-
-##Example:
+## Example
 {% highlight smarty %}
 {$a='abc'}
 {$d='def'}
@@ -19,7 +18,7 @@ cat(array $rest)
 {cat $a $d $g}
 {% endhighlight %}
 
-##Output:
+## Output
 {% highlight text %}
 abcdefghi
 {% endhighlight %}

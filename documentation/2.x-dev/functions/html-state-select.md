@@ -13,12 +13,12 @@ htmlStateSelect(string $name, [ string $width = "100%", [int $size = false, [boo
 * **size** : moo, defaults to foo
 * **multiselect** : A flag signifing multiple selections, defaults to false
 
-##Example
+## Example
 {% highlight smarty %}
 {htmlStateSelect name="state" width="200px"}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight html %}
 <select name="state" id="state" style="width:200px;">
  <option value="AL">Alabama</option>
@@ -27,12 +27,12 @@ htmlStateSelect(string $name, [ string $width = "100%", [int $size = false, [boo
 </select>
 {% endhighlight %}
 
-##Example
+## Example
 {% highlight smarty %}
 {htmlStateSelect name="state" size="5" multiselect="true"}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight html %}
 <select name="state" id="state" style="width:100%;" size="5" multiple="multiple">
  <option value="AL">Alabama</option>

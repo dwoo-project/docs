@@ -10,13 +10,13 @@ nl2br(string $value)
 
 * **value** : the string to process
 
-##Example
+## Example
 {% highlight smarty %}
 {nl2br("string
 breaking")}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight html %}
 string<br />
 breaking

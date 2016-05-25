@@ -9,12 +9,12 @@ countWords(string $value)
 ```
 * **value** : the string to process
 
-##Example:
+## Example
 ```html
 {countWords('ab cd')}
 ```
 
-##Output:
+## Output
 ```
 2
 ```

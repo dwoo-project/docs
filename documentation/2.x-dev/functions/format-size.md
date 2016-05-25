@@ -14,7 +14,7 @@ formatSize($size)
 
 > Thanks to [JR](http://www.if-not-true-then-false.com/author/juissi/){:target="_blank"} for is helpful function: [http://www.if-not-true-then-false.com/2009/format-bytes-with-php-b-kb-mb-gb-tb-pb-eb-zb-yb-converter/](http://www.if-not-true-then-false.com/2009/format-bytes-with-php-b-kb-mb-gb-tb-pb-eb-zb-yb-converter/){:target="_blank"}
 
-##Example
+## Example
 {% highlight smarty %}
 {"123"|formatSize}
 {"2049"|formatSize}
@@ -24,7 +24,7 @@ formatSize($size)
 {formatSize("1572864", "KB", 3)}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 123.00 B
 2.00 KB

@@ -18,12 +18,12 @@ mailto(string $address, [ string $text = null, [ string $subject = null, [ strin
 * **followupto** : address(es) to follow up, comma separated
 * **extra** : additional attributes to add to the <a> tag
 
-##Example
+## Example
 {% highlight smarty %}
 {mailto "test@gmail.com" "Name" "subject"}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight html %}
 <a href="mailto:test@gmail.com?subject=subject" >Name</a>
 {% endhighlight %}

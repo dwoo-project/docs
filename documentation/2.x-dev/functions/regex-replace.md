@@ -13,12 +13,12 @@ regexReplace(string $value, string $search, string $replace)
 * **replace** : the string to use as a replacement, must be a complete regular expression including delimiters
 > Note that if you want to use backreferences, use \$1 instead of $1, \$2 for $2 and so on, otherwise Dwoo will replace the $1 as if it was a variable.
 
-##Example
+## Example
 {% highlight smarty %}
 {regexReplace "abcdABCD" "/([a-z])/" "\$1*"}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 a*b*c*d*ABCD
 {% endhighlight %}

@@ -10,7 +10,7 @@ docType([$docType = ''])
 
 * **docType** : the name of the doctype, falls back to HTML5 if not recognized or given
 
-##Available DOCTYPES:
+## Available DOCTYPES
 * HTML5
 * XHTML11
 * XHTML1_STRICT
@@ -21,13 +21,13 @@ docType([$docType = ''])
 * HTML4_LOOSE
 * HTML4_FRAMESET
 
-##Example
+## Example
 {% highlight smarty %}
 {docType XHTML1_STRICT}
 {docType}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight html %}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!DOCTYPE html>

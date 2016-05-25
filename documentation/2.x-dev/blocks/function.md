@@ -13,7 +13,7 @@ function(string $name [, array $rest = array() ])
 > Also see [{load_templates}](/documentation/2.x-dev/functions/load-templates.html) that allow to load multiple templates from one file much like you include functions/classes from an external file in php.  
 > **Attention**: It's not possible to create a function with the same name.
 
-##Recursive menu example
+## Recursive menu example
 With $menuTree being this array:
 {% highlight php %}
 <?php
@@ -42,7 +42,7 @@ $menuTree = array(
 {menu $menuTree ">"}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 > Foo
   > Foo-Sub

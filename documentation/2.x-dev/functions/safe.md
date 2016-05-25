@@ -10,7 +10,7 @@ safe(mixed $var)
 
 * **var** : the variable to pass through untouched
 
-##Example
+## Example
 {% highlight smarty %}
 {auto_escape on}
 {safe $user}

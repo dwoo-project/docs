@@ -17,7 +17,7 @@ Conditional block, the syntax is very similar to the php one, allowing `()` `||`
 * X is [not] even [by Y] → (X % 2) == 0 or ((X/Y) % 2) == 0
 * X is [not] odd [by Y] → (X % 2) != 0 or ((X/Y) % 2) != 0
 
-##Example
+## Example
 {% highlight smarty %}
 {if 3 == 5}
   never gonna happen
@@ -28,7 +28,7 @@ Conditional block, the syntax is very similar to the php one, allowing `()` `||`
 {/if}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 if you don't see this, the world is coming to its end
 {% endhighlight %}

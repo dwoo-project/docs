@@ -11,13 +11,13 @@ stringFormat(string $value, string $format)
 * **value** : the string to format
 * **format** : the format to use, see sprintf() for details
 
-##Example
+## Example
 {% highlight smarty %}
 {stringFormat('23.5787446', "%.2f")}
 {stringFormat('23.5787446', "%d")}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight html %}
 23.58
 23

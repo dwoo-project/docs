@@ -12,12 +12,12 @@ replace(string $value, mixed $search, mixed $replace)
 * **search** : the string to search for or an array of strings
 * **replace** : the string to use as a replacement or an array of strings (matching the search array)
 
-##Example
+## Example
 {% highlight smarty %}
 {replace "abc" "b" "B"} or {"abc"|replace:array(a,c):array(A,C)}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight html %}
 aBc or AbC
 {% endhighlight %}

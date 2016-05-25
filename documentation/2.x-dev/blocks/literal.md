@@ -10,7 +10,7 @@ literal()
 
 > This block **MUST** be closed explicitly using `{/literal}`, doing it like `{/}` or closing it's parent block will not work.
 
-##Example
+## Example
 {% highlight smarty %}
 {$var=3}
 {literal}
@@ -19,7 +19,7 @@ literal()
 {$var}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 {$var} 
 3

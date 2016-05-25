@@ -11,12 +11,12 @@ googleAnalytics($code, [$domain = ''])
 * **$code** : Code UA Google Analytics
 * **$domain** : Specify the domain name
 
-##Example
+## Example
 {% highlight smarty %}
 {googleAnalytics code="UA-xxxxxxxx-1"}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight html %}
 <script>
 	var _gaq = _gaq || [];

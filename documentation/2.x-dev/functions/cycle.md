@@ -16,7 +16,7 @@ cycle([ string $name = 'default', [ mixed $values = null, [ bool $print = true, 
 * **assign** : if set, the value is saved in that variable instead of being output
 * **reset** : if true, the pointer is reset to the first value
 
-##Example:
+## Example
 {% highlight smarty %}
 {cycle values=array("1red","2blue","3green")}
 {cycle}
@@ -27,7 +27,7 @@ cycle([ string $name = 'default', [ mixed $values = null, [ bool $print = true, 
 {cycle reset=true}
 {% endhighlight %}
 
-##Output:
+## Output
 {% highlight text %}
 1red
 2blue

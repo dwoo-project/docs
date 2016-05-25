@@ -14,7 +14,7 @@ dateFormat([string $value = 'now', [ string $format = 'M n, Y', [ int $timestamp
 * **timeZone** : a datetimezone supported by the `\DateTimeZone` class
 * **modify** : Alters the timestamp, see [http://www.php.net/manual/en/datetime.modify.php](http://www.php.net/manual/en/datetime.modify.php){:target="_blank"} for details
 
-##Example:
+## Example
 {% highlight smarty %}
 {$.now}
 {dateFormat value="now" format="Y-m-j"}
@@ -22,7 +22,7 @@ dateFormat([string $value = 'now', [ string $format = 'M n, Y', [ int $timestamp
 {dateFormat "1994-3-15 10:24:22"}
 {% endhighlight %}
 
-##Output:
+## Output
 {% highlight text %}
 1382017201.358
 2013-10-17

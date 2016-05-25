@@ -11,7 +11,7 @@ capture([ string $name = 'default', [ string $assign = null, [ bool $cat = false
 * **assign** : if set, the value is also saved in the given variable
 * **cat** : if true, the value is appended to the previous one (if any) instead of overwriting itIf the cat parameter is true, the content will be appended to the existing content
 
-##Example
+## Example
 {% highlight smarty %}
 {capture "foo"}
   Anything in here wont show, it will be saved for later use..
@@ -19,7 +19,7 @@ capture([ string $name = 'default', [ string $assign = null, [ bool $cat = false
 Captured: {$.capture.foo}
 {% endhighlight %}
 
-##Output 
+## Output 
 {% highlight text %}
 Captured: Anything in here wont show, it will be saved for later use..
 {% endhighlight %}

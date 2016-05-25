@@ -10,13 +10,13 @@ countSentences(string $value)
 
 * **value** : the string to process
 
-##Example:
+## Example
 {% highlight smarty %}
 {countSentences('ab cd')}
 {countSentences('ab. cd')}
 {% endhighlight %}
 
-Output:
+## Output
 {% highlight text %}
 1
 2

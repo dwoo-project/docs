@@ -10,7 +10,7 @@ strip(string $mode = 'default')
 
 * **mode** : the stripping mode defines some rules to prevent harmful behavior on some types of content, currently the only special mode is `js` or `javascript` that ensures javascript line comments do not break the script.
 
-##Example
+## Example
 {% highlight smarty %}
 {strip}
    spaces between words in a same line     
@@ -22,7 +22,7 @@ strip(string $mode = 'default')
 {/strip}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 spaces between words in a same line- are not removed -buteverythingelseis
 {% endhighlight %}

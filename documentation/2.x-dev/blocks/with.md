@@ -10,19 +10,19 @@ with(array $var)
 
 * **var** : the array where to move the scope
 
-##Example
+## Example
 {% highlight smarty %}
 {$arr.foo}
 {with $arr} {$foo} / {$arr.foo} {/with}
 {% endhighlight %}
 
-##Data
+## Data
 {% highlight php %}
 <?php
 'arr' => array( 'foo' => 'bar' )
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 bar
 bar /
@@ -32,7 +32,7 @@ bar /
 
 As you can see with the above example, `{$arr.foo}` within the `{with}` block is not valid and returns null. To fix this you can use the `_parent` and `_root` keywords. `$_root` links to the top-level scope, and `$_parent` goes up by one level. The magic [$dwoo](/documentation/2.x-dev/reference/dwoo-variables.html) variable is not affected by this and is accessible in the same way no matter the current scope.
 
-##Example
+## Example
 {% highlight smarty %}
 {with $arr.sub}
   {$foo} / {$_root.arr.sub.foo} / {$_parent.foo}
@@ -41,14 +41,14 @@ As you can see with the above example, `{$arr.foo}` within the `{with}` block is
 {/with}
 {% endhighlight %}
 
-##Data
+## Data
 {% highlight php %}
 <?php
 'arr' => array( 'sub' => array( 'foo' => 'bar' ) )
 'url' => 'example.org'
 {% endhighlight %}
 
-#Output
+# Output
 {% highlight text %}
 bar / bar / bar
 example.org / example.org

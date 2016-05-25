@@ -10,12 +10,12 @@ upper(string $value)
 
 * **value** : string to convert
 
-##Example
+## Example
 {% highlight smarty %}
 {upper('This is a String')}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 THIS IS A STRING
 {% endhighlight %}

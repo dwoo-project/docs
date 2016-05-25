@@ -8,21 +8,21 @@ Assigns a value to a variable
 assign(mixed $value, string $var)
 {% endhighlight %}
 
-* **value** : the value that you want to save
-* **var** : the variable name (without the leading $)
+* **value**: the value that you want to save
+* **var**: the variable name (without the leading $)
 
-##Example :
+## Example
 {% highlight smarty %}
 {assign 'test string' myVar}
 Variable contains: {$myVar}
 {% endhighlight %}
 
-##Output:
+## Output
 {% highlight text %}
 Variable contains: test string
 {% endhighlight %}
 
-##Note that
+## Note that
 this plugin was mostly provided for smarty compatibility, it is easier to do it with the = operator, just as in any language, using :
 
 {% highlight smarty %}

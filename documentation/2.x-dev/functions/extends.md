@@ -12,7 +12,7 @@ extends(string $file)
 
 > **Note:** You cannot extends a parent template using `../`. However to refer to the root directory you can use `./`.
 
-##Example:
+## Example
 {% highlight smarty %}
 {extends "base.tpl"}
 {% endhighlight %}

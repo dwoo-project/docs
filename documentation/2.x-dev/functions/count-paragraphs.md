@@ -10,13 +10,13 @@ countParagraphs(string $value)
 
 * **value** : the string to process
 
-##Example:
+## Example
 {% highlight smarty %}
 {countParagraphs('ab cd')}
 {countParagraphs('ab\n cd')}
 {% endhighlight %}
 
-##Output:
+## Output
 {% highlight text %}
 1
 2

@@ -11,7 +11,7 @@ loadTemplates(string $file)
 * **file** : the resource/template name to parse for sub-templates (those are defined using `{template}`
 Templates are only visible in the file they are loaded, so if you include another file you have to call load_templates there also.
 
-##Example
+## Example
 {% highlight smarty %}
 {loadTemplates "subtemplates.tpl"}
 {% endhighlight %}

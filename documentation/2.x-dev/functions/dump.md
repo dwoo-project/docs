@@ -10,10 +10,10 @@ dump($value)
 
 * **value** : the variable to display
 
-##Example
+## Example
 {% highlight smarty %}
 {dump $}
 {% endhighlight %}
 
-##Output
+## Output
 Will output an array of all variables global.

@@ -62,7 +62,7 @@ Output:
 </html>
 {% endhighlight %}
 
-##Overriding/passing template variables
+## Overriding/passing template variables
 Sometimes you may need to pass variables to another template without wanting to include them in the data parameter of the get or output methods of the Dwoo class. This can be done by adding them in as parameters as the following example illustrates:
 
 site_header.tpl:

@@ -15,9 +15,9 @@ foreach(array $from, [ string $key = null, [ string $item = null, [ string $name
 
 > Note that this plugin supports [iterator variables](/documentation/2.x-dev/reference/iterator-variables.html) through the name parameter and also supports the [else](/documentation/2.x-dev/blocks/else.html) plugin.
 
-##Example
+## Example
 
-###PHP data
+### PHP data
 {% highlight php %}
 <?php
 array(
@@ -29,14 +29,14 @@ array(
 )
 {% endhighlight %}
 
-###HTML
+### HTML
 {% highlight smarty %}
 {foreach $arr val implode=", "}
   {$val.id} - {$val.name}
 {/foreach}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 1 - Jim,
 2 - John,
