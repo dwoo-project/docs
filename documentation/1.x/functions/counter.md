@@ -16,7 +16,7 @@ counter([ string $name = 'default', [ int $start = 1, [ int $skip = 1, [ string 
 * **print**: if false, the counter will not output the current count, defaults to true
 * **assign**: if set, the counter is saved into the given variable and does not output anything, overriding the print parameter
 
-##Example
+## Example
 {% highlight smarty %}
 {counter start=10 skip=5}
 {counter}
@@ -25,7 +25,7 @@ counter([ string $name = 'default', [ int $start = 1, [ int $skip = 1, [ string 
 {counter}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 10
 15

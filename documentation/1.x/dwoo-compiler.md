@@ -3,11 +3,11 @@ layout: documentation
 title: Dwoo_Compiler class
 ---
 
-##Settings
+## Settings
 
-###setDelimiters(string $left, string $right) - Changing the default syntax delimiters ({ and })
+### setDelimiters(string $left, string $right) - Changing the default syntax delimiters ({ and })
 
-###getDelimiters()
+### getDelimiters()
 
 {% highlight php %}
 <?php
@@ -29,9 +29,9 @@ Then your templates should be written as:
 <%/if%>
 {% endhighlight %}
 
-###setLooseOpeningHandling(bool $allow) - Allowing spaces within template blocks
+### setLooseOpeningHandling(bool $allow) - Allowing spaces within template blocks
 
-###getLooseOpeningHandling()
+### getLooseOpeningHandling()
 
 {% highlight php %}
 <?php
@@ -52,9 +52,9 @@ If you really don't like this, because you want to use spaces in your template c
 * Use `$compiler->setLooseOpeningHandling(true);` and it will work fine, but then you must be careful to escape all {'s in your css/js code as such : `\{`
 * Use `$compiler->setDelimiters('{ ', ' }');` so your delimiters include the spaces, but the css/js should still not interfere. Obviously this only works if you are really consistent with the way you type your template code, because if you type `{` (curly brace + two spaces) then it will not get picked up by the compiler, neither will a single `{`.
 
-##setAutoEscape(bool $enabled) - Automatically html-escape variables
+## setAutoEscape(bool $enabled) - Automatically html-escape variables
 
-##getAutoEscape()
+## getAutoEscape()
 
 {% highlight php %}
 <?php
@@ -64,7 +64,7 @@ setAutoEscape(bool $enabled)
 This enables or disables the auto escape functionality, in two words it applies `htmlspecialchars()` automatically to all variables unless you pass them through the safe plugin
 See AutoEscape for more details.
 
-###allowNestedComments(bool $allow) - Allow parsing of nested comment blocks
+### allowNestedComments(bool $allow) - Allow parsing of nested comment blocks
 {% highlight php %}
 <?php
 allowNestedComments(bool $allow)
@@ -81,68 +81,68 @@ When this setting is enabled (it's off by default), this syntax becomes valid:
 This can be useful if you like to disable big parts of your templates using comments during development, and you already have comments inside the part you disable. So enable it if it makes your life easier.
 As you can see in the code example above, when it is off (the syntax highlighter doesn't support this), `<p>Whatever</p> *}` is still visible because the child comment has ended the comment parsing.
 
-##Adding pre/post processors
+## Adding pre/post processors
 
-###addPreProcessor(mixed $callback, bool $autoload=false)
+### addPreProcessor(mixed $callback, bool $autoload=false)
 Adds a template pre processor, either by name if it's in a Dwoo plugin directory (in which case you can set $autoload to true), or with a direct callback.  
 The pre processor will receive the template and can modify it before it's parsed/compiled.
 
-###addPostProcessor(mixed $callback, bool $autoload=false)
+### addPostProcessor(mixed $callback, bool $autoload=false)
 Same thing than above, but post processors can act on the php source after the template has been compiled.
 
-###removePreProcessor(mixed $callback)
+### removePreProcessor(mixed $callback)
 Removes a pre processor by name (if autoloaded) or callback.
 
-###removePostProcessor(mixed $callback)
+### removePostProcessor(mixed $callback)
 Removes a post processor by name (if autoloaded) or callback.
 
-##Utilities
+## Utilities
 The following methods are giving you access to some properties and/or objects that might be useful.
 
-###getSecurityPolicy()
+### getSecurityPolicy()
 Returns the current security policy if any.
 
-###getDwoo()
+### getDwoo()
 Returns the current Dwoo object using this compiler.
 
-###getLine()
+### getLine()
 Returns the current line (from the source template) that is being parsed, i.e. this can be useful to build a custom handler for `Dwoo_Compilation_Exception`'s, using `$exception->getCompiler()->getLine();`
 
-##[Advanced] Plugin development
+## [Advanced] Plugin development
 The following methods are mostly designed to be used when developing advanced plugins.
 
-###getCompiledParams(array $params)
+### getCompiledParams(array $params)
 Returns an array of compiled php strings from a parameter array. You need to use this if you're building a block plugin using the preProcessing/postProcessing methods.
 
-###getRealParams(array $params)
+### getRealParams(array $params)
 Returns an array of source strings from a parameter array. This is useful only in block plugins and you most likely don't need this function.
 
-###getTemplateSource(bool $fromPointer=false)
+### getTemplateSource(bool $fromPointer=false)
 
-###setTemplateSource(string $newSource, bool $fromPointer=false)
+### setTemplateSource(string $newSource, bool $fromPointer=false)
 Returns or overrides the template source, the fromPointer parameter defines whether it is read/written from the current parsing position or if the entire source is returned/replaced.  
 This is used for example in the extends plugin, where the template source is replaced by a new template (all parent templates + the current one with all blocks merged).
 
-###getPointer()
+### getPointer()
 
-###setPointer(int $position, bool $isOffset=false)
+### setPointer(int $position, bool $isOffset=false)
 Returns the parser's pointer position, or moves it by offset or absolutely. If you do setPointer(0) the template is reparsed entirely - this means that the entire block stack is flushed and all variables reset just as if nothing had been parsed yet. Otherwise the parsing will continue from the new pointer position.
 
-###setScope(mixed $scope, bool $absolute=false)
+### setScope(mixed $scope, bool $absolute=false)
 
-###forceScope(mixed $scope)
+### forceScope(mixed $scope)
 Those modify the current variable scope and should be used by scope-modifying plugins, but this is very likely to change in a future version and you should be considered unstable.
 
-###setLine(int $number, bool $isOffset=false)
+### setLine(int $number, bool $isOffset=false)
 {% highlight smarty %}
 setLine(int $number, [ bool $isOffset = false ])
 {% endhighlight %}
 Changes the current line, by offset or with an absolute value.
 
-##[Advanced] Block handling
+## [Advanced] Block handling
 Those are functions you most likely don't want to look at :)
 
-###& getCurrentBlock()
+### & getCurrentBlock()
 Returns the current block, this is an array that has the following content:
 {% highlight php %}
 <?php
@@ -156,18 +156,18 @@ array(
 {% endhighlight %}
 It is returned by reference so you can modify it (i.e. the parameters array).
 
-###& findBlock(string $type, bool $closeAlong=false)
+### & findBlock(string $type, bool $closeAlong=false)
 The return value is the same as getCurrentBlock() but this will look in the block stack (starting from the current position) for a particular type. Optionally it can also close all blocks that do not match the given type until it finds one. If the type is not found it throws a `Dwoo_Compilation_Exception`
 
-###injectBlock(string $type, array $params)
+### injectBlock(string $type, array $params)
 Injects a block at the top of the plugin stack without calling its preProcessing method,  
 See the else plugin's source for an use case.
 
-###push(string $content, int $lineCount=null)
+### push(string $content, int $lineCount=null)
 Adds compiled content to the current block, the line count is the number of lines from the template source that generated this content, this is important to keep track of line numbers for parse errors.
 
-###removeTopBlock()
+### removeTopBlock()
 Removes the block at the top of the stack and calls its postProcessing() method
 
-###removeBlock(string $type)
+### removeBlock(string $type)
 Removes the closest-to-top block of the given type and all other blocks encountered while going down the block stack (quite similar to findBlock($type, true) but it doesn't return anything)

@@ -12,7 +12,7 @@ default(mixed $value, [ mixed $default = ""])
 * **value**: the variable to check
 * **default**: fallback value if the first one is empty
 
-##Example
+## Example
 {% highlight smarty %}
 {$var1="foo"}
 {$var2=""}
@@ -21,7 +21,7 @@ default(mixed $value, [ mixed $default = ""])
 {default $var3 "bar"}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 foo
 bar

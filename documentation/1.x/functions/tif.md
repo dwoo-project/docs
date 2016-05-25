@@ -11,7 +11,7 @@ tif(array $rest)
 
 * **rest**: you can not use named parameters to call this, use it either with three arguments in the correct order (expression, true result, false result) or write it as in php (expression ? true result : false result)
 
-##Example
+## Example
 {% highlight smarty %}
 {$foo = "foo"}
 {tif $foo == "bar" ? "true" : "false"} {* full syntax *}
@@ -26,7 +26,7 @@ tif(array $rest)
 {tif $foo}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 true
 foo

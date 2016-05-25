@@ -13,7 +13,7 @@ date_format(string $value, [ string $format = '%b %e, %Y', [ mixed $default = nu
 * **format**: output format, see [http://php.net/strftime](http://php.net/strftime){:target="_blank"} for details
 * **default**: a default timestamp value, if the first one is empty
 
-##Example
+## Example
 {% highlight smarty %}
 {$.now}
 {date_format $.now "%Y-%m-%d"}
@@ -21,7 +21,7 @@ date_format(string $value, [ string $format = '%b %e, %Y', [ mixed $default = nu
 {date_format "1994-3-15 10:24:22"}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 1211992444
 2008-05-28

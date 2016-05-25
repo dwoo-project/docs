@@ -5,7 +5,7 @@ title: Template Inheritance
 
 Inheritance brings the concept of Object Oriented Programming to templates, allowing you to define one (or more) base templates that can be extended by child templates. Extending means that the child can override some of the parent areas, read on as it is easier to understand by looking at an example.
 
-##Usage
+## Usage
 Let's say you want a default header and footer in your pages, the more common approach to this (without inheritance) is to put at the top and bottom of every template `{include "header.html"}` and `{include "footer.html"}`. However this is not very flexible since you can only modify the area between header and footer, and you have to redefine the entire content area in each template. That could be improved by including more than two files but it would quickly become messy to manage.
 
 What you do with template inheritance is define blocks, which are areas that can be overriden by child templates, so your base template will look like this:
@@ -75,7 +75,7 @@ Now if we render `gallery_home.html` we will get this:
 {% endhighlight %}
 Defining new blocks in children templates is currently not supported.
 
-##Summary
+## Summary
 To sum things up, here is a list of short hints and limitations that apply to template inheritance:
 
 * You currently can not close a block with the short-hand syntax `{/}`, you must explicitly do `{/block}`

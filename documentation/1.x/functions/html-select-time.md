@@ -25,12 +25,12 @@ html_select_time( [$prefix = "Time_", [$time = null, [$display_hours = true, [$d
 * **second_extra**: extra attributes to add to the second select box
 * **meridian_extra**: extra attributes to add to the meridian select box
 
-##Basic Usage
+## Basic Usage
 {% highlight smarty %}
 {html_select_time}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight html %}
 <select name='Time_Hour'>
  <option value='0'>0</option>
@@ -61,12 +61,12 @@ html_select_time( [$prefix = "Time_", [$time = null, [$display_hours = true, [$d
 </select>
 {% endhighlight %}
 
-##Extended Example
+## Extended Example
 {% highlight smarty %}
 {html_select_time prefix="MyTime_" display_seconds=false use_24_hours=false}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight html %}
 <select name='MyTime_Hour'  >
  <option value='1'>1</option>
@@ -90,7 +90,7 @@ html_select_time( [$prefix = "Time_", [$time = null, [$display_hours = true, [$d
 </select>
 {% endhighlight %}
 
-##Sources
+## Sources
 {% highlight php %}
 <?php
 /**

@@ -3,9 +3,9 @@ layout: documentation
 title: Syntax
 ---
 
-##Dwoo Template Syntax
+## Dwoo Template Syntax
 
-###Variables
+### Variables
 Those are the simplest thing to handle in Dwoo, you just need to know the variable name and you can output it like that : {$name}. So let's say you have a variable called date, you would output it using `{$date}`.
 
 To handle arrays, if you have for example a variable called article that contains three items, title, author and content, you can access the sub-items by separating the array name and the sub-item by a dot (.) so that it looks like this for example:
@@ -33,7 +33,7 @@ AND A FOOIABLE STICKING TO TEXT
 {% endhighlight %}
 You can also concatenate strings and variables with the [cat()](/documentation/1.x/functions/cat.md) function.
 
-###Functions
+### Functions
 The function syntax is quite flexible, functions can either be called just like in php, using `{upper("hello")}` to call the function upper with the parameter hello. This would print HELLO, as the upper function's purpose is to make strings uppercased. In this case the multiple parameters are split using a comma, i.e. {function("a", "b")} will call function with two parameters, a and b.
 {% highlight smarty %}
 Here are some {upper("uppercased words")}
@@ -66,7 +66,7 @@ prints:
 Hello JOHNDOE!
 {% endhighlight %}
 
-###Modifiers
+### Modifiers
 Modifiers are simply functions that can be applied on variables or strings to modify them, this syntax is not mandatory, modifiers like upper can be called using the function syntax without any problem, but the alternative exists if you prefer it. To make **hello** uppercased using the upper function as a modifier, you must do `{"hello"|upper}`.
 {% highlight smarty %}
 Abcd reversed is {"Abcd"|reverse}
@@ -88,7 +88,7 @@ T-S-E-T equals T-S-E-T
 {% endhighlight %}
 This example shows that multiple functions are applied from "inside" the parenthesis (right) to the "outside" (left), while multiple modifiers are applied from left to right.
 
-###Blocks
+### Blocks
 Blocks are started like functions, using `{blockname(parameter1, parameter2)}` or the named parameter syntax, and they are closed with `{/blockname}`. Unclosed blocks are automatically closed when one of their parent is closed, or at the template's end, however it's better to close them yourselves to be sure they are closed when you want them to be and to avoid any conflict to arise.
 {% highlight smarty %}
 {textformat wrap=10 indent_first=3}
@@ -102,9 +102,9 @@ baz qux
 quuux
 {% endhighlight %}
 
-##Advanced Syntax
+## Advanced Syntax
 
-###The @ Operator
+### The @ Operator
 If you use the modifier syntax on an array and prepend the modifier with an `@`, the modifier will be applied to every element of the array.  
 For example, the following:
 {% highlight smarty %}
@@ -125,5 +125,5 @@ However, if we do :
 
 would output **ba dc** as with the `@`, reverse was not applied to the array but to 'ab' and then to 'cd', reversing each character sequence.
 
-###Shortcuts
+### Shortcuts
 Read more about [shortcuts](/documentation/1.x/shortcuts.html) to write templates faster.

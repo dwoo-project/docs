@@ -13,14 +13,14 @@ count_characters(string $value, [ bool $count_spaces = false ])
 * **count_spaces**: if true, the white-space characters are counted as well
 
 
-##Example
+## Example
 {% highlight smarty %}
 {count_characters('ab cd')}
 {count_characters('ab cd', true)}
 {% endhighlight %}
 
 
-##Output
+## Output
 {% highlight text %}
 4
 5

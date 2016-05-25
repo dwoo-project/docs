@@ -3,7 +3,7 @@ layout: documentation
 title: "Adapters: Zend Framework"
 ---
 
-##Bootstrap code
+## Bootstrap code
 {% highlight php %}
 <?php
 /**
@@ -32,14 +32,14 @@ $viewRenderer = new Zend_Controller_Action_Helper_ViewRenderer($viewInterface);
 Zend_Controller_Action_HelperBroker::addHelper($viewRenderer);
 {% endhighlight %}
 
-##Some additional tuning
+## Some additional tuning
 If you don't want to use .phtml template suffix, you can change it to .tpl (or whatever you want):
 {% highlight php %}
 <?php
 $viewRenderer->setViewSuffix('tpl')
 {% endhighlight %}
 
-##Changing properties of the Dwoo or Dwoo_Compiler objects
+## Changing properties of the Dwoo or Dwoo_Compiler objects
 You can access the setSomething() methods of the Dwoo and Dwoo_Compiler classes through the configuration array as such:
 {% highlight php %}
 <?php
@@ -56,7 +56,7 @@ $viewInterface = new Dwoo_Adapters_ZendFramework_View(array(
 Constructor accepts a configuration array (via setOptions() method) or instance of Zend_Config object (via setConfig() method).  
 Alternatively you can just provide a custom pre-configured object instead of those settings sub-arrays, see below.
 
-##Using your own engine class
+## Using your own engine class
 You can ask the adapter to use any class that extends Dwoo as its engine (as of 2008/09/12 only SVN version):
 {% highlight php %}
 <?php
@@ -97,7 +97,7 @@ $viewInterface = new Dwoo_Adapters_ZendFramework_View(array(
 ));
 {% endhighlight %}
 
-##View helpers
+## View helpers
 Dwoo_Adapters_ZendFramework_View supports Zend's view helpers with the use of Dwoo_Adapters_ZendFramework_PluginProxy. This proxy is bonded to the Dwoo engine and checks for available helpers (headTitle, headLink, url, etc).
 
 Some helper call examples:

@@ -3,7 +3,7 @@ layout: documentation
 title: "Adapters: Agavi"
 ---
 
-##Install instructions
+## Install instructions
 * Drop dwoo's directory in `app/lib/renderer` (create if needed)
 * Add a renderer to `app/config/output_types.xml` as such:
 {% highlight xml %}

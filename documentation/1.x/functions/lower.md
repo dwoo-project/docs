@@ -11,12 +11,12 @@ lower(string $value)
 
 * **value**: string to convert
 
-##Example
+## Example
 {% highlight smarty %}
 {lower('ThiS IS a STRING')}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 this is a string
 {% endhighlight %}

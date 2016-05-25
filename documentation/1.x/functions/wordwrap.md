@@ -14,12 +14,12 @@ wordwrap(string $value, [ int $length = 80, [ string $break = "\n", [ bool $cut 
 * **break**: the character(s) to use to break the line
 * **cut**: if true, the line is cut at the exact length instead of breaking at the nearest space
 
-##Example
+## Example
 {% highlight smarty %}
 {wordwrap "abcdefghijklmnopqrstuvwxyz" 8 cut=true}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 abcdefgh
 ijklmnop

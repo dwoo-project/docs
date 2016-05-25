@@ -15,12 +15,12 @@ regex_replace(string $value, string $search, string $replace)
 
 > Note that if you want to use backreferences, use `\$1` instead of `$1`, `\$2` for `$2` and so on, otherwise Dwoo will replace the `$1` as if it was a variable.
 
-##Example
+## Example
 {% highlight smarty %}
 {regex_replace "abcdABCD" "/([a-z])/" "\$1*"}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 a*b*c*d*ABCD
 {% endhighlight %}

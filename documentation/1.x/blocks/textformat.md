@@ -19,14 +19,14 @@ textformat([ int $wrap = 80, [ string $wrap_char = "\r\n", [ string $wrap_cut = 
 * **assign**: if set, the formatted text is assigned to that variable instead of being output
 
 
-##Example
+## Example
 {% highlight smarty %}
 {textformat 10}here is some text that should wrap{/textformat}
  
 {textformat 10 wrap_cut=true}and this one should cut words that go beyoooooooond 10 chars{/textformat}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 here is
 some text

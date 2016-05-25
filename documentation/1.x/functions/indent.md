@@ -13,7 +13,7 @@ indent(string $value, [ int $by = 4, [ string $char = ' ' ]])
 * **by**: how many characters should be inserted before each line
 * **char**: the character(s) to insert
 
-##Example
+## Example
 {% highlight smarty %}
 baseline
 {indent "foo bar baz
@@ -21,7 +21,7 @@ qux and then what was it
 again? quux quuux and so on I think"}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 baseline
     foo bar baz

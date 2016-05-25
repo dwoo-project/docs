@@ -11,12 +11,12 @@ optional(mixed $value)
 
 * **value**: variable to print
 
-##Example
+## Example
 {% highlight smarty %}
 {optional $var}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 (nothing if $var isn't defined, but no warning either)
 {% endhighlight %}

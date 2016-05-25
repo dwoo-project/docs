@@ -3,13 +3,13 @@ layout: documentation
 title: Using Dwoo your choice framework
 ---
 
-##Frameworks are compatible with Dwoo
+## Frameworks are compatible with Dwoo
 The following frameworks include support Dwoo, such as the main engine or an optional view:
 
 * [Ariadna Framework](http://code.google.com/p/ariadna-framework/){:target="_blank"}
 * [Bluebird Framework](http://www.brilland.org/){:target="_blank"}
 
-##Adapters
+## Adapters
 Below is a list of adapters that allow the use Dwoo in conjunction with some popular frameworks:
 
 * [Agavi](/documentation/1.x/adapters/agavi.html)

@@ -7,13 +7,13 @@ Executes whatever follows without output. This is basically a cleaner alternativ
 
 I can't think of any reason to use it in a template, but since it's there for internal reasons, you might as well use it if required.
 
-##Example
+## Example
 {% highlight smarty %}
 {do "foo"}
 {do reverse("bar")}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 *nothing*
 {% endhighlight %}

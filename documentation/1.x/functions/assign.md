@@ -13,13 +13,13 @@ assign(mixed $value, string $var)
 * **var**: the variable name (without the leading $)
 
 
-##Example
+## Example
 {% highlight smarty %}
 {assign 'test string' myVar}
 Variable contains: {$myVar}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 Variable contains: test string
 {% endhighlight %}

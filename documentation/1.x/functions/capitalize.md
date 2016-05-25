@@ -13,12 +13,12 @@ capitalize(string $value [, bool $numwords = false ] )
 * **numwords**: whether or not to capitalize words with numbers
 
 
-##Example
+## Example
 {% highlight smarty %}
 {capitalize('this is a string what2')}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 This Is A String what2
 {% endhighlight %}

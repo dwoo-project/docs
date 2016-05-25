@@ -5,7 +5,7 @@ title:  List of unsupported Smarty features
 
 Dwoo supports the Smarty template syntax and extends it to provide some other possibilities. Read the Dwoo syntax and syntax shortcuts pages for more info on that.
 
-##Partially Supported
+## Partially Supported
 These are supported by Dwoo but in a different way than the original Smarty features, so they might or might not work using the Adapter class depending on what you do with them.
 
 * **{section},{sectionelse}**  
@@ -20,7 +20,7 @@ Some features like whitelisting methods are not available since this is pointles
 * **{strip}**  
 The strip block is supported, but the strip modifier had to be renamed to whitespace instead, the smartyCompat preprocessor converts it but as for section tags, you should convert them if you want to use Dwoo in native mode.
 
-##Unsupported Plugins
+## Unsupported Plugins
 However, Smarty functions and modifiers are not entirely supported. Some will be in future versions, some won't, here is the list and some details about why they are not supported.
 
 Those won't happen:
@@ -49,10 +49,10 @@ And finally, those will probably be implemented one day, but until then you can 
 * {popup}
 * {popup_init}
 
-##Unsupported Smarty Class Features
+## Unsupported Smarty Class Features
 Here is the current compatibility list of the Smarty class properties and methods and what I'm going to do about it in the future.
 
-###Methods
+### Methods
 Will not be supported:
 
 * clear_config()
@@ -71,7 +71,7 @@ Should be implemented in one of the next versions:
 * clear_compiled_tpl()
 	* a bit useless really, clear your compile dir yourself if you really need to, but the lack of this function shouldn't prevent anything from working
 
-###Properties
+### Properties
 Those will probably never be implemented, they are either useless or should be done through other means in Dwoo:
 
 * debugging

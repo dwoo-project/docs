@@ -3,13 +3,13 @@ layout: documentation
 title: "Adapters: CakePHP"
 ---
 
-##Installation:
+## Installation
 1. Download and install the dwoo library, preferably on the 'vendors' directory of CakePHP.
 (However you can place it anywhere you want; if you do, make sure to change the App::import line in dwoo.php (found in Dwoo/Adapters/CakePHP) to include the dwoo library properly.)
 2. Place this Dwoo/Adapters/CakePHP/dwoo.php file in the app/views directory, or on cake/libs/view.
 3. Create the app/tmp/dwoo/cache and app/tmp/dwoo/compile directories and make sure they are writable.
 
-##Usage example:
+## Usage example
 {% highlight php %}
 <?php
 // In your controller class you need to change the view property to

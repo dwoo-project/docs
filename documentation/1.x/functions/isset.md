@@ -11,7 +11,7 @@ isset(mixed $var)
 
 * **var**: variable to check
 
-##Example
+## Example
 {% highlight smarty %}
 {if isset($foo)}SET{else}not set or null{/if}
 {$foo=1}
@@ -20,7 +20,7 @@ isset(mixed $var)
 {if isset($bar)}SET{else}not set or null{/if}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight smarty %}
 not set or null
 SET

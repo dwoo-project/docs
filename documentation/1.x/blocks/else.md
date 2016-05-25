@@ -8,7 +8,7 @@ Generic else block, it supports all builtin optional-display blocks which are [i
 If any of those block contains an else statement, the content between `{else}` and `{/*blockname*}` (you do not need to close the else block) will be shown if the block's condition has no been met
 
 
-##Example
+## Example
 {% highlight smarty %}
 {foreach $array val}
   $array is not empty so we display it's values : {$val}

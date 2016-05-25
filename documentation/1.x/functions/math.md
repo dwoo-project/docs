@@ -15,13 +15,13 @@ math(string $equation, [ string $format = "", [ string $assign = "", [ array $re
 * **rest**: all math specific variables that you use must be defined, see the example
 
 
-##Example
+## Example
 {% highlight smarty %}
 {$c=2}
 {math "(a+b)*$c/4" a=3 b=5} {* which translates to: ((3+5)*2/4) *}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 4
 {% endhighlight %}

@@ -12,13 +12,13 @@ spacify(string $value, [ $space_char = ' ' ])
 * **value**: the string to process
 * **space_char**: the character(s) to insert between each character
 
-##Example
+## Example
 {% highlight smarty %}
 {spacify 'abcd'}
 {spacify 'abcd' '-'}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 a b c d
 a-b-c-d

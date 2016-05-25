@@ -17,7 +17,7 @@ for(string $name, mixed $from, [ int $to = null, [ int $step = 1, [ int $skip = 
 > Note that this plugin supports [iterator variables](/documentation/1.x/iterator-variables.html) through the name parameter and also supports the else plugin
 
 
-##Example:
+## Example
 {% highlight smarty %}
 {for i 0 5} {$i} {/for}
  
@@ -29,7 +29,7 @@ for(string $name, mixed $from, [ int $to = null, [ int $step = 1, [ int $skip = 
 {/for}
 {% endhighlight %}
 
-##Output:
+## Output
 {% highlight text %}
 0  1  2  3  4  5 
 0  2  4 

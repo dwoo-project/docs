@@ -13,7 +13,7 @@ load_templates(string $file)
 
 > Templates are only visible in the file they are loaded, so if you include another file you have to call `load_templates` there also.
 
-##Example
+## Example
 {% highlight smarty %}
 {load_templates "subtemplates.tpl"}
  

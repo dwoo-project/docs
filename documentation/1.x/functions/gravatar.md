@@ -14,17 +14,17 @@ gravatar(string $email, [ int $size = 80, [ string $default = "", [ string $rati
 * **default**: an url to the default image to display, or one of the three image generators: identicon, monsterid or wavatar, see [http://en.gravatar.com/site/implement/url](http://en.gravatar.com/site/implement/url){:target="_blank"} for more infos on those, by default this will be the gravatar logo
 * **rating**: the highest allowed rating for the images, it defaults to 'g' (general, the lowest/safest) and other allowed values (in order) are 'pg' (parental guidance), 'r' (restricted) and 'x' (boobies, crackwhores, etc.)
 
-##Example
+## Example
 {% highlight smarty %}
 <img src="{gravatar "test@gravatar.com" 20 rating="x"}" alt="Test gravatar" />
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight html %}
 <img src="http://www.gravatar.com/avatar/df3d4780faaf2446a65ce39eafdfe1c0?s=20&r=x" alt="Test gravatar" />
 {% endhighlight %}
 
-##Sources
+## Sources
 {% highlight php %}
 <?php
 /**

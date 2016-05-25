@@ -10,10 +10,10 @@ Before we start, you should know about those general plugin featuers :
 * The parameter names that you define in your plugin and the default values as well are important, because that will define the parameter names to use in the template when you call that plugin, and it will also allow the compiler to detect when a required argument is missing, so that plugins don't have to handle that logic.
 * The main functions for each plugin, the ones that accept the parameters, can have a rest array parameters, which aggregates all unmapped parameters. It has to be declared as `array $rest` or `array $rest=array()` to work as it should. See the [array](/documentation/1.x/helpers/array.html) and [math](/documentation/1.x/functions/math.html) plugins for examples.
 
-##Functions / Modifiers
+## Functions / Modifiers
 There are three ways of building function plugins, we will explore those, learning how to make a plugin that returns an uppercased string.
 
-##Simple function plugin
+## Simple function plugin
 This function will be called when the template is ran, with the required arguments, the only requirement is that the first argument must be of type Dwoo and will always be the Dwoo instance that runs the template.
 {% highlight php %}
 <?php
@@ -31,7 +31,7 @@ function Dwoo_Plugin_exampleplugin(Dwoo $dwoo, array $rest=array())
 }
 {% endhighlight %}
 
-##Precompiled function plugin
+## Precompiled function plugin
 The example above is very simple and just wraps a php function into a plugin. That is a bit silly as it adds the function call overhead plus the plugin file loading time for no benefit at all. Because of that, we are going to make it compilable by appending "_compile" to it's name, and this time the first argument will not be of type Dwoo but will be Dwoo_Compiler.
 {% highlight php %}
 <?php
@@ -50,7 +50,7 @@ While this is a great feature of Dwoo, it is a bit dangerous to fiddle with, and
 * A little exception to the previous rule is for booleans, you can do `if($value=='true')` or `if($value=='false')`, but note that true and false are strings here, not real booleans.
 You can look at most of Dwoo function plugins's source code for more examples, more than half of them are precompiled functions. The math plugin for example is a very good example of a complex precompiled plugin, as it parses it's input at compile-time to improve the performance a lot at run-time. Since templates are ran more often than they are compiled, this is overall better.
 
-##Class function plugin
+## Class function plugin
 If one of your plugins uses several functions, it might be a good idea to regroup them all inside a class. Dwoo class plugins must follow some rules :
 
 * The constructor's first parameter must be of type Dwoo, you can extend the Dwoo_Plugin class for convenience so that the constructor already does what it needs to, or you can provide that logic yourself.
@@ -67,7 +67,7 @@ class Dwoo_Plugin_upper extends Dwoo_Plugin
 {% endhighlight %}
 A particularity of class plugins is that only one instance of each class is created for the entire template. That means that instance variables are "template-static", they remain present while the template is run, but they are not static across templates. Static variables are of course shared by all instances, nothing special about that. Anyway if you absolutely need per-plugin-call variables, you will have to reset their value in the process() method.
 
-##Precompiled class function plugin
+## Precompiled class function plugin
 * It must implement the Dwoo_ICompilable interface.
 * The method that Dwoo will call must now be static and is called "compile" instead of "process", it will receive all the parameters with the `Dwoo_Compiler` object calling it being first.
 {% highlight php %}
@@ -81,7 +81,7 @@ class Dwoo_Plugin_upper extends Dwoo_Plugin implements Dwoo_ICompilable
 }
 {% endhighlight %}
 
-##Block
+## Block
 Block plugins on their end, can only be built with classes. You should extend the `Dwoo_Block_Plugin` class, but your block plugin must still be named `Dwoo_Plugin_<name>`, NOT `Dwoo_Block_Plugin_<name>`.
 Some Block facts :
 
@@ -89,7 +89,7 @@ Some Block facts :
 * The block equivalent to the process() method is called init() and must include all parameters, it is called when the block is opened, followed by end() (no parameters) when the block is closed, and finally process() (no parameters) when the block buffer is required by a parent block.
 * The block contents can be accessed in the process function through the buffer property : `$this->buffer`
 
-###Simple block plugins
+### Simple block plugins
 Those are the default block type, that you are most likely to want to use, by default they automatically buffer all their content and then process() is called at the end. That's where you should do your work, anyway here is an example :
 {% highlight php %}
 <?php
@@ -112,7 +112,7 @@ class Dwoo_Plugin_upper extends Dwoo_Block_Plugin
 }
 {% endhighlight %}
 
-###Precompiled block plugins
+### Precompiled block plugins
 More complex to build as they make use of the pre and postProcessing functions, precompiled block plugins allowed complex things like if, elseif, foreach, for and so on to be made as plugins completely separated from the compiler.  
 Those plugins that are completely handled by the compiler should implement the `Dwoo_ICompilable_Block` interface, which does nothing but tells the compiler that the plugin should not be loaded at runtime, which enhances performances a bit.  
 The block compiler functions have the particularity to receive two sets of arguments in `$params`, one set containing the output-ready php safe values, accessible through `Dwoo_Utils::getCompiledParams($params)`, and the other set that contains the original arguments provided by the template source, which are accessible through `Dwoo_Utils::getRealParams($params)`. This is required in some rare cases, but usually the first method is sufficient.  
@@ -140,7 +140,7 @@ class Dwoo_Plugin_upper extends Dwoo_Block_Plugin implements Dwoo_ICompilable_Bl
 }
 {% endhighlight %}
 
-##Filters and Processors
+## Filters and Processors
 Filters are added to the Dwoo object and they are called after the template rendering, right before it is cached or output.
 Processors are filters for the compiler, they can be "pre" or "post" processor, being called before and after compilation.
 
@@ -148,7 +148,7 @@ Processors are filters for the compiler, they can be "pre" or "post" processor, 
 * That prefix only has to be used if you want to use the autoload capability. In that case, place your file in one of the plugin directories, and then use `addFilter('name', true);` where name matches the filename and the name found after `Dwoo_Filter_` or `Dwoo_Processor_`.
 * If you are loading a filter from somewhere else, then you must provide a valid callback to the processor/filter function, for example use `addFilter('function_name');` for function based filters or `addFilter(array($object, 'method'));` for class-based filters.
 
-###PreProcessors
+### PreProcessors
 Preprocessors are added to the compiler through `$compiler->addPreProcessor()`, and are called before template compilation. It allows you to do some processing over the template if you need that in your application. For example Dwoo uses that to help supporting Smarty templates, there is a prefilter that converts some unsupported / legacy smarty features into Dwoo ones, transparently.
 Here we will see how to create a simple function-based processor that adds a date automatically at the end of every template. You could use a similar processor to force all your templates to have a specific footer, a Google Analytics tracking code or anything.
 {% highlight php %}
@@ -171,11 +171,11 @@ class Dwoo_Processor_timestamp extends Dwoo_Processor
 }
 {% endhighlight %}
 
-###PostProcessors
+### PostProcessors
 Postprocessors are added to the compiler through `$compiler->addPostProcessor()`, and are called after template compilation. It allows you to process the template after it has been created, if you want to add something to it or whatever.
 They are built exactly as preprocessors so see the examples above.
 
-###Filters
+### Filters
 Filters are added to the Dwoo instance through `$dwoo->addFilter()`, and are called after the template is fully rendered, right before it is cached (if cache is in use). You can use those to do some work on the HTML output. For example Dwoo includes an [html_format](/documentation/1.x/filters/html-format.html) filter that correctly indents the html of your page so that the sources look nicer and are easier to read. Which can be useful especially while developing the site.
 They are built exactly like processors excepted that they receive a Dwoo object as parameter and that they use the `Dwoo_Filter_` prefix, for example :
 {% highlight php %}

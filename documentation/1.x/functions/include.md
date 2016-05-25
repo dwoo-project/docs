@@ -20,7 +20,7 @@ include(string $file [, int $cache_time = null [, string $cache_id = null [, str
 
 As an example, you may have a common header that you would like to include into all of your pages. This can be accomplished like this:
 
-##index.html
+## index.html
 {% highlight smarty %}
 <html>
   <head>
@@ -34,7 +34,7 @@ As an example, you may have a common header that you would like to include into 
 </html>
 {% endhighlight %}
 
-##header.html
+## header.html
 {% highlight smarty %}
 <h1>Some awesome website</h1>
 <div id="menu">
@@ -42,7 +42,7 @@ As an example, you may have a common header that you would like to include into 
 </div>
 {% endhighlight %}
 
-###Output
+### Output
 {% highlight html %}
 <html>
   <head>
@@ -61,10 +61,10 @@ As an example, you may have a common header that you would like to include into 
 </html>
 {% endhighlight %}
 
-##Overriding/passing template variables
+## Overriding/passing template variables
 Sometimes you may need to pass variables to another template without wanting to include them in the data parameter of the get or output methods of the Dwoo class. This can be done by adding them in as parameters as the following example illustrates:
 
-###site_header.tpl
+### site_header.tpl
 {% highlight smarty %}
 <html>
   <head>
@@ -73,7 +73,7 @@ Sometimes you may need to pass variables to another template without wanting to 
   <body>
 {% endhighlight %}
 
-###page_about.tpl
+### page_about.tpl
 {% highlight smarty %}
 {include(file='site_header.tpl' title='About Us')}
 {% endhighlight %}
@@ -81,7 +81,7 @@ Sometimes you may need to pass variables to another template without wanting to 
 <!-- Other content for a company "About us" webpage goes here -->
 In the above example we have two files, one for a header and a snippet of a fictional 'About us' page. The page_about.tpl is parsed and passes it's title "About Us" through the title variable in the include statement to give the output:
 
-###Output
+### Output
 {% highlight html %}
 <html>
   <head>

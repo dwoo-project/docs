@@ -11,12 +11,12 @@ count_words(string $value)
 
 * **value**: the string to process
 
-##Example
+## Example
 {% highlight smarty %}
 {count_words('ab cd')}
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 2
 {% endhighlight %}

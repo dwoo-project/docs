@@ -11,14 +11,14 @@ loop(array $from [, $name = "default ] )
 
 > Note that this plugin supports [iterator variables](/documentation/1.x/iterator-variables.html) through the name parameter and also supports the [else](/documentation/1.x/blocks/else.html) plugin
 
-##Example
+## Example
 {% highlight smarty %}
 {loop $users}
     {$id}-{$name}
 {/loop}
 {% endhighlight %}
 
-###Data:
+### Data
 {% highlight php %}
 <?php
 'users' => array(
@@ -27,14 +27,14 @@ loop(array $from [, $name = "default ] )
 )
 {% endhighlight %}
 
-##Output
+## Output
 {% highlight text %}
 1-Bob
 2-John
 {% endhighlight %}
 
-##Accessing the array key
+## Accessing the array key
 To access the array key you have to use the `{$_key}` var within the loop, its name is not user-definable to keep this plugin as simple as possible.
 
-##Extra reads
+## Extra reads
 * [Using iterator variables](/documentation/1.x/iterator-variables.html)
