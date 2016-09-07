@@ -147,7 +147,7 @@ As above in Dwoo simple variables are passed and rendered to HTML using an assoc
 The variables page_title and page_content are passed to the template rendering API like such:
 {% highlight php %}
 <?php
-$dwoo = Dwoo();
+$dwoo = new Dwoo();
  
 $params = array();
 $params['page_title']   = 'The next social networking website';
@@ -170,7 +170,7 @@ In Dwoo it is possible to 'bundle' your variables up into arrays on the PHP side
 In the above code snippet we have two bundles, the first is the auth array that includes the user's username. The second is the array that contains the page content. This snippet is setup with the following PHP code:
 {% highlight php %}
 <?php
-$dwoo = Dwoo();
+$dwoo = new Dwoo();
  
 /* We hard code the parameters in here but in a real world app this would come from 
  * an authenticating module using a DB or maybe from an LDAP server. 
@@ -212,7 +212,7 @@ Sometimes you need to repeat parts of a web page in a systematic manor. In Dwoo 
 Above is a code snippet from an HTML form. The `type_id` is a simple variable (see above). The `licensee_type_list` variable is an array containing associated arrays. What occurs is that in every iteration of the loop the [loop](/documentation/1.x/blocks/loop.html) plugin extracts the values from an array entry with its name and id as keys and substitutes them into the template. The above snippet (if in a file called `code_snippet.tpl`) would be initialized and setup with the following PHP:
 {% highlight php %}
 <?php
-$dwoo = Dwoo();
+$dwoo = new Dwoo();
  
 /* Although we are populating this by hand it will usually come from a DB in practice.  */
  
