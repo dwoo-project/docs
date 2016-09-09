@@ -7,7 +7,7 @@ title: Changelog
 `Deprecated` 
 * Dwoo class is deprecated.
 
-`Fixed`
+`Fixed`   
 * Fix for reading `unassigned _filter` from `Zend_View_Abstract` for **ZendFramework** adapter.
 * Fixed `{capture}` contents lacking the output of block plugins when multiple block plugins are used.
 * Fixed Dwoo compiler to not unnecessarily fail at statements involving method calls and multiple arguments.
