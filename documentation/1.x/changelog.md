@@ -352,7 +352,7 @@ title: Changelog
 * Made the dependency on the hash extension optional
 * Fixed compiler bug that prevented method calls combined with named parameters
 * Fixed compiler bug that prevented the % shortcut for constants to work within
-  function calls (basically it only worked as {%CONST})
+  function calls (basically it only worked as `{%CONST}`)
 * Fixed compiler bug that prevented empty() to be called
 * Fixed several modifier parsing bugs
    => http://forum.dwoo.org/viewtopic.php?id=27
@@ -420,8 +420,7 @@ title: Changelog
 + Plugins: Added {do} that executes whatever you feed it whitout echoing the
   result, used internally for extends but you can use it if required
 + Plugins: Added {eol} that prints an end of line character (OS-specific)
-+ Syntax: Added shortcut for {$dwoo.const.*} using '%', for example you can use
-  {%FOO} instead of {$dwoo.const.FOO}
++ Syntax: Added shortcut for `{$dwoo.const.*}` using `%`, for example you can use `{%FOO}` instead of `{$dwoo.const.FOO}`
 + Syntax: When using named parameters, typing a parameter name without any
   value is the same as typing param=true, for example {foo name="test" bar} and
   {foo name="test" bar=true} are equals, can be useful for very complex plugins
