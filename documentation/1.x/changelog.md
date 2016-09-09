@@ -4,7 +4,7 @@ title: Changelog
 ---
 
 ## 1.2.1 (2014-04-20)
-`Deprecated`
+`Deprecated` 
 * Dwoo class is deprecated.
 
 `Fixed`
