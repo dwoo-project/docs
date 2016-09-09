@@ -4,10 +4,12 @@ title: Changelog
 ---
 
 ## 1.2.1 (2014-04-20)
-`Deprecated` 
+`Deprecated`
+
 * Dwoo class is deprecated.
 
-`Fixed`   
+`Fixed`
+
 * Fix for reading `unassigned _filter` from `Zend_View_Abstract` for **ZendFramework** adapter.
 * Fixed `{capture}` contents lacking the output of block plugins when multiple block plugins are used.
 * Fixed Dwoo compiler to not unnecessarily fail at statements involving method calls and multiple arguments.
@@ -18,10 +20,12 @@ title: Changelog
 * Fix opcache and apc compatibility.
 
 `Removed`
+
 * Remove include so autoloader can handle it.
 
 ## 1.2.0 (2013-02-15)
 `Deprecated`
+
 * BC Break: Dwoo_Core::isArray had to be fixed and it has been split up
   in 3 methods, isArray (for array access), isTraversable (for foreach)
   and count (just a helper that counts anything). It won't affect you
@@ -37,6 +41,7 @@ title: Changelog
   346 [http://bugs.dwoo.org/dwoo/browse_code/revision/345] for more infos
   
 `Added`
+
 * Added support for nested blocks for template inheritance, block names
   must be unique, overriding of any block is done at the top level, thanks
   to Ian Carpenter for the patch
@@ -56,6 +61,7 @@ title: Changelog
   it with caution
 
 `Fixed`
+
 * Fixed PHP parse errors being generated in compiled templates when
   {dynamic} was nested
 * Fixed extends bug when calling {extends} with parenthesis
@@ -78,11 +84,13 @@ title: Changelog
 
 ##  1.1.1 (2010-02-07)
 `Added`
+
 * Added {optional} plugin that just prints an optional var without any
   notice if it doesn't exist
 * Added Dwoo::setTemplate() for testing purposes mostly
 
 `Fixed`
+
 * Fixed an {extends} parsing bug that prevented the use of single-quotes
   around the parent template's filename
 * Fixed a security issue, if you didn't use a custom compiler factory but
@@ -100,7 +108,7 @@ title: Changelog
   compiled sub-template couldn't access the dwoo charset property,
   resulting in a fatal error)
 * Fixed a property reading bug on objects that implemented __get but not
-  __isset, implementing __isset is however very much recommended
+  `__isset`, implementing `__isset` is however very much recommended
 * Fixed a Dwoo_Data bug in the append method when the index didn't exist
   yet it threw a notice
 * Fixed a bug when accessing global vars from a sub-template
@@ -113,10 +121,12 @@ title: Changelog
   outputting the cached version
 
 `Removed`
+
 * Removed a couple of `@` operator calls to `file_get_contents`
 
 ## 1.1.0 (2009-07-18)
 `Deprecated`
+
 * BC Break: Dwoo::initGlobals() is only called once during the Dwoo object
   construction. If you had overriden it and need to update global data
   before each template is executed you should instead override
@@ -127,6 +137,7 @@ title: Changelog
   to the next if you render several in series.
   
 `Added`
+
 * Added {template} plugin that allows you to define sub-templates and then
   call them (works recursively too, good for menus and lists)
 * Added {load_templates} to load external sub-templates into your file
@@ -141,6 +152,7 @@ title: Changelog
   work with CakePHP 1.2
 
 `Fixed`
+
 * Adapters: Zend: Denis Arh is now appointed maintainer of that part and
   fixed a few things since 1.0.1
 * The include_path isn't altered anymore, hopefully saving some stat calls
@@ -170,6 +182,7 @@ title: Changelog
 
 ## 1.0.1 (2008-12-24)
 `Fixed`
+
 * Direct assignments like {$foo = 5} now allow spaces around the operator
 * Fixed a {foreach} bug with the implode argument
 * Fixed modulo operator in if statements
@@ -179,12 +192,14 @@ title: Changelog
 
 ## 1.0.0 (2008-10-23)
 `Deprecated`
+
 * BC Break: Small one that probably won't affect anyone, but it makes the
   PluginProxy feature much stronger. Basically if you used a custom one you
   will get a fatal error and need to update it to conform to the new
   IPluginProxy interface, that's it
   
 `Added`
+
 * Compiler: the modifier syntax (|foo) can now be applied on functions and on
   complex variables i.e. {$obj->getStuff()|upper} or {lower('foo')|upper}
 * SmartyCompat: Added a {section} plugin but I strongly discourage using it,
@@ -193,6 +208,7 @@ title: Changelog
   $skip parameter has been dropped
   
 `Fixed`
+
 * The core Dwoo class doesn't need writable compile/cache dirs in the
   constructor anymore so you can provide custom ones later through
   ->setCompile(/Cache)Dir - thanks to Denis Arh for the patch
@@ -222,6 +238,7 @@ title: Changelog
 
 ## 1.0.0beta (2008-09-08)
 `Deprecated`
+
 * Important note : Dwoo.php should not be included directly anymore, please
   read the UPGRADE_NOTES file for more infos on the matter, if you don't
   your Dwoo install will most likely break after the update anyway
@@ -234,6 +251,7 @@ title: Changelog
   be fine, so to fix this you should convert your relative includes/extends
   
 `Added`
+
 * Adapters: Added the Agavi interface for Dwoo
   (see /Dwoo/Adapters/Agavi/README)
 * API: Added Dwoo_Compilation_Exception methods getCompiler() and
@@ -244,6 +262,7 @@ title: Changelog
   comments result in syntax errors
   
 `Fixed`
+
 * The Compiler now ensures that a template starting with <?xml will not
   conflict with php using the short_open_tag=On setting
 * Complex arrays keys can be read using {$var["Long|Key*With.some)Crap"]},
@@ -270,6 +289,7 @@ title: Changelog
 
 ## 0.9.3 (2008-08-03)
 `Added`
+
 * Adapters: Added the ZendFramework interface for Dwoo
   (see /Dwoo/Adapters/ZendFramework/README)
 * Plugins: Added the {a} block plugin to generate <a> tags
@@ -294,6 +314,7 @@ title: Changelog
 * Compiler supports method calls into a method call's parameters
 
 `Fixed`
+
 * Dwoo_Compiler::implode_r is now public/static so it can be used in other
   places such as plugin proxies
 * Syntax: Math expressions in strings are now only allowed when the entire
@@ -312,6 +333,7 @@ title: Changelog
 
 ## 0.9.2 (2008-06-28)
 `Deprecated`
+
 * BC Break: Renamed the {strip} modifier/function to {whitespace}, this does
   not affect the strip block, that has been moved off the compiler into a
   plugin. Which is why the name conflict had to be resolved. Please report
@@ -330,6 +352,7 @@ title: Changelog
   need to override the default ones
   
 `Added`
+
 * Plugins: Added {dynamic} that allows cached templates to have dynamic
   (non-cached) parts, when rendering a cached page, the dynamic parts can still
   use the variables you provides
@@ -344,6 +367,7 @@ title: Changelog
   presence of a var inside a Dwoo_Data object
   
 `Fixed`
+
 * Plugins: added a fifth 'string $implode' parameter to {foreach}, it prints
   whatever you provide it between each item of the foreach, just like implode()
 * Plugins: added a fourth 'bool $case_sensitive' parameter to {replace}
@@ -374,6 +398,7 @@ title: Changelog
 
 ## 0.9.1 (2008-05-30)
 `Added`
+
 + API: Added Dwoo_Compiler->setAutoEscape() and getAutoEscape() to modify the
   automatic html entity escaping setting. This is disabled by default, and when
   enabled can be overriden with the {safe $var} plugin or the
@@ -384,6 +409,7 @@ title: Changelog
 + Syntax: Added {/} shortcut that closes the last opened block
 
 `Fixed`
+
 * Optimized scope-handling functions, {loop} and {with} are now slightly faster
 * Fixed a bug in {date_format} that prevented anything but unix timestamps to
   work
@@ -396,6 +422,7 @@ title: Changelog
 
 ## 0.9.0 (2008-05-10)
 `Deprecated`
+
 * BC Break: changed all class names to be PEAR compliant (aka use underscores
   to separate words/paths), sorry about that but I better do it now than in
   six months
@@ -407,6 +434,7 @@ title: Changelog
   among all classes and factory functions
   
 `Added`
+
 + Added a compiled version of Dwoo that loads faster (especially with opcode
   caches such as APC), include Dwoo.compiled.php instead of Dwoo.php on
   production but if you want to file a bug use Dwoo.php please as it allows
@@ -444,6 +472,7 @@ title: Changelog
 + Added a 'data' argument to {include} to be able to feed data directly into it
 
 `Fixed`
+
 * The compiler now throws Dwoo_Compilation_Exception exceptions upon failure
   and security problems lead to a Dwoo_Security_Exception being thrown. Runtime
   plugin errors and such trigger simple php errors to allow the template
@@ -476,12 +505,14 @@ title: Changelog
 
 ## 0.3.4 (2008-04-09)
 `Deprecated`
+
 * BC Break: DWOO_PATH constant changed to DWOO_DIRECTORY
 * BC Break: Smarty's @ operator for modifiers is now reversed, for example
   $array|reverse will reverse the items of that array while $array|@reverse
   will reverse each item of the given array (as if you used array_map)
   
 `Added`
+
 + Syntax: Added support for method calls on objects i.e. {$foo->bar()}
 + Added support for smarty security features, see the DwooSecurityPolicy class
   and $dwoo->setSecurityPolicy()
@@ -498,6 +529,7 @@ title: Changelog
   though so you might get compatibility warnings
   
 `Fixed`
+
 * Fixed {elseif} bug that appeared when multiple elseif tags were used in a row
 * Syntax: Improved simple math support to work within variable variables
   (i.e. you can do {$array[$index+1]}) and within strings as well. To prevent
@@ -511,6 +543,7 @@ title: Changelog
 
 ## 0.3.3 (2008-03-19)
 `Added`
+
 + Syntax: Added support for $dwoo.const.CONSTANT and
   $dwoo.const.Class::CONSTANT to read PHP constants from the template
 + Syntax: Added support for on/off/yes/no, that work as aliases for true/false
@@ -524,6 +557,7 @@ title: Changelog
   it breaks for you
   
 `Fixed`
+
 * {with} now skips the entire block if it's variable doesn't exist, so by
   itself it acts as if you would do {if $var}{with $var}{/with}{/if}
 * Each resource has a compiler factory function assigned to it, allowing you to
@@ -538,6 +572,7 @@ title: Changelog
 
 ## 0.3.2 (2008-03-09)
 `Added`
+
 + Added access to superglobals through $dwoo.get.value, $dwoo.post.value,
   etc.
 + Added outputFilters to Dwoo (use Dwoo->addOutputFilter and
@@ -566,6 +601,7 @@ title: Changelog
 + Added an abstract DwooFilter class that you can extend to build filters
 
 `Fixed`
+
 * PHP function calls are now case insensitive
 * Syntax: The compiler now parses expressions before modifiers, allowing for
   {$var/2|number_format} for example
@@ -576,6 +612,7 @@ title: Changelog
 
 ## 0.3.1 (2008-03-05)
 `Added`
+
 + Added {cycle} function
 + Syntax : Enabled support for associative arrays using
   array(key="value", key2=5) for example, which you can assign or use in a
@@ -589,6 +626,7 @@ title: Changelog
   features that you use
   
 `Fixed`
+
 * Bug fixed in {literal} parsing
 * Bug fixed in smarty functions handling
 * API : Moved Plugin types constants to Dwoo so the compiler doesn't have to
@@ -599,11 +637,13 @@ title: Changelog
 * Some changes in the cache handling of DwooTemplateFile
 
 `Removed`
+
 - Special thanks to Andrew Collins that found many of the bugs fixed in this
   release
 
 ## 0.3.0 (2008-03-02)
 `Added`
+
 + Full template cache support
 + DwooTemplateString class to load templates from a string
 + Dwoo::VERSION constant
@@ -614,6 +654,7 @@ title: Changelog
   complete for 0.4.0
   
 `Fixed`
+
 * {capture} is now compilable and has a new boolean flag to append output into
   the target variable instead of overwriting
 * {foreach} supports direct input (instead of only variables), allowing
@@ -629,10 +670,12 @@ title: Changelog
 
 ## 0.2.1 (2008-02-19)
 `Fixed`
+
 * Compiler fixes for argument parsing and handling of Smarty plugins
 
 ## 0.2.0 (2008-02-14)
 `Added`
+
 + Added support for plugins made for Smarty (that includes modifiers,
   functions and blocks). Not thoroughly tested.
 + Major API changes in the way Dwoo must be run, it's now much more
