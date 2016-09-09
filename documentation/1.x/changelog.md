@@ -4,6 +4,14 @@ title: Changelog
 ---
 
 ## 1.2.1 (2014-04-20)
+`Added`
+
+* Support for Composer, adding `composer.json` file.
+
+`Changed`
+
+* Minimum PHP version required is now **PHP 5.3**
+
 `Deprecated`
 
 * Dwoo class is deprecated.
@@ -603,70 +611,52 @@ title: Changelog
 `Fixed`
 
 * PHP function calls are now case insensitive
-* Syntax: The compiler now parses expressions before modifiers, allowing for
-  {$var/2|number_format} for example
-* DwooTemplateFile now extends DwooTemplateString instead of the other way
-  around as it was before
-* {else} is now a general purpose plugin that can act as 'else' for foreach,
-  for and if/elseif, foreachelse is still available though
+* Syntax: The compiler now parses expressions before modifiers, allowing for `{$var/2|number_format}` for example
+* **DwooTemplateFile** now extends DwooTemplateString instead of the other way around as it was before
+* `{else}` is now a general purpose plugin that can act as 'else' for foreach, for and if/elseif, foreachelse is still available though
 
 ## 0.3.1 (2008-03-05)
 `Added`
 
-+ Added {cycle} function
-+ Syntax : Enabled support for associative arrays using
-  array(key="value", key2=5) for example, which you can assign or use in a
-  foreach directly
-+ Syntax : Added support for {$var +-/*% X} (i.e. {$var + 4}), useful for
-  simple math operations without the math plugin
-+ API : Added append/appendByRef to DwooData
-+ Completely rebuilt DwooSmartyAdapter, it should "work" and fail silently if
-  you use a non supported function now, however you can set
-  $smarty->show_compat_errors=true; on it to receive notices about unsupported
-  features that you use
++ Added `{cycle}` function
++ Syntax : Enabled support for associative arrays using `array(key="value", key2=5)` for example, which you can assign or use in a foreach directly
++ Syntax : Added support for `{$var +-/*% X}` (i.e. `{$var + 4}`), useful for simple math operations without the math plugin
++ API : Added append/appendByRef to **DwooData**
++ Completely rebuilt **DwooSmartyAdapter**, it should "work" and fail silently if you use a non supported function now, however you can set `$smarty->show_compat_errors=true;` on it to receive notices about unsupported features that you use
   
 `Fixed`
 
-* Bug fixed in {literal} parsing
+* Bug fixed in `{literal}` parsing
 * Bug fixed in smarty functions handling
-* API : Moved Plugin types constants to Dwoo so the compiler doesn't have to
-  be loaded unles really required
-* API : Moved globals and var reinitialization in Dwoo into their own methods
-  so that child classes can easily add globals
+* API : Moved Plugin types constants to Dwoo so the compiler doesn't have to be loaded unles really required
+* API : Moved globals and var reinitialization in Dwoo into their own methods so that child classes can easily add globals
 * Some improvements in the compiler output
-* Some changes in the cache handling of DwooTemplateFile
+* Some changes in the cache handling of **DwooTemplateFile**
 
 `Removed`
 
-- Special thanks to Andrew Collins that found many of the bugs fixed in this
-  release
+- Special thanks to Andrew Collins that found many of the bugs fixed in this release
 
 ## 0.3.0 (2008-03-02)
 `Added`
 
 + Full template cache support
-+ DwooTemplateString class to load templates from a string
-+ Dwoo::VERSION constant
-+ {dump} plugin to print out variables
-+ Unit tests (with PHPUnit) covering 73% of the codebase right now, which
-  should help reducing regression bugs in the next versions.
-+ Started commenting (with phpdocs) properly all the classes, should be
-  complete for 0.4.0
++ **DwooTemplateString** class to load templates from a string
++ `Dwoo::VERSION` constant
++ `{dump}` plugin to print out variables
++ Unit tests (with PHPUnit) covering 73% of the codebase right now, which should help reducing regression bugs in the next versions.
++ Started commenting (with phpdocs) properly all the classes, should be complete for 0.4.0
   
 `Fixed`
 
-* {capture} is now compilable and has a new boolean flag to append output into
-  the target variable instead of overwriting
-* {foreach} supports direct input (instead of only variables), allowing
-  constructs like {foreach array(a,b,c) val}{$val}{/foreach} for example that
-  would output abc.
-* pre/postProcessing functions in block plugins now receive an array of named
-  parameters instead of numbered
-* Major refactoring of DwooTemplateFile and DwooCompiler
-* Cleaned up members visibility in Dwoo/DwooCompiler
+* `{capture}` is now compilable and has a new boolean flag to append output into the target variable instead of overwriting
+* `{foreach}` supports direct input (instead of only variables), allowing constructs like `{foreach array(a,b,c) val}{$val}{/foreach}` for example that would output abc.
+* pre/postProcessing functions in block plugins now receive an array of named parameters instead of numbered
+* Major refactoring of **DwooTemplateFile** and **DwooCompiler**
+* Cleaned up members visibility in **Dwoo/DwooCompiler**
 * Fixes in the compiler parsing and general variables handling
 * Multiple bugfixes here and there thanks to the unit tests
-* Optimized {foreach} a lot
+* Optimized `{foreach}` a lot
 
 ## 0.2.1 (2008-02-19)
 `Fixed`
@@ -676,12 +666,9 @@ title: Changelog
 ## 0.2.0 (2008-02-14)
 `Added`
 
-+ Added support for plugins made for Smarty (that includes modifiers,
-  functions and blocks). Not thoroughly tested.
-+ Major API changes in the way Dwoo must be run, it's now much more
-  flexible and should not change too much in the future.
-+ Added support for custom plugins, filters should come in the next version
-  although the API to register them is already in.
+* Added support for plugins made for Smarty (that includes modifiers, functions and blocks). Not thoroughly tested.
+* Major API changes in the way Dwoo must be run, it's now much more flexible and should not change too much in the future.
+* Added support for custom plugins, filters should come in the next version although the API to register them is already in.
 
 ## 0.1.0 (2008-02-08)
 * Initial release
