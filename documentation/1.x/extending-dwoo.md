@@ -50,7 +50,7 @@ Here, the fix_address() function replaces common email address characters with h
 If you want add more than one custom plugin, you can specify to the loader a custom directory to search for, such as :
 {% highlight php %}
 <?php
-$this->getLoader()->addDirectory(__DIR__ . 'Views/plugins/'); // BUGGED FOR NOW
+$this->getLoader()->addDirectory(__DIR__ . 'Views/plugins/');
 {% endhighlight %}
 
 ## How to extends to the Dwoo class ?
