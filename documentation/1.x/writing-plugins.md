@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: Extending Dwoo - Writing Plugins
+title: Writing your own plugins
 ---
 
 Dwoo plugins come in different flavours, functions/modifiers, blocks and filters. Most of those can be built using simple functions or more complex classes.
