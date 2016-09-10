@@ -61,3 +61,10 @@ class MyTemplate extends DWoo {
 }
 {% endhighlight %}
 > Careful, this class **cannot** be a **Singleton** because plugins clone it!
+
+## Changelog
+
+| Version | Description |
+| ------- | ----------- |
+| **1.2.2** | Add support for closure when adding a new plugin with: `$dwoo->addPlugin()`. |
+{: class="table table-striped table-bordered"}
