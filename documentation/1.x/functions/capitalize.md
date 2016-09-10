@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:capitalize"
+title: capitalize
 ---
 
 Uppercases the first letter of each word in the given string

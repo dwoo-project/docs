@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:eval"
+title: eval
 ---
 
 Evaluates the given string as if it was a template

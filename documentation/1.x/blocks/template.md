@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Blocks:template"
+title: template
 ---
 
 Checks whether a variable is not null

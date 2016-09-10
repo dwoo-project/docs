@@ -53,7 +53,17 @@ layout: default
 					<ul class="breadcrumb pull-right">
 						<li><a href="/">Home</a></li>
 						{% if version != null %}<li><a href="/documentation/{{ version }}/">{{ version }}</a></li>{% endif %}
-						<li class="active">{{ page.title }}</li>
+						{% assign crumbs = page.url | split: '/' %}
+						{% assign crumbstotal = crumbs | size %}
+						{% for crumb in crumbs offset:3 %}
+							{% unless crumb == 'index.html' %}
+								{% if forloop.last %}
+									<li class="active">{{ crumb | remove: '.html' }} </li>
+								{% else %}
+									<li>{{ crumb | remove: '.html' }} </li>
+								{% endif %}
+							{% endunless %}
+						{% endfor %}
 					</ul>
 				</div>
 			</section>

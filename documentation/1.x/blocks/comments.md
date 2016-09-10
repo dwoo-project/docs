@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Blocks:comments"
+title: comments
 ---
 
 The comments plugin allows you to put comments in your template files. These comments are handled by Dwoo, and are not sent as output to the browser, unlike HTML comments.

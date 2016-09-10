@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:do"
+title: do
 ---
 
 Executes whatever follows without output. This is basically a cleaner alternative to doing `{assign func("foo") var}` or to use `{capture}` to silence some output.

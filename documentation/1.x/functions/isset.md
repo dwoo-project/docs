@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:isset"
+title: isset
 ---
 
 Checks whether a variable is not null

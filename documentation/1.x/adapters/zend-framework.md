@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Adapters: Zend Framework"
+title: Zend Framework
 ---
 
 ## Bootstrap code

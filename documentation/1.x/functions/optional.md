@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:optional"
+title: optional
 ---
 
 Prints out a variable without any notice if it doesn't exist.

@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:wordwrap"
+title: wordwrap
 ---
 
 Wraps a text at the given line length

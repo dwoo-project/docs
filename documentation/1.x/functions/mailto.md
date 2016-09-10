@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:mailto"
+title: mailto
 ---
 
 Outputs a mailto link with optional spam-proof (okay probably not) encoding

@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Blocks:if"
+title: if
 ---
 
 Conditional block, the syntax is very similar to the php one, allowing `()` `||` `&&` and other [php operators](http://php.net/operators){:target="_blank"}.
@@ -19,7 +19,7 @@ Additional Dwoo operators and their equivalent php syntax are as follow:
 * X is [not] even [by Y] → (X % 2) == 0 or ((X/Y) % 2) == 0
 * X is [not] odd [by Y] → (X % 2) != 0 or ((X/Y) % 2) != 0
 
-## Example
+### Example
 {% highlight smarty %}
 {if 3 == 5}
   never gonna happen
@@ -30,7 +30,14 @@ Additional Dwoo operators and their equivalent php syntax are as follow:
 {/if}
 {% endhighlight %}
 
-## Output (hopefully)
+### Output (hopefully)
 {% highlight text %}
 if you don't see this, the world is coming to its end
 {% endhighlight %}
+
+## Changelog
+
+| Version | Description |
+| ------- | ----------- |
+| **1.2.2** | Add support for `XOR` and `^` operators. |
+{: class="table table-striped table-bordered"}

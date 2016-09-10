@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Adapters: Agavi"
+title: Agavi
 ---
 
 ## Install instructions

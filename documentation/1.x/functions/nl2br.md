@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:nl2br"
+title: nl2br
 ---
 
 Converts line breaks into `<br />` tags

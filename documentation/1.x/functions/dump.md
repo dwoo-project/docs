@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:dump"
+title: dump
 ---
 
 Dumps values of the given variable, or the entire data if nothing provided

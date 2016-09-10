@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Blocks:loop"
+title: loop
 ---
 
 Loops over an array of arrays and allows for really simple / small constructs by moving the scope down to each element automatically. It is basically a combination of foreach and with internally.

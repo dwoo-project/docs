@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:date_format"
+title: date_format
 ---
 
 Formats a date

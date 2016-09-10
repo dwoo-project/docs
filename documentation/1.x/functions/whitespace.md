@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:whitespace"
+title: whitespace
 ---
 
 Replaces all white-space characters with the given string

@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:regex_replace"
+title: regex_replace
 ---
 
 Replaces the search string by the replace string using regular expressions

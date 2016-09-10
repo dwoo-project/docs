@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:count_sentences"
+title: count_sentences
 ---
 
 Counts the sentences in a string

@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:strip_tags"
+title: strip_tags
 ---
 
 Removes all html tags

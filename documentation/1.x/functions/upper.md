@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:upper"
+title: upper
 ---
 
 Converts a given string to upper case.

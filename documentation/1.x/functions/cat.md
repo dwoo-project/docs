@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:cat"
+title: cat
 ---
 
 Concatenates any number of variables or strings fed into it

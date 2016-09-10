@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:reverse"
+title: reverse
 ---
 
 Reverses a string or an array

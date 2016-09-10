@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Blocks:textformat"
+title: textformat
 ---
 
 Formats a string to the given format, you can wrap lines at a certain length and indent them

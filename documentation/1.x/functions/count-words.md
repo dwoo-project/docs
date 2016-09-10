@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:count_words"
+title: count_words
 ---
 
 Counts the words in a string

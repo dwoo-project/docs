@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:include"
+title: include
 ---
 
 Include allows you to insert other templates into the current template.

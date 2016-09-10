@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:cycle"
+title: cycle
 ---
 
 Cycles between several values and returns one of them on each call

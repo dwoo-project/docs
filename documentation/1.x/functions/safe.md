@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:safe"
+title: safe
 ---
 
 Marks the variable as safe and removes the auto-escape function, only useful if you turned auto-escaping on

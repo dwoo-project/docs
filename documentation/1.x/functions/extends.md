@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:extends"
+title: extends
 ---
 
 Extends another template, read more about [template inheritance](/documentation/1.x/template-inheritance.html) for details and examples.

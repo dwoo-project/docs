@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:lower"
+title: lower
 ---
 
 Converts a given string to lower case.

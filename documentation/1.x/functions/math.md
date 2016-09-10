@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:math"
+title: math
 ---
 
 Computes a mathematical equation

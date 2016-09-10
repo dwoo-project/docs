@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:spacify"
+title: spacify
 ---
 
 Adds spaces (or the given character(s)) between every character of a string

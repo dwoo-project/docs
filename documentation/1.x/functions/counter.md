@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:counter"
+title: counter
 ---
 
 Initiates a counter that is incremented every time you call it

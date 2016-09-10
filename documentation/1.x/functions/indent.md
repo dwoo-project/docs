@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:indent"
+title: indent
 ---
 
 Indents every line of a text by the given amount of characters

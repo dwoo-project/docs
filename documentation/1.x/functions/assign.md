@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:assign"
+title: assign
 ---
 
 Assigns a value to a variable

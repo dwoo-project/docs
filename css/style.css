@@ -189,6 +189,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+thead {
+	background: #428bca;
+	color: white;
+}
 td,
 th {
 	padding: 0;

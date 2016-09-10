@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:gravatar"
+title: gravatar
 ---
 
 Returns a link to the gravatar of someone based on his email address, see the Gravatar website if you don't know what this is about.

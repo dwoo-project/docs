@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:escape"
+title: escape
 ---
 
 Applies various escaping schemes on the given string

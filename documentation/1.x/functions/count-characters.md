@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:count_characters"
+title: count_characters
 ---
 
 Counts the characters in a string

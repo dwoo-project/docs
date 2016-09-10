@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:truncate"
+title: truncate
 ---
 
 Truncates a string at the given length

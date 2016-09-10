@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Blocks:capture"
+title: capture
 ---
 
 Captures all the output within this block and saves it into `{$.capture.default}` by default, or `{$.capture.name}` if you provide another name.

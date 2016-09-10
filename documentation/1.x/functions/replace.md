@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:replace"
+title: replace
 ---
 
 Replaces the search string by the replace string

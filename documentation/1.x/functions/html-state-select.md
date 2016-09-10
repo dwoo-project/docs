@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:html_state_select"
+title: html_state_select
 ---
 
 Returns a simple HTML select element filled with a list of all US States.

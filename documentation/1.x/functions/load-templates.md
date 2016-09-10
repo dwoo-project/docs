@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:load_templates"
+title: load_templates
 ---
 
 Checks whether a variable is not null

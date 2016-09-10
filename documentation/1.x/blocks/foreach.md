@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Blocks:foreach"
+title: foreach
 ---
 
 Similar to the php foreach block, loops over an array

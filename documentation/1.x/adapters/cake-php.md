@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Adapters: CakePHP"
+title: CakePHP
 ---
 
 ## Installation

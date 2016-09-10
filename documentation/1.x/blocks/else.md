@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Blocks:else"
+title: else
 ---
 
 Generic else block, it supports all builtin optional-display blocks which are [if](/documentation/1.x/blocks/if.html), [loop](/documentation/1.x/blocks/loop.html), [for](/documentation/1.x/blocks/for.html), [foreach](/documentation/1.x/blocks/foreach.html) and [with](/documentation/1.x/blocks/with.html).

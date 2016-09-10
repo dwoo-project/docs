@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Blocks:dynamic"
+title: dynamic
 ---
 
 Marks the contents of the block as dynamic. Which means that it will not be cached.

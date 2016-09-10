@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Blocks:auto_escape"
+title: auto_escape
 ---
 
 Overrides the compiler auto-escape setting within the block

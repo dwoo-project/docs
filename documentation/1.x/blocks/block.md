@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Blocks:block"
+title: block
 ---
 
 Defines a block that can be extended by a child template

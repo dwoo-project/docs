@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:html_select_time"
+title: html_select_time
 ---
 
 Creates select boxes for any/all of hour, minute, seconds and meridian.

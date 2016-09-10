@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:count_paragraphs"
+title: count_paragraphs
 ---
 
 Counts the paragraphs in a string

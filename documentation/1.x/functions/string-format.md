@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:string-format"
+title: string-format
 ---
 
 Formats a string using the sprintf function

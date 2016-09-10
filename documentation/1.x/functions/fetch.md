@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:fetch"
+title: fetch
 ---
 
 Reads a file

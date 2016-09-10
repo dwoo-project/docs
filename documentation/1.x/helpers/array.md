@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Helpers:array"
+title: array
 ---
 
 Creates a PHP array with the given input

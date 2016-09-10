@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Functions:default"
+title: default
 ---
 
 Returns a variable or a default value if it's empty

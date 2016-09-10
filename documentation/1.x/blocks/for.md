@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Blocks:for"
+title: for
 ---
 
 Similar to the php for statement

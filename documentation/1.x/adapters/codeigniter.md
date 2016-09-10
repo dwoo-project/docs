@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Adapters: Codeigniter"
+title: Codeigniter
 ---
 
 Works with : **CodeIgniter 1.7.0+**

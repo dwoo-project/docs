@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Blocks:strip"
+title: strip
 ---
 
 Removes the white-space at the beginning and end of each line, and also removes all line breaks

@@ -1,6 +1,6 @@
 ---
 layout: documentation
-title: "Blocks:with"
+title: with
 ---
 
 Moves the scope down into an array of values, allowing one to type `{$var}` instead of `{$array.var}` within the `{with}` block
