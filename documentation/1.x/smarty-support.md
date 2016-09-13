@@ -96,3 +96,7 @@ Those are probably going to be implemented, but I can't say when yet:
 * `debug_tpl`
 * `cache_modified_check`
 * `default_resource_type`
+
+## Unsupported Smarty Features
+* `{break}`
+* `{continue}`
