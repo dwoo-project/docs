@@ -56,7 +56,7 @@ $this->getLoader()->addDirectory(__DIR__ . 'Views/plugins/');
 ## How to extends to the Dwoo class ?
 {% highlight php %}
 <?php
-class MyTemplate extends DWoo {
+class MyTemplate extends Dwoo {
 
 }
 {% endhighlight %}
