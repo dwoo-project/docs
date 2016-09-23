@@ -10,7 +10,7 @@ navigation:
   - {title: Documentation, url: "/documentation/"}
   - {title: About, url: "/about.html"}
 documentation:
-  1.x:
+  1.2.x:
     -
       title: "Dwoo users"
       children:

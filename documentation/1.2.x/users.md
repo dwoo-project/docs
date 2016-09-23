@@ -3,7 +3,7 @@ layout: documentation
 title: Users
 ---
 
-If your site or company is using Dwoo feel free to drop a link here, and if you made an open source framework that works with Dwoo also add it on the [frameworks](/documentation/1.x/frameworks.html) page.
+If your site or company is using Dwoo feel free to drop a link here, and if you made an open source framework that works with Dwoo also add it on the [frameworks](/documentation/1.2.x/frameworks.html) page.
 
 ## Products
 These products ([CMS](/http://en.wikipedia.org/wiki/Content_management_system){:target="_blank"} and others) use Dwoo as a template engine, natively or through some optional extensions:

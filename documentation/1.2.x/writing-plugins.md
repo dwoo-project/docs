@@ -8,7 +8,7 @@ Before we start, you should know about those general plugin featuers :
 
 * Dwoo automatically loads the plugins that are in it's plugin directory, along with those you manually add through Dwoo_Loader::addDirectory. However, for those plugins to work correctly, they must follow some naming conventions. The function/block plugins must be declared as `function Dwoo_Plugin_<name>` or `class Dwoo_Plugin_<name>`, while the filters use `function Dwoo_Filter_<name>` and `class Dwoo_Filter_<name>` and processors use `Dwoo_Processor_`. Plugins added manually must not follow those rules as you provide their exact function callbacks when you add them.
 * The parameter names that you define in your plugin and the default values as well are important, because that will define the parameter names to use in the template when you call that plugin, and it will also allow the compiler to detect when a required argument is missing, so that plugins don't have to handle that logic.
-* The main functions for each plugin, the ones that accept the parameters, can have a rest array parameters, which aggregates all unmapped parameters. It has to be declared as `array $rest` or `array $rest=array()` to work as it should. See the [array](/documentation/1.x/helpers/array.html) and [math](/documentation/1.x/functions/math.html) plugins for examples.
+* The main functions for each plugin, the ones that accept the parameters, can have a rest array parameters, which aggregates all unmapped parameters. It has to be declared as `array $rest` or `array $rest=array()` to work as it should. See the [array](/documentation/1.2.x/helpers/array.html) and [math](/documentation/1.2.x/functions/math.html) plugins for examples.
 
 ## Functions / Modifiers
 There are three ways of building function plugins, we will explore those, learning how to make a plugin that returns an uppercased string.
@@ -116,7 +116,7 @@ class Dwoo_Plugin_upper extends Dwoo_Block_Plugin
 More complex to build as they make use of the pre and postProcessing functions, precompiled block plugins allowed complex things like if, elseif, foreach, for and so on to be made as plugins completely separated from the compiler.  
 Those plugins that are completely handled by the compiler should implement the `Dwoo_ICompilable_Block` interface, which does nothing but tells the compiler that the plugin should not be loaded at runtime, which enhances performances a bit.  
 The block compiler functions have the particularity to receive two sets of arguments in `$params`, one set containing the output-ready php safe values, accessible through `Dwoo_Utils::getCompiledParams($params)`, and the other set that contains the original arguments provided by the template source, which are accessible through `Dwoo_Utils::getRealParams($params)`. This is required in some rare cases, but usually the first method is sufficient.  
-Here is an example that compiles our now famous upper plugin. However this example is quite limited and I advise you to look at [for](/documentation/1.x/blocks/for.html), [foreach](/documentation/1.x/blocks/foreach.html) and if plugins for more advanced implementations.  
+Here is an example that compiles our now famous upper plugin. However this example is quite limited and I advise you to look at [for](/documentation/1.2.x/blocks/for.html), [foreach](/documentation/1.2.x/blocks/foreach.html) and if plugins for more advanced implementations.  
 {% highlight php %}
 <?php
 class Dwoo_Plugin_upper extends Dwoo_Block_Plugin implements Dwoo_ICompilable_Block 
@@ -176,7 +176,7 @@ Postprocessors are added to the compiler through `$compiler->addPostProcessor()`
 They are built exactly as preprocessors so see the examples above.
 
 ### Filters
-Filters are added to the Dwoo instance through `$dwoo->addFilter()`, and are called after the template is fully rendered, right before it is cached (if cache is in use). You can use those to do some work on the HTML output. For example Dwoo includes an [html_format](/documentation/1.x/filters/html-format.html) filter that correctly indents the html of your page so that the sources look nicer and are easier to read. Which can be useful especially while developing the site.
+Filters are added to the Dwoo instance through `$dwoo->addFilter()`, and are called after the template is fully rendered, right before it is cached (if cache is in use). You can use those to do some work on the HTML output. For example Dwoo includes an [html_format](/documentation/1.2.x/filters/html-format.html) filter that correctly indents the html of your page so that the sources look nicer and are easier to read. Which can be useful especially while developing the site.
 They are built exactly like processors excepted that they receive a Dwoo object as parameter and that they use the `Dwoo_Filter_` prefix, for example :
 {% highlight php %}
 <?php

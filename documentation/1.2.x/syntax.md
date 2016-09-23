@@ -31,7 +31,7 @@ Here is a FOO
 HERE IS A FOO IN A STRING
 AND A FOOIABLE STICKING TO TEXT
 {% endhighlight %}
-You can also concatenate strings and variables with the [cat()](/documentation/1.x/functions/cat.md) function.
+You can also concatenate strings and variables with the [cat()](/documentation/1.2.x/functions/cat.md) function.
 
 ### Functions
 The function syntax is quite flexible, functions can either be called just like in php, using `{upper("hello")}` to call the function upper with the parameter hello. This would print HELLO, as the upper function's purpose is to make strings uppercased. In this case the multiple parameters are split using a comma, i.e. {function("a", "b")} will call function with two parameters, a and b.
@@ -126,4 +126,4 @@ However, if we do :
 would output **ba dc** as with the `@`, reverse was not applied to the array but to 'ab' and then to 'cd', reversing each character sequence.
 
 ### Shortcuts
-Read more about [shortcuts](/documentation/1.x/shortcuts.html) to write templates faster.
+Read more about [shortcuts](/documentation/1.2.x/shortcuts.html) to write templates faster.

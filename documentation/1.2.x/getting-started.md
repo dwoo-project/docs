@@ -9,19 +9,21 @@ Dwoo is a templating system used to make creating websites easier and more struc
 1. Creating, initializing and managing the Dwoo runtime; and
 2. Templating with the Dwoo templating language.
 
-Dwoo relies on [plugins](/documentation/1.x/plugins.html) to provide useful functionality, examples may include: if-else blocks, include functionality, string manipulation and loops. For a full list see the [plugins](/documentation/1.x/plugins.html) page.
+Dwoo relies on [plugins](/documentation/1.2.x/plugins.html) to provide useful functionality, examples may include: if-else blocks, include functionality, string manipulation and loops. For a full list see the [plugins](/documentation/1.2.x/plugins.html) page.
 
 ## Install
 
-### PEAR install **(DEPRECATED)**
-Dwoo is now available on [pearhub](http://web.archive.org/web/20130315111540/http://pearhub.org/projects/Dwoo), you can install it by executing:
+### Installing via Composer **(recommended)**
+Dwoo is available on [packagist.org](https://packagist.org/packages/dwoo/dwoo){:target="_blank"} to do so, install [Composer](https://getcomposer.org/download/){:target="_blank"} and run the following command to get the latest version:
 {% highlight bash %}
-pear channel-discover pearhub.org
-pear install pearhub/Dwoo
+composer require dwoo/dwoo
 {% endhighlight %}
 
-### Manual install
-To install Dwoo manually, you can go to the [downloads page](/downloads.html) to get the latest version of Dwoo 1.x branch. 
+### Installing from the tarball release
+1. Download the most recent tarball from the [downloads page](/downloads.html),
+2. Unpack the tarball,
+3. Move the files somewhere in your project,
+4. Go to the [next section](#running-dwoo) to know how to use classes. 
 
 ## Running Dwoo
 
@@ -30,7 +32,7 @@ Here is the simplest way to output a Dwoo template.
 {% highlight php %}
 <?php
 // Include the main class, the rest will be automatically loaded
-include 'path/to/dwooAutoload.php';
+require 'vendor/autoload.php';
 
 // Create the controller, it is reusable and can render multiple templates
 $dwoo = new Dwoo();
@@ -59,7 +61,7 @@ In this example we add the Dwoo_Data class that serves as a data container, and 
 {% highlight php %}
 <?php
 // Include the main class, the rest will be automatically loaded
-include 'path/to/dwooAutoload.php';
+require 'vendor/autoload.php';
 
 // Create the controller, it is reusable and can render multiple templates
 $dwoo = new Dwoo();
@@ -80,10 +82,11 @@ $dwoo->get($tpl, $data);
 {% endhighlight %}
 
 ### Using a Compiler object
-If you want to use [custom pre- or post-processors](/documentation/1.x/plugins.html), you need to instantiate a [Dwoo_Compiler](/documentation/1.x/dwoo-compiler.html) and add the processors to it.
+If you want to use [custom pre- or post-processors](/documentation/1.2.x/plugins.html), you need to instantiate a [Dwoo_Compiler](/documentation/1.2.x/dwoo-compiler.html) and add the processors to it.
 {% highlight php %}
 <?php
-include 'path/to/dwooAutoload.php';
+require 'vendor/autoload.php';
+
 $dwoo = new Dwoo();
 $tpl = new Dwoo_Template_File('path/to/index.tpl');
 $data = array('a'=>5, 'b'=>6);
@@ -113,7 +116,7 @@ You first have to create an "article.tpl" template file, the name doesn't matter
 You will then use this template to render all the articles.
 {% highlight php %}
 <?php
-include 'path/to/dwooAutoload.php';
+require 'vendor/autoload.php';
 
 $dwoo = new Dwoo();
 // Load the "article" template
@@ -201,7 +204,7 @@ The above two snippets generate roughly the same HTML as the first example using
 Dwoo has if/else constructs to allow the coder to add conditional sections to web pages. This can be used for things such as restricting content to authorized users or displaying form components only if certain conditions are met. Dwoo's conditional statements are quite flexible, however we only cover the basics here.
 
 ### Loops
-Sometimes you need to repeat parts of a web page in a systematic manor. In Dwoo this is done using [loops](/documentation/1.x/blocks/loop.html). This is best illustrated by an example:
+Sometimes you need to repeat parts of a web page in a systematic manor. In Dwoo this is done using [loops](/documentation/1.2.x/blocks/loop.html). This is best illustrated by an example:
 {% highlight html %}
 <select name="type_id" value="{$type_id}">
  {loop $licensee_type_list}
@@ -209,7 +212,7 @@ Sometimes you need to repeat parts of a web page in a systematic manor. In Dwoo 
  {/loop}
 </select>
 {% endhighlight %}
-Above is a code snippet from an HTML form. The `type_id` is a simple variable (see above). The `licensee_type_list` variable is an array containing associated arrays. What occurs is that in every iteration of the loop the [loop](/documentation/1.x/blocks/loop.html) plugin extracts the values from an array entry with its name and id as keys and substitutes them into the template. The above snippet (if in a file called `code_snippet.tpl`) would be initialized and setup with the following PHP:
+Above is a code snippet from an HTML form. The `type_id` is a simple variable (see above). The `licensee_type_list` variable is an array containing associated arrays. What occurs is that in every iteration of the loop the [loop](/documentation/1.2.x/blocks/loop.html) plugin extracts the values from an array entry with its name and id as keys and substitutes them into the template. The above snippet (if in a file called `code_snippet.tpl`) would be initialized and setup with the following PHP:
 {% highlight php %}
 <?php
 $dwoo = new Dwoo();
@@ -244,7 +247,7 @@ This method can also be used to generate tables of data (by repeating the tr tag
 ### Breaking your webpage templates into sections
 Webpages are usually broken up into sections for easy maintenance and design. An example could be a webpage which has a header, body content, and footer sections. In this case instead of everything being in one file, the page is broken up into components which can be reused for other page templates.
 
-In PHP you can do this by writing functions, that when called output a section of the page. In Dwoo this is accomplished by using the [include](/documentation/1.x/functions/include.html) plugin. An example would be:
+In PHP you can do this by writing functions, that when called output a section of the page. In Dwoo this is accomplished by using the [include](/documentation/1.2.x/functions/include.html) plugin. An example would be:
 **sect_header_stuff.tpl:**
 {% highlight html %}
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">

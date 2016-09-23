@@ -9,7 +9,7 @@ Loops over an array of arrays and allows for really simple / small constructs by
 loop(array $from [, $name = "default ] )
 {% endhighlight %}
 
-> Note that this plugin supports [iterator variables](/documentation/1.x/iterator-variables.html) through the name parameter and also supports the [else](/documentation/1.x/blocks/else.html) plugin
+> Note that this plugin supports [iterator variables](/documentation/1.2.x/iterator-variables.html) through the name parameter and also supports the [else](/documentation/1.2.x/blocks/else.html) plugin
 
 ## Example
 {% highlight smarty %}
@@ -37,4 +37,4 @@ loop(array $from [, $name = "default ] )
 To access the array key you have to use the `{$_key}` var within the loop, its name is not user-definable to keep this plugin as simple as possible.
 
 ## Extra reads
-* [Using iterator variables](/documentation/1.x/iterator-variables.html)
+* [Using iterator variables](/documentation/1.2.x/iterator-variables.html)
