@@ -24,7 +24,7 @@ title: Changelog
 
 `Deprecated`
 
-* Method `Dwoo\Core::output()` is now deprecated, will be removed in **1.3.0**.
+* Method `Dwoo_Core::output()` is now deprecated, will be removed in **1.3.0**.
 
 ## 1.2.2 (2016-09-10)
 `Added`
