@@ -16,11 +16,11 @@ Dwoo relies on [plugins](/documentation/1.2.x/plugins.html) to provide useful fu
 ### Installing via Composer **(recommended)**
 Dwoo is available on [packagist.org](https://packagist.org/packages/dwoo/dwoo){:target="_blank"} to do so, install [Composer](https://getcomposer.org/download/){:target="_blank"} and run the following command to get the latest version:
 {% highlight bash %}
-composer require dwoo/dwoo
+composer require dwoo/dwoo 1.2.*
 {% endhighlight %}
 
 ### Installing from the tarball release
-1. Download the most recent tarball from the [downloads page](/downloads.html),
+1. Download the most recent tarball from the [releases page](https://github.com/dwoo-project/dwoo/releases){:target="_blank"},
 2. Unpack the tarball,
 3. Move the files somewhere in your project,
 4. Go to the [next section](#running-dwoo) to know how to use classes. 

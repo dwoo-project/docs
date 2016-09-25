@@ -1,7 +1,7 @@
 ---
 layout: documentation
 title: License
-subtitle: "License for <strong>Dwoo 1.x</strong>"
+subtitle: "License for <strong>Dwoo 1.2.x</strong>"
 redirect_from: "/LICENSE"
 ---
 
