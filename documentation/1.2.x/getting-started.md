@@ -254,7 +254,7 @@ In PHP you can do this by writing functions, that when called output a section o
   <head>
     <title>{$title} - Awesome Inc.</title>
  
-    <script src="script.js" type="text/javascript" language="javascript">
+    <script src="script.js" type="text/javascript" language="javascript"></script>
     <link href="site.css" type="text/css" rel="stylesheet"/>
   </head>
   <body> <!-- Page content START. -->
