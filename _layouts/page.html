@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<!-- Breadcrumb -->
+<div class="breadcrumbs">
+	<div class="container">
+		<ol>
+			<li><a href="/">Home</a></li>
+			{% assign crumbs = page.url | split: '/' %}
+			{% assign crumbstotal = crumbs | size %}
+			{% for crumb in crumbs offset:1 %}
+				{% unless crumb == 'index.html' %}
+					{% if forloop.last %}
+						<li class="active">{{ crumb | capitalize | remove: '.html' }} </li>
+					{% else %}
+						<li><a href="/{{ crumb }}/">{{ crumb | capitalize | remove: '.html' }}</a></li>
+					{% endif %}
+				{% endunless %}
+			{% endfor %}
+		</ol>
+	</div>
+</div>
+
+{{ content }}
