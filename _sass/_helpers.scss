@@ -1,0 +1,49 @@
+// Convert PX to REM
+$browser-context: 16; // Default
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+// Margin/Padding helpers
+$step    : 5;
+$from    : 0;
+$through : ceil( 100 /$step);
+$unit    : 'px';
+@for $i from $from through $through {
+  $i : $i * $step;
+
+  // Margin Top
+  .mt-#{$i} {margin-top:rem($i)}
+
+  // Margin Right
+  .mr-#{$i} {margin-right:rem($i)}
+
+  // Margin Bottom
+  .mb-#{$i} {margin-bottom:rem($i)}
+
+  // Margin Left
+  .ml-#{$i} {margin-left:rem($i)}
+
+  // Margin All
+  .ma-#{$i} {margin:rem($i)}
+
+  // Padding Top
+  .pt-#{$i} {padding-top:rem($i)}
+
+  // Padding Right
+  .pr-#{$i} {padding-right:rem($i)}
+
+  // Padding Bottom
+  .pb-#{$i} {padding-bottom:rem($i)}
+
+  // Padding Left
+  .pl-#{$i} {padding-left:rem($i)}
+
+  // Padding All
+  .pa-#{$i} {padding:rem($i)}
+}
+
+// Reset h* margins to 0
+@for $i from 1 through 6 {
+  h#{$i} {margin:0}
+}
