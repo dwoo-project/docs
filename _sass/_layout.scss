@@ -29,14 +29,20 @@ a {
   }
 }
 h1 {
-  font-size: 38px;
+  font-size: 2.375rem;
   font-weight: 300;
   font-family: "Roboto", sans-serif;
   color: #43484d;
 }
 h2 {
-  font-size: 30px;
+  font-size: 1.875rem;
   font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  color: #43484d;
+}
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
   font-family: "Roboto", sans-serif;
   color: #43484d;
 }
@@ -44,6 +50,9 @@ p {
   line-height: 24px;
   color: #5e6977;
   font-weight: 300;
+}
+ul {
+  color: #5e6977;
 }
 .btn {
   &.btn-success {
@@ -83,6 +92,9 @@ p {
 }
 .img-responsive {
   max-width: 100%;
+}
+.bgc-light-gray {
+  background-color: #f9f9f9;
 }
 /***************************** Header ****************************/
 body > header {
@@ -191,39 +203,6 @@ body > header {
 	}
   }
 }
-/***************************** Features ****************************/
-.bgc-light-gray {
-  background-color: #f9f9f9;
-}
-.features,
-.genre {
-  padding: 100px 0;
-  position: relative;
-  .icon {
-	display: inline-block;
-	text-decoration: none;
-	transition: all 0.3s ease 0s;
-	  color: #C3CFD8;
-  }
-  h3 {
-	font-size: 18px;
-	font-weight: 400;
-	font-family: "Roboto", sans-serif;
-	color: #43484d;
-	a {
-	  color: #43484d;
-	}
-  }
-  p {
-	font-size: 16px;
-	font-weight: 300;
-	font-family: "Roboto", sans-serif;
-	color: #86939e;
-  }
-}
-.genre {
-  padding: 50px 0;
-}
 /***************************** Widgets ****************************/
 .widget {
   border: 3px solid #f7f7f7;
@@ -320,7 +299,6 @@ body > header {
     border-bottom: 1px solid #eee;
     margin: 20px 0;
     padding-left: 0;
-    padding-bottom: 10px;
     p {
       padding: 15px 0;
     }
@@ -350,6 +328,37 @@ body > header {
     padding: 30px;
     margin: 30px 0;
     border-radius: 5px;
+  }
+}
+/***************************** Integrations ****************************/
+ul.list-integrations {
+  li {
+	border: 1px solid #e2e2e2;
+	border-right: none;
+	width: 33.333333%;
+	float: left;
+	&:last-of-type {
+	  border-right: 1px solid #e2e2e2;
+	}
+	a {
+	  display: block;
+	  position: relative;
+	  padding: 30px;
+	  span {
+		position: absolute;
+		right: .5rem;
+		bottom: .5rem;
+		font-size: .75rem;
+		line-height: 1em;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	  }
+	  &:hover {
+		span {
+		  text-decoration: underline;
+		}
+	  }
+	}
   }
 }
 /***************************** Footer ****************************/
