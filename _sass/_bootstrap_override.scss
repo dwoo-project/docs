@@ -1,0 +1,53 @@
+/***************************** Buttons ****************************/
+.btn {
+  &.btn-success {
+	background-color: $color-brand;
+	border: medium none;
+	border-radius: 5px;
+	color: $color-white;
+	font-size: 16px;
+	font-weight: 500;
+	padding: 13px 25px;
+  }
+  &.btn-default {
+	font-size: 18px;
+	border-radius: 5px;
+	border: 2px solid #e1e8ee;
+	color: #43484d;
+	padding: 15px 30px;
+	&:hover {
+	  background: #f9f9f9 none repeat scroll 0 0;
+	  border: 2px solid #e1e8ee;
+	  transition: background-color 500ms ease-out 0.2s;
+	}
+  }
+}
+/***************************** Lists ****************************/
+ul.list-folder {
+  padding-left: 0;
+  list-style: none;
+  li {
+	padding-left: 5px;
+	&:before {
+	  font-family: FontAwesome, serif;
+	  content: "\f114";
+	  color: rgb(181, 191, 199);
+	  font-size: 18px;
+	  padding-right: 10px;
+	}
+  }
+}
+ul.topics-list {
+  padding-left: 0;
+  list-style: none;
+  li {
+	padding-left: 5px;
+	&:before {
+	  font-family: FontAwesome, serif;
+	  content: "\f016";
+	  color: rgb(181, 191, 199);
+	  font-size: 18px;
+	  padding-right: 10px;
+	}
+  }
+}
