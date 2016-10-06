@@ -1,6 +1,5 @@
 name: "dwoo.org"
 highlighter: rouge
-repository: dwoo-project/dwoo
 gems:
   - jekyll-redirect-from
   - jekyll-sitemap
