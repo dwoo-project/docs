@@ -299,6 +299,9 @@ body > header {
       &:last-child::after {
         content: none;
       }
+	  span {
+		color: #43484d;
+	  }
     }
   }
   img {
@@ -390,6 +393,17 @@ ul.list-integrations {
 	  margin: 0;
 	}
   }
+}
+/***************************** Contributors ****************************/
+.contributors {
+	li {
+	  img {
+		width: 80px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+	  }
+	}
 }
 /***************************** Footer ****************************/
 footer {

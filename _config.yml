@@ -13,125 +13,35 @@ navigation:
   - {title: Documentation, url: "/documentation/"}
   - {title: About, url: "/about.html"}
 documentation:
-  1.2.x:
-    -
-      title: "Dwoo users"
-      children:
-        - {title: "Getting Started", url: "getting-started.html"}
-        - {title: "Using Dwoo with your framework of choice", url: "frameworks.html"}
-        - {title: "Extending - How to write plugins", url: "writing-plugins.html"}
-    -
-      title: "Smarty user ?"
-      children:
-        - {title: "Using the Smarty Adapter to convert your Smarty code", url: "smarty-adapter.html"}
-        - {title: "List of unsupported Smarty features", url: "smarty-support.html"}
-    -
-      title: "Quick Links"
-      children:
-        - {title: "List of $dwoo and other reserved variables", url: "dwoo-variables.html"}
-        - {title: "List of iterator variables (loop, for and foreach)", url: "iterator-variables.html"}
-        - {title: "Shortened syntax for power users", url: "shortcuts.html"}
-    -
-      title: "Designers Documentation"
-      children:
-        - {title: "Syntax", url: "syntax.html"}
-        - {title: "Plugins", url: "plugins.html"}
-    -
-      title: "Stuff"
-      children:
-        - {title: "Dwoo Users / Sites built with it", url: "users.html"}
-        - {title: "Dwoo syntax file for GeSHI", url: "files/dwoo-geshi-1.0.0.tar.gz"}
-    - {title: "Changelog", url: "changelog.html"}
+  main:
+    - {title: "Dwoo for designers", url: "dwoo-for-designers.html"}
+    - {title: "Template Inheritance", url: "template-inheritance.html"}
+    - {title: "Shortcuts", url: "shortcuts.html"}
+    - {title: "Iterator variables", url: "iterator-variables.html"}
     - {title: "License", url: "license.html"}
-  1.3.x:
+    - {title: "Unsupported Smarty features", url: "smarty-support.html"}
+    - {title: "Reserved variables", url: "dwoo-variables.html"}
+  1.2:
     - {title: "Getting started", url: "getting-started.html"}
-    - {title: "Dwoo for Designers", url: "dwoo-for-designers.html"}
-    - {title: "Dwoo for Developers", url: "dwoo-for-developers.html"}
+    - {title: "Dwoo for developers", url: "dwoo-for-developers.html"}
+    - {title: "Smarty adapter", url: "smarty-adapter.html"}
+    - {title: "Deprecated features", url: "deprecated-features.html"}
     - {title: "Extending Dwoo", url: "extending-dwoo.html"}
-    - {title: "Writing your own plugins", url: "writing-your-own-plugins.html"}
-    -
-      title: "Smarty user?"
-      children:
-        - {title: "Using the Smarty Adapter to convert your Smarty code", url: "smarty-adapter.html"}
-        - {title: "List of unsupported Smarty features", url: "smarty-support.html"}
-    -
-      title: "Reference"
-      children:
-        - {title: "Iterator Variables", url: "reference/iterator-variables.html"}
-        - {title: "Dwoo Variables", url: "reference/dwoo-variables.html"}
-        - {title: "Shortcuts", url: "reference/shortcuts.html"}
-    -
-      title: "Blocks/Tags"
-      children:
-        - {title: "a", url: "blocks/a.html"}
-        - {title: "autoEscape", url: "blocks/auto-escape.html"}
-        - {title: "block", url: "blocks/block.html"}
-        - {title: "capture", url: "blocks/capture.html"}
-        - {title: "{* comments *}", url: "blocks/comments.html"}
-        - {title: "dynamic", url: "blocks/dynamic.html"}
-        - {title: "else", url: "blocks/else.html"}
-        - {title: "for", url: "blocks/for.html"}
-        - {title: "foreach", url: "blocks/foreach.html"}
-        - {title: "foreachelse", url: "blocks/foreachelse.html"}
-        - {title: "forelse", url: "blocks/forelse.html"}
-        - {title: "function", url: "blocks/function.html"}
-        - {title: "if, elseif", url: "blocks/if.html"}
-        - {title: "literal", url: "blocks/literal.html"}
-        - {title: "loop", url: "blocks/loop.html"}
-        - {title: "strip", url: "blocks/strip.html"}
-        - {title: "textformat", url: "blocks/textformat.html"}
-        - {title: "with", url: "blocks/with.html"}
-    -
-      title: "Functions/Modifiers"
-      children:
-        - {title: "assign", url: "functions/assign.html"}
-        - {title: "capitalize", url: "functions/capitalize.html"}
-        - {title: "cat", url: "functions/cat.html"}
-        - {title: "countCharacters", url: "functions/count-characters.html"}
-        - {title: "countParagraphs", url: "functions/count-paragraphs.html"}
-        - {title: "countSentences", url: "functions/count-sentences.html"}
-        - {title: "countWords", url: "functions/count-words.html"}
-        - {title: "counter", url: "functions/counter.html"}
-        - {title: "cycle", url: "functions/cycle.html"}
-        - {title: "dateFormat", url: "functions/date-format.html"}
-        - {title: "default", url: "functions/default.html"}
-        - {title: "do", url: "functions/do.html"}
-        - {title: "docType", url: "functions/doc-type.html"}
-        - {title: "dump", url: "functions/dump.html"}
-        - {title: "escape", url: "functions/escape.html"}
-        - {title: "eval", url: "functions/eval.html"}
-        - {title: "exectime", url: "functions/exectime.html"}
-        - {title: "extends", url: "functions/extends.html"}
-        - {title: "fetch", url: "functions/fetch.html"}
-        - {title: "formatSize", url: "functions/format-size.html"}
-        - {title: "googleAnalytics", url: "functions/google-analytics.html"}
-        - {title: "gravatar", url: "functions/gravatar.html"}
-        - {title: "htmlStateSelect", url: "functions/html-state-select.html"}
-        - {title: "htmlSelectTime", url: "functions/html-select-time.html"}
-        - {title: "include", url: "functions/include.html"}
-        - {title: "indent", url: "functions/indent.html"}
-        - {title: "isset", url: "functions/isset.html"}
-        - {title: "loadTemplates", url: "functions/load-templates.html"}
-        - {title: "lower", url: "functions/lower.html"}
-        - {title: "mailto", url: "functions/mailto.html"}
-        - {title: "math", url: "functions/math.html"}
-        - {title: "nl2br", url: "functions/nl2br.html"}
-        - {title: "optional", url: "functions/optional.html"}
-        - {title: "regexReplace", url: "functions/regex-replace.html"}
-        - {title: "replace", url: "functions/replace.html"}
-        - {title: "reverse", url: "functions/reverse.html"}
-        - {title: "safe", url: "functions/safe.html"}
-        - {title: "spacify", url: "functions/spacify.html"}
-        - {title: "stringFormat", url: "functions/string-format.html"}
-        - {title: "stripTags", url: "functions/strip-tags.html"}
-        - {title: "tif", url: "functions/tif.html"}
-        - {title: "truncate", url: "functions/truncate.html"}
-        - {title: "upper", url: "functions/upper.html"}
-        - {title: "whitespace (strip)", url: "functions/whitespace.html"}
-        - {title: "wordwrap", url: "functions/wordwrap.html"}
-    -
-      title: "Helpers"
-      children:
-        - {title: "array", url: "helpers/array.html"}
+    - {title: "Writing your own plugin", url: "writing-your-own-plugins.html"}
+    - {title: "Dwoo internals", url: "dwoo-internals.html"}
     - {title: "Changelog", url: "changelog.html"}
-    - {title: "License", url: "license.html"}
+  1.3:
+    - {title: "Getting started", url: "getting-started.html"}
+    - {title: "Dwoo for developers", url: "dwoo-for-developers.html"}
+    - {title: "Smarty adapter", url: "smarty-adapter.html"}
+    - {title: "Deprecated features", url: "deprecated-features.html"}
+    - {title: "Extending Dwoo", url: "extending-dwoo.html"}
+    - {title: "Writing your own plugin", url: "writing-your-own-plugins.html"}
+    - {title: "Dwoo internals", url: "dwoo-internals.html"}
+    - {title: "Changelog", url: "changelog.html"}
+  popular:
+    - {title: "Getting started", url: "1.3/getting-started.html"}
+    - {title: "Dwoo for developers", url: "1.3/dwoo-for-developers.html"}
+    - {title: "Dwoo for designers", url: "dwoo-for-designers.html"}
+    - {title: "Template Inheritance", url: "template-inheritance.html"}
+    - {title: "Shortcuts", url: "shortcuts.html"}
