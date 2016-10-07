@@ -365,6 +365,32 @@ ul.list-integrations {
     }
   }
 }
+/***************************** Documentation ****************************/
+.doc {
+  h1 {
+	margin-bottom: 1rem;
+  }
+}
+.code-box {
+  border: 1px solid #BFBFBF;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  background: #FEFEFE;
+  header {
+	background: #f7f7f7;
+	padding: 3px 15px;
+	border-radius: 7px 7px 0 0;
+	font-weight: 600;
+	line-height: 35px;
+  }
+  figure.highlight {
+	padding: 15px 20px;
+	margin: 0;
+	pre {
+	  margin: 0;
+	}
+  }
+}
 /***************************** Footer ****************************/
 footer {
   background-color: #f9f9f9;

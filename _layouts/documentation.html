@@ -2,7 +2,7 @@
 layout: page
 ---
 
-<section class="topics">
+<section class="doc mt-50 mb-50">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-8">
@@ -10,74 +10,11 @@ layout: page
 				{% if page.subtitle != null %}<h2>{{ page.subtitle }}</h2>{% endif %}
 				{{ content }}
 			</div>
-			<div class="col-lg-4">
-				<div class="sidebar">
-					<div class="widget mt-50 mb-25">
-						<span class="icon pb-10 d-inline-block">
-							<img src="/assets/img/icon-gitter.png" alt="">
-						</span>
-						<h4>Looking for help?</h4>
-						<p class="pt-30 pb-30">Couldn’t find what your are looking for ? Why not join out support chat and let us help you.</p>
-						<a href="{{ site.urls.gitter }}" target="_blank" class="btn btn-success">Discuss on Gitter</a>
-					</div>
-				</div>
-			</div>
+            <div class="col-lg-4">
+                <div class="sidebar">
+                    {% include gitter.html %}
+                </div>
+            </div>
 		</div>
 	</div>
 </section>
-
-<!--<div class="header-line header-line-big">-->
-	<!--<div class="wrapper">-->
-		<!--{% assign version = null %}-->
-		<!--{% for versions in site.documentation %}-->
-			<!--{% assign current = null %}-->
-			<!--{% if page.url contains versions[0] %}-->
-				<!--{% assign version = versions[0] %}-->
-				<!--{% assign current = ' class="active"' %}-->
-			<!--{% endif %}-->
-			<!--<a href="/documentation/{{ versions[0] }}/"{{ current }}>{{ versions[0] }}</a>-->
-		<!--{% endfor %}-->
-	<!--</div>-->
-<!--</div>-->
-
-<!--<div class="main">-->
-	<!--<div class="container-fluid bs-docs-container">-->
-		<!--<aside class="hidden-sm hidden-xs">-->
-			<!--<div class="bs-docs-sidebar hidden-print" role="complementary">-->
-				<!--<ul class="nav">-->
-					<!--{% for versions in site.documentation %}-->
-						<!--{% if page.url contains versions[0] %}-->
-							<!--{% for menu in versions[1] %}-->
-									<!--<li>-->
-										<!--{% if menu.url != null %}-->
-											<!--<a href="/documentation/{{ versions[0] }}/{{ menu.url }}"><i class="fa fa-file"></i> {{ menu.title }}</a>-->
-										<!--{% else %}-->
-											<!--<span><i class="fa fa-book"></i> {{ menu.title }}</span>-->
-										<!--{% endif %}-->
-										<!--{% if menu.children != null %}-->
-											<!--<ul>-->
-											<!--{% for child in menu.children %}-->
-												<!--<li><a href="/documentation/{{ versions[0] }}/{{ child.url }}"><i class="fa fa-file"></i> {{ child.title }}</a></li>-->
-											<!--{% endfor %}-->
-											<!--</ul>-->
-										<!--{% endif %}-->
-									<!--</li>-->
-							<!--{% endfor %}-->
-						<!--{% endif %}-->
-					<!--{% endfor %}-->
-				<!--</ul>-->
-			<!--</div>-->
-		<!--</aside>-->
-		<!--<div class="content" role="main">-->
-			<!--{% if page.title != null %}-->
-			<!--<section class="hgroup">-->
-				<!--<div class="container-fluid">-->
-					<!--<h1>{{ page.title }}</h1>-->
-					<!--{% if page.subtitle != null %}<h2>{{ page.subtitle }}</h2>{% endif %}-->
-				<!--</div>-->
-			<!--</section>-->
-			<!--{% endif %}-->
-			<!--{{ content }}-->
-		<!--</div>-->
-	<!--</div>-->
-<!--</div>-->
