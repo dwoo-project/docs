@@ -1,4 +1,4 @@
 ---
 layout: documentation
-title:
+title: Dwoo internals
 ---

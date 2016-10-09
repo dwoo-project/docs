@@ -21,6 +21,7 @@ documentation:
     - {title: "License", url: "license.html"}
     - {title: "Unsupported Smarty features", url: "smarty-support.html"}
     - {title: "Reserved variables", url: "dwoo-variables.html"}
+    - {title: "Changelog", url: "changelog.html"}
   1.2:
     - {title: "Getting started", url: "getting-started.html"}
     - {title: "Dwoo for developers", url: "dwoo-for-developers.html"}
@@ -29,7 +30,6 @@ documentation:
     - {title: "Extending Dwoo", url: "extending-dwoo.html"}
     - {title: "Writing your own plugin", url: "writing-your-own-plugins.html"}
     - {title: "Dwoo internals", url: "dwoo-internals.html"}
-    - {title: "Changelog", url: "changelog.html"}
   1.3:
     - {title: "Getting started", url: "getting-started.html"}
     - {title: "Dwoo for developers", url: "dwoo-for-developers.html"}
@@ -38,7 +38,6 @@ documentation:
     - {title: "Extending Dwoo", url: "extending-dwoo.html"}
     - {title: "Writing your own plugin", url: "writing-your-own-plugins.html"}
     - {title: "Dwoo internals", url: "dwoo-internals.html"}
-    - {title: "Changelog", url: "changelog.html"}
   popular:
     - {title: "Getting started", url: "1.3/getting-started.html"}
     - {title: "Dwoo for developers", url: "1.3/dwoo-for-developers.html"}

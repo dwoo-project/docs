@@ -12,6 +12,9 @@ layout: page
 			</div>
             <div class="col-lg-4">
                 <div class="sidebar">
+                    {% if page.toc %}
+                        {% include toc.html %}
+                    {%endif %}
                     {% include gitter.html %}
                 </div>
             </div>
