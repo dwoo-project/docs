@@ -8,7 +8,11 @@
 			{% for crumb in crumbs offset:1 %}
 				{% unless crumb == 'index.html' %}
 					{% if forloop.last %}
-						<li class="active">{{ crumb | capitalize | remove: '.html' }} </li>
+                        {% if page.title %}
+                            <li class="active">{{ page.title }}</li>
+                        {% else %}
+						    <li class="active">{{ crumb | capitalize | remove: '.html' }}</li>
+                        {% endif %}
 					{% else %}
 						<li><a href="/{{ crumb }}/">{{ crumb | capitalize | remove: '.html' }}</a></li>
 					{% endif %}
