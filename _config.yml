@@ -19,7 +19,8 @@ documentation:
     - {title: "Shortcuts", url: "shortcuts.html"}
     - {title: "Iterator variables", url: "iterator-variables.html"}
     - {title: "License", url: "license.html"}
-    - {title: "Unsupported Smarty features", url: "smarty-support.html"}
+    - {title: "Syntax", url: "syntax.html"}
+    - {title: "Smarty support", url: "smarty-support.html"}
     - {title: "Reserved variables", url: "dwoo-variables.html"}
     - {title: "Changelog", url: "changelog.html"}
   1.2:
