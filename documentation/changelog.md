@@ -1,6 +1,7 @@
 ---
 layout: documentation
 title: Changelog
+toc: true
 ---
 
 ## 1.3.0 (2016-09-25)

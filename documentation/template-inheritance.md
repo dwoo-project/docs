@@ -1,6 +1,7 @@
 ---
 layout: documentation
 title: Template Inheritance
+toc: true
 ---
 
 Inheritance brings the concept of **Object Oriented Programming** to templates, allowing you to define one (or more) base

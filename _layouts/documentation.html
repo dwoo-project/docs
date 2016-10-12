@@ -2,20 +2,22 @@
 layout: page
 ---
 
-<section class="doc mt-50 mb-50">
+<section class="mt-50 mb-50">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-8">
-				<h1>{{ page.title }}</h1>
-				{% if page.subtitle != null %}<h2>{{ page.subtitle }}</h2>{% endif %}
+			<div class="doc col-lg-8">
+                <header>
+                    <h1>{{ page.title }}</h1>
+                    {% if page.subtitle != null %}<h2>{{ page.subtitle }}</h2>{% endif %}
+                </header>
 				{{ content }}
 			</div>
             <div class="col-lg-4">
                 <div class="sidebar">
+                    {% include gitter.html %}
                     {% if page.toc %}
                         {% include toc.html %}
                     {%endif %}
-                    {% include gitter.html %}
                 </div>
             </div>
 		</div>
