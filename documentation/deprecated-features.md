@@ -1,7 +1,6 @@
 ---
 layout: documentation
 title: Deprecated features
-doc_breadcrumb: true
 toc: true
 ---
 

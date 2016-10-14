@@ -13,7 +13,6 @@ A global variable is like any other template variable, except that it's availabl
 
 <blockquote class="blockquote">
 Actually globals are defined in the <code>Core</code> class and cannot be modified directly.
-In the <code>1.4.0</code> version, you will be able to add new <strong>globals</strong> variables.
 </blockquote>
 
 ## Extending Core
@@ -21,8 +20,7 @@ In the <code>1.4.0</code> version, you will be able to add new <strong>globals</
 <header>MyTemplate.php</header>
 {% highlight php %}
 <?php
-use \Dwoo\Core;
-class MyTemplate extends Core {
+class MyTemplate extends Dwoo_Core {
 
 }
 {% endhighlight %}
@@ -33,6 +31,7 @@ In addition to providing you with an abundance of built-in plugins, Dwoo also al
 These plugins may be implemented as user-defined functions or standalone classes, and can be either manually added at
 run-time via Dwoo’s `addPlugin()` method or automatically loaded by the Dwoo autoloader.
 
+To illustrate, consider the following script, which sets up a simple plugin to manipulate email addresses:
 <div class="code-box">
 <header>index.php</header>
 {% highlight php %}
@@ -60,6 +59,28 @@ $data['string']= 'vikram@example.com';
 
 // interpolate values into template
 // send interpolated result to output device
-$dwoo->output($tpl, $data);
+echo $dwoo->get($tpl, $data);
+{% endhighlight %}
+</div>
+
+Here, the `fix_address()` function replaces common email address characters with human-readable words, in order to
+make it harder for spammers to harvest these addresses from Web pages.
+The `addPlugin()` method takes care of adding this function to Dwoo’s plugin list, specifying both the local plugin
+name and the function callback.
+
+Here’s how you’d use it in a template:
+<div class="code-box">
+<header>index.tpl</header>
+{% highlight smarty %}
+{email_safe($string)}
+{% endhighlight %}
+</div>
+
+If you want add more than one custom plugin, you can specify to the loader a custom directory to search for, such as:
+<div class="code-box">
+<header>index.php</header>
+{% highlight php %}
+<?php
+$dwoo->getLoader()->addDirectory(__DIR__ . 'Views/plugins/');
 {% endhighlight %}
 </div>

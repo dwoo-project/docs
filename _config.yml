@@ -18,6 +18,7 @@ documentation:
     - {title: "Template Inheritance", url: "template-inheritance.html"}
     - {title: "Shortcuts", url: "shortcuts.html"}
     - {title: "Iterator variables", url: "iterator-variables.html"}
+    - {title: "Deprecated features", url: "deprecated-features.html"}
     - {title: "License", url: "license.html"}
     - {title: "Syntax", url: "syntax.html"}
     - {title: "Smarty support", url: "smarty-support.html"}
@@ -27,7 +28,6 @@ documentation:
     - {title: "Getting started", url: "getting-started.html"}
     - {title: "Dwoo for developers", url: "dwoo-for-developers.html"}
     - {title: "Smarty adapter", url: "smarty-adapter.html"}
-    - {title: "Deprecated features", url: "deprecated-features.html"}
     - {title: "Extending Dwoo", url: "extending-dwoo.html"}
     - {title: "Writing your own plugin", url: "writing-your-own-plugins.html"}
     - {title: "Dwoo internals", url: "dwoo-internals.html"}
@@ -35,7 +35,6 @@ documentation:
     - {title: "Getting started", url: "getting-started.html"}
     - {title: "Dwoo for developers", url: "dwoo-for-developers.html"}
     - {title: "Smarty adapter", url: "smarty-adapter.html"}
-    - {title: "Deprecated features", url: "deprecated-features.html"}
     - {title: "Extending Dwoo", url: "extending-dwoo.html"}
     - {title: "Writing your own plugin", url: "writing-your-own-plugins.html"}
     - {title: "Dwoo internals", url: "dwoo-internals.html"}
