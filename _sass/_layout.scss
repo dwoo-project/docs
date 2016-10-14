@@ -25,20 +25,7 @@ a {
 	color: $color-brand;
   }
 }
-h1 {
-  font-weight: 300;
-  font-family: "Roboto", sans-serif;
-  color: #43484d;
-}
-h2 {
-  font-weight: 300;
-  font-family: "Roboto", sans-serif;
-  color: #43484d;
-}
 h3 {
-  font-weight: 300;
-  font-family: "Roboto", sans-serif;
-  color: #43484d;
   &.light {
     font-size: 18px;
     font-weight: 400;
@@ -46,7 +33,6 @@ h3 {
   }
 }
 p {
-  line-height: 24px;
   color: #5e6977;
   font-weight: 300;
 }
@@ -368,15 +354,16 @@ ul.list-integrations {
 }
 /***************************** Documentation ****************************/
 .doc {
-  header {
+  > header {
 	padding-bottom: 10px;
 	border-bottom: 1px solid #eee;
-	margin-bottom: 1rem;
+	margin-bottom: 10px;
   }
 }
 .code-box {
   border: 1px solid #BFBFBF;
   border-radius: 7px;
+  margin-top: 10px;
   margin-bottom: 20px;
   background: #FEFEFE;
   header {
