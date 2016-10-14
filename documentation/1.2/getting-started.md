@@ -9,7 +9,9 @@ Dwoo relies on plugins to provide useful functionality, examples may include: **
 functionality, **string manipulation** and **loops**. For a full list see the [plugins](/plugins.html) page.
 
 ## Prerequisites
-Dwoo 1.2 and bellow requires at least **PHP 5.3** to run.
+Dwoo `1.2` and bellow requires at least **PHP 5.3** to run.
+<blockquote class="blockquote">
+However Dwoo <code>1.2 and bellow</code> are not compatible with <strong>PHP7</strong>.</blockquote>
 
 ## Installation
 ### Installing via Composer **(recommended)**
@@ -40,7 +42,7 @@ Here is the simplest way to output a Dwoo template.
 require 'vendor/autoload.php';
 
 // Create the controller, it is reusable and can render multiple templates
-$dwoo = new Dwoo();
+$dwoo = new Dwoo_Core();
 
 // Create some data
 $data = array('a'=>5, 'b'=>6);
@@ -76,7 +78,7 @@ represents a template file in your application.
 require 'vendor/autoload.php';
 
 // Create the controller, it is reusable and can render multiple templates
-$dwoo = new Dwoo();
+$dwoo = new Dwoo_Core();
 
 // Load a template file, this is reusable if you want to render multiple times the same template with different data
 $tpl = new Dwoo_Template_File('path/to/index.tpl');
@@ -95,15 +97,15 @@ $dwoo->get($tpl, $data);
 </div>
 
 ### Using a Compiler object
-If you want to use [custom pre- or post-processors](plugins.html), you need to instantiate a
-[Dwoo_Compiler](/documentation/1.2.x/dwoo-compiler.html) and add the processors to it.
+If you want to use [custom pre-processors or post-processors](/plugins.html#processors), you need to instantiate a
+[Dwoo_Compiler](dwoo-compiler.html) and add the processors to it.
 <div class="code-box">
 <header>index.php</header>
 {% highlight php %}
 <?php
 require 'vendor/autoload.php';
 
-$dwoo = new Dwoo();
+$dwoo = new Dwoo_Core();
 $tpl = new Dwoo_Template_File('path/to/index.tpl');
 $data = array('a'=>5, 'b'=>6);
 
@@ -120,9 +122,11 @@ $dwoo->output($tpl, $data, $compiler);
 </div>
 
 ### Using Dwoo with loops - Blog example
-Let's assume you are looping over multiple articles of a blog that you want to display, here is what you can do to do it as lightly as possible :
+Let's assume you are looping over multiple articles of a blog that you want to display, here is what you can do to do
+it as lightly as possible:
 
-You first have to create an "article.tpl" template file, the name doesn't matter really it's up to you, here is what goes in :
+You first have to create an "article.tpl" template file, the name doesn't matter really it's up to you, here is what
+goes in:
 <div class="code-box">
 <header>article.tpl</header>
 {% highlight html %}
@@ -141,7 +145,7 @@ You will then use this template to render all the articles.
 <?php
 require 'vendor/autoload.php';
 
-$dwoo = new Dwoo();
+$dwoo = new Dwoo_Core();
 // Load the "article" template
 $tpl = new Dwoo_Template_File('path/to/article.tpl');
 
@@ -159,12 +163,14 @@ foreach($articles as $article) {
 </div>
 
 ## Basic Templating
-As already mentioned, the Dwoo runtime parses the template files to generate HTML output. In this section we introduce some common constructs to quickly get you up to speed.
+As already mentioned, the Dwoo runtime parses the template files to generate HTML output. In this section we introduce
+some common constructs to quickly get you up to speed.
 
 ### Variables
 
 #### Simple variables
-As above in Dwoo simple variables are passed and rendered to HTML using an associated array, as the following example illustrates:
+As above in Dwoo simple variables are passed and rendered to HTML using an associated array, as the following example
+illustrates:
 <div class="code-box">
 <header>index.tpl</header>
 {% highlight html %}
@@ -180,7 +186,7 @@ The variables page_title and page_content are passed to the template rendering A
 <header>index.php</header>
 {% highlight php %}
 <?php
-$dwoo = new Dwoo();
+$dwoo = new Dwoo_Core();
  
 $params = array();
 $params['page_title']   = 'The next social networking website';
@@ -192,7 +198,9 @@ echo $dwoo->get("code_snippet.tpl", $params);
 In the above example the $params array is loaded with parameters that are substituted in the Dwoo code snippet.
 
 #### Variable arrays
-In Dwoo it is possible to 'bundle' your variables up into arrays on the PHP side and address them separately in a Dwoo template using the 'dot' operator. This helps reduce the possibility of confusion with one variable with two different purposes being used in different places in your Dwoo template. An example will be used to illustrate this:
+In Dwoo it is possible to 'bundle' your variables up into arrays on the PHP side and address them separately in a
+Dwoo template using the 'dot' operator. This helps reduce the possibility of confusion with one variable with two
+different purposes being used in different places in your Dwoo template. An example will be used to illustrate this:
 <div class="code-box">
 <header>index.tpl</header>
 {% highlight html %}
@@ -205,12 +213,13 @@ In Dwoo it is possible to 'bundle' your variables up into arrays on the PHP side
 {% endhighlight %}
 </div>
 
-In the above code snippet we have two bundles, the first is the auth array that includes the user's username. The second is the array that contains the page content. This snippet is setup with the following PHP code:
+In the above code snippet we have two bundles, the first is the auth array that includes the user's username.
+The second is the array that contains the page content. This snippet is setup with the following PHP code:
 <div class="code-box">
 <header>index.php</header>
 {% highlight php %}
 <?php
-$dwoo = new Dwoo();
+$dwoo = new Dwoo_Core();
  
 /* We hard code the parameters in here but in a real world app this would come from 
  * an authenticating module using a DB or maybe from an LDAP server. 
@@ -232,17 +241,21 @@ $params['page'] = $page;
 echo $dwoo->get("code_snippet.tpl", $params);
 {% endhighlight %}
 </div>
-The above two snippets generate roughly the same HTML as the first example using simple variables. You may wonder why using arrays to bundle your parameters has any benefit:
+The above two snippets generate roughly the same HTML as the first example using simple variables.
+You may wonder why using arrays to bundle your parameters has any benefit:
 
 1. It prevents naming collisions.
 2. Allows you to group or encapsulate related blocks of variables.
 3. You can have different PHP modules generating their own output arrays making your site's design more modularized.
 
 ### Conditionals
-Dwoo has if/else constructs to allow the coder to add conditional sections to web pages. This can be used for things such as restricting content to authorized users or displaying form components only if certain conditions are met. Dwoo's conditional statements are quite flexible, however we only cover the basics here.
+Dwoo has if/else constructs to allow the coder to add conditional sections to web pages. This can be used for things
+such as restricting content to authorized users or displaying form components only if certain conditions are met.
+Dwoo's conditional statements are quite flexible, however we only cover the basics here.
 
 ### Loops
-Sometimes you need to repeat parts of a web page in a systematic manor. In Dwoo this is done using [loops](/plugins/blocks/loop.html). This is best illustrated by an example:
+Sometimes you need to repeat parts of a web page in a systematic manor. In Dwoo this is done using
+[loops](/plugins/blocks/loop.html). This is best illustrated by an example:
 <div class="code-box">
 <header>select.tpl</header>
 {% highlight html %}
@@ -253,12 +266,17 @@ Sometimes you need to repeat parts of a web page in a systematic manor. In Dwoo 
 </select>
 {% endhighlight %}
 </div>
-Above is a code snippet from an HTML form. The `type_id` is a simple variable (see above). The `licensee_type_list` variable is an array containing associated arrays. What occurs is that in every iteration of the loop the [loop](/documentation/1.2.x/blocks/loop.html) plugin extracts the values from an array entry with its name and id as keys and substitutes them into the template. The above snippet (if in a file called `code_snippet.tpl`) would be initialized and setup with the following PHP:
+
+Above is a code snippet from an HTML form. The `type_id` is a simple variable (see above). The `licensee_type_list`
+variable is an array containing associated arrays. What occurs is that in every iteration of the loop the
+[loop](/plugins/blocks/loop.html) plugin extracts the values from an array entry with its name and id as
+keys and substitutes them into the template. The above snippet (if in a file called `code_snippet.tpl`) would be
+initialized and setup with the following PHP:
 <div class="code-box">
 <header>index.php</header>
 {% highlight php %}
 <?php
-$dwoo = new Dwoo();
+$dwoo = new Dwoo_Core();
  
 /* Although we are populating this by hand it will usually come from a DB in practice.  */
  
@@ -292,9 +310,12 @@ The above Dwoo snippet and PHP code extract will give the following HTML output:
 This method can also be used to generate tables of data (by repeating the tr tag). It is up to you.
 
 ### Breaking your webpage templates into sections
-Webpages are usually broken up into sections for easy maintenance and design. An example could be a webpage which has a header, body content, and footer sections. In this case instead of everything being in one file, the page is broken up into components which can be reused for other page templates.
+Webpages are usually broken up into sections for easy maintenance and design. An example could be a webpage which has
+a header, body content, and footer sections. In this case instead of everything being in one file, the page is broken
+up into components which can be reused for other page templates.
 
-In PHP you can do this by writing functions, that when called output a section of the page. In Dwoo this is accomplished by using the [include](/documentation/1.2.x/functions/include.html) plugin. An example would be:
+In PHP you can do this by writing functions, that when called output a section of the page. In Dwoo this is
+accomplished by using the [include](/plugins/functions/include.html) plugin. An example would be:
 <div class="code-box">
 <header>sect_header_stuff.tpl</header>
 {% highlight html %}
@@ -329,4 +350,5 @@ In PHP you can do this by writing functions, that when called output a section o
 {include(file='sect_footer_stuff.tpl')}
 {% endhighlight %}
 </div>
-Above is a generic page whose title and main body content can be extracted from a database. You may choose to do it this way or to 'hard code' your content directly into a function specific template.
+Above is a generic page whose title and main body content can be extracted from a database. You may choose to do it
+this way or to 'hard code' your content directly into a function specific template.
