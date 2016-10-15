@@ -254,7 +254,7 @@ not static across templates. Static variables are of course shared by all instan
 Anyway if you absolutely need per-plugin-call variables, you will have to reset their value in the `process()` method.
 
 #### Precompiled class function plugin
-* It must implement the Dwoo_ICompilable interface.
+* It must implement the `Dwoo_ICompilable` interface.
 * The method that Dwoo will call must now be static and is called "compile" instead of "process", it will receive all
  the parameters with the `Dwoo_Compiler` object calling it being first.
 <div class="code-box">
