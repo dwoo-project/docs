@@ -355,13 +355,15 @@ ul.list-integrations {
 /***************************** Documentation ****************************/
 .doc {
   > header {
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	border-bottom: 1px solid #eee;
 	margin-bottom: 10px;
   }
 }
 .code-box {
   border: 1px solid #BFBFBF;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
   border-radius: 7px;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -379,6 +381,45 @@ ul.list-integrations {
 	pre {
 	  margin: 0;
 	}
+  }
+  &.synopsis {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	figure.highlight {
+	  padding: .75rem;
+	  code {
+		white-space: normal;
+		.cp {
+		  display: none;
+		}
+	  }
+	}
+  }
+}
+/***************************** Plugin ****************************/
+.plugin {
+  > header {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	h1 {
+	  font-weight: 700;
+	}
+	abbr {
+	  color: $color-white;
+	  border: 0;
+	  text-decoration: none;
+	}
+  }
+  h3 {
+	padding-bottom: 5px;
+	border-bottom: 1px dotted #BFBFBF;
+	margin-top: 30px;
+	margin-bottom: 10px;
   }
 }
 /***************************** Contributors ****************************/

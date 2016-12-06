@@ -1,0 +1,31 @@
+---
+layout: page
+plugin_breadcrumb: true
+---
+
+<section class="mt-50 mb-50">
+    <div class="container">
+        <div class="row">
+            <div class="plugin col-lg-8">
+                <header>
+                    <h1>{{ page.title }}</h1>
+                    {% if page.versions != null %}
+                        <div>
+                        {% for version in page.versions %}
+                            <abbr title="Plugin available in Dwoo {{ version }}" class="tag tag-warning">
+                                {{ version }}
+                            </abbr>
+                        {% endfor %}
+                        </div>
+                    {% endif %}
+                </header>
+                {{ content }}
+            </div>
+            <div class="col-lg-4">
+                <div class="sidebar">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
