@@ -1,7 +1,7 @@
 ---
 layout: plugin
 title: dynamic
-versions: [1.2, 1.3]
+versions: [1.0, 1.1, 1.2, 1.3]
 ---
 
 Marks the contents of the block as dynamic. Which means that it will not be cached.

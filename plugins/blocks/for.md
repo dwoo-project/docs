@@ -1,6 +1,7 @@
 ---
 layout: plugin
 title: for
+versions: [1.0, 1.1, 1.2, 1.3]
 ---
 
 Similar to the php for statement

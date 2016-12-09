@@ -1,6 +1,7 @@
 ---
 layout: plugin
 title: if
+versions: [1.0, 1.1, 1.2, 1.3]
 ---
 
 Conditional block, the syntax is very similar to the php one, allowing `()` `||` `&&` and other [php operators](http://php.net/operators){:target="_blank"}.

@@ -1,6 +1,7 @@
 ---
 layout: plugin
 title: loop
+versions: [1.0, 1.1, 1.2, 1.3]
 ---
 
 Loops over an array of arrays and allows for really simple / small constructs by moving the scope down to each element automatically. It is basically a combination of foreach and with internally.

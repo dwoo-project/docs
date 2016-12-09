@@ -1,6 +1,7 @@
 ---
 layout: plugin
 title: foreach
+versions: [1.0, 1.1, 1.2, 1.3]
 ---
 
 Similar to the php foreach block, loops over an array

@@ -1,6 +1,7 @@
 ---
 layout: plugin
 title: template
+versions: [1.0, 1.1, 1.2, 1.3]
 ---
 
 Checks whether a variable is not null

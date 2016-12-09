@@ -1,7 +1,7 @@
 ---
 layout: plugin
 title: else
-versions: [1.2, 1.3]
+versions: [1.0, 1.1, 1.2, 1.3]
 ---
 
 Generic else block, it supports all builtin optional-display blocks which are [if](/plugins/blocks/if.html),

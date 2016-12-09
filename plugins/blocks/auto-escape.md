@@ -1,7 +1,7 @@
 ---
 layout: plugin
 title: auto_escape
-versions: [1.2, 1.3]
+versions: [1.0, 1.1, 1.2, 1.3]
 ---
 
 auto_escape — Overrides the compiler auto-escape setting within the block

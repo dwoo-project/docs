@@ -1,6 +1,7 @@
 ---
 layout: plugin
 title: textformat
+versions: [1.0, 1.1, 1.2, 1.3]
 ---
 
 Formats a string to the given format, you can wrap lines at a certain length and indent them
