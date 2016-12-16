@@ -5,7 +5,7 @@ published: true
 comments: true
 ---
 
-Dwoo2 beta is now available on the site [Packagist.org](https://packagist.org/packages/dwoo/dwoo){:target="_blank"}.
+Dwoo2 beta is now available on the site [Packagist.org](https://packagist.org/packages/dwoo/dwoo){:target="_blank"}.   
 <!-- more -->
 Dwoo2 beta version embedded also a `Composer.json`
 

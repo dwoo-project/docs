@@ -5,7 +5,8 @@ published: true
 comments: true
 ---
 
-Since I took over this unmaintained project 2 years ago, I put online a new website and focus on a 2.x version without having the success I expected in my development, by lack of time.
+Since I took over this unmaintained project 2 years ago, I put online a new website and focus on a 2.x version 
+without having the success I expected in my development, by lack of time.   
 <!-- more -->
 After a while of inactivity and accumulation of issues, it's now time to get this project back-on-tracks!
 
