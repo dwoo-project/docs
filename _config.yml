@@ -8,7 +8,7 @@ urls:
 navigation:
   - {title: Home, url: "/index.html"}
   - {title: Blog, url: "/blog.html"}
-  - {title: Integrations, url: "/integrations.html"}
+  - {title: Integrations, url: "/integrations/"}
   - {title: Plugins, url: "/plugins.html"}
   - {title: Documentation, url: "/documentation/"}
   - {title: About, url: "/about.html"}

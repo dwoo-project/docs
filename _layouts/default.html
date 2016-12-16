@@ -33,7 +33,8 @@
                 result.reverse().forEach(function (object) {
                     if (object.author.login != 'gitter-badger') {
                         $(".contributors")
-                                .append('<li class="col-sm-4"><a href="' + object.author.html_url + '"><img src="' +
+                                .append('<li class="col-sm-4"><a href="' + object.author.html_url + '" target="_blank">' +
+                                    '<img src="' +
                                         object.author.avatar_url + '">' + object.author.login + ' (' +
                                         object.total + ')</a></li>');
                     }
