@@ -3,8 +3,6 @@ layout: integrations
 title: Yii adapter
 ---
 
-### Requirements
-
 ### Installation
 Bootstrap code:
 <div class="code-box synopsis">

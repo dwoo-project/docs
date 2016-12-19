@@ -3,8 +3,6 @@ layout: integrations
 title: CakePHP adapter
 ---
 
-### Requirements
-
 ### Installation
 1. Download and install the dwoo library, preferably on the **vendors** directory of CakePHP. (However you can place it
  anywhere you want; if you do, make sure to change the `App::import` line in *dwoo.php*

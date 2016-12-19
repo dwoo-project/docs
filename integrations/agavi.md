@@ -3,8 +3,6 @@ layout: integrations
 title: Agavi adapter
 ---
 
-### Requirements
-
 ### Installation
 * Drop dwoo's directory in `app/lib/renderer` (create if needed)
 * Add a renderer to `app/config/output_types.xml` as such:
