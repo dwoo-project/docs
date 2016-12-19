@@ -30,14 +30,14 @@ documentation:
     - {title: "Smarty adapter", url: "smarty-adapter.html"}
     - {title: "Extending Dwoo", url: "extending-dwoo.html"}
     - {title: "Writing your own plugin", url: "writing-your-own-plugins.html"}
-    - {title: "Dwoo internals", url: "dwoo-internals.html"}
+#    - {title: "Dwoo internals", url: "dwoo-internals.html"}
   1.3:
     - {title: "Getting started", url: "getting-started.html"}
     - {title: "Dwoo for developers", url: "dwoo-for-developers.html"}
     - {title: "Smarty adapter", url: "smarty-adapter.html"}
     - {title: "Extending Dwoo", url: "extending-dwoo.html"}
     - {title: "Writing your own plugin", url: "writing-your-own-plugins.html"}
-    - {title: "Dwoo internals", url: "dwoo-internals.html"}
+#    - {title: "Dwoo internals", url: "dwoo-internals.html"}
   popular:
     - {title: "Getting started", url: "1.3/getting-started.html"}
     - {title: "Dwoo for developers", url: "1.3/dwoo-for-developers.html"}
