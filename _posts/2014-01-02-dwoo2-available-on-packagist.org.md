@@ -1,10 +1,12 @@
 ---
 layout: post
 title: Dwoo2 available on Packagist.org
+published: true
+comments: true
 ---
 
-Dwoo2 beta is now available on the site [Packagist.org](https://packagist.org/packages/dwoo/dwoo){:target="_blank"}.
-
+Dwoo2 beta is now available on the site [Packagist.org](https://packagist.org/packages/dwoo/dwoo){:target="_blank"}.   
+<!-- more -->
 Dwoo2 beta version embedded also a `Composer.json`
 
 For people who don't know Packagist.org, it's the main Composer repository. It aggregates all sorts of PHP packages that are installable with Composer.

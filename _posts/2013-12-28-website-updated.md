@@ -1,10 +1,12 @@
 ---
 layout: post
 title: Website updated
+published: true
+comments: true
 ---
 
-Dwoo changes ownership, this made the website design was restylized.
-
+Dwoo changes ownership, this made the website design was restylized.   
+<!-- more -->
 In this new version of the official website of Dwoo you would find complete documentation for developers as well as designers.
 But also a forum to ask all your questions to ask for help, new features, to report a bug or just to discuss about Dwoo.
 

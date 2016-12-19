@@ -2,21 +2,23 @@
 layout: default
 ---
 
-<div class="main">
-	<section class="hgroup">
-		<div class="container">
-			<h1>{{ page.title }}</h1>
-			<h2><i class="fa-time"></i> {{ page.date | date_to_long_string }}</h2>
-			<ul class="breadcrumb pull-right">
-				<li><a href="/">Home</a></li>
-				<li><a href="/blog.html">Blog</a></li>
-				<li class="active">{{ page.title }}</li>
-			</ul>
+{% include post_breadcrumb.html %}
+
+<!-- Content -->
+<main class="pt-40">
+	<div class="container">
+		<div class="col-lg-8">
+			<article class="post">
+				<h1>{{ page.title }}</h1>
+                <ul class="meta">
+                    <li><span>Publication date:</span> {{ page.date | date_to_long_string }}</li>
+                </ul>
+                {{ content }}
+
+                {% if page.comments %}
+                    <div id="disqus_thread"></div>
+                {% endif %}
+			</article>
 		</div>
-	</section>
-	<section>
-		<div class="container">
-			{{ content }}
-		</div>
-	</section>
-</div>
+	</div>
+</main>

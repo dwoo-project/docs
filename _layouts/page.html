@@ -1,0 +1,12 @@
+---
+layout: default
+---
+{% if page.doc_breadcrumb %}
+    {% include doc_breadcrumb.html %}
+{% elsif page.plugin_breadcrumb %}
+    {% include plugin_breadcrumb.html %}
+{% else %}
+    {% include breadcrumb.html %}
+{% endif %}
+
+{{ content }}

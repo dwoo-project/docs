@@ -1,58 +1,70 @@
 ---
 layout: default
+masthead: true
+redirect_from:
+  - /download
 ---
 
-<div class="main">
-	<section class="call_to_action">
-		<div class="container">
-			<h3><strong>PHP5.3+</strong> template engine</h3>
-			<br>
-			<a class="btn btn-success btn-lg" href="/documentation/"><i class="fa fa-question"></i> Learn more</a>
-			<a class="btn btn-primary btn-lg" href="/documentation/1.2.x/getting-started.html#install"><i class="fa fa-download"></i> Install now</a>
-		</div>
-	</section>
-	<section class="features_teasers_wrapper">
-		<div class="container">
-			<div class="row">
-				<div class="feature_teaser col-sm-4 col-md-4">
-					<i class="fa fa-5x fa-refresh" aria-hidden="true"></i>
+<!-- Main Features -->
+<section class="bgc-light-gray pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="text-md-center col-lg-4">
+                <div class="media-body">
+					<span class="icon pb-10 d-inline-block">
+                        <img src="assets/img/icon-inheritance.png"/>
+					</span>
+                    <h3 class="pb-10 light">Template Inheritance</h3>
+                    <p class="text-muted">
+                        <a href="/documentation/template-inheritance.html">Inheritance</a> brings the concept of OOP
+                        to templates, allowing you to define base templates that can be extended by child templates.
+                    </p>
+                </div>
+            </div>
+            <div class="text-md-center col-lg-4">
+                <div class="media-body">
+					<span class="icon pb-10 d-inline-block">
+						<img src="assets/img/icon-puzzle.png"/>
+					</span>
+                    <h3 class="pb-10 light">Flexible with plugins</h3>
+                    <p class="text-muted">
+                        <a href="/plugins.html">Plugins</a> can be wrapped in
+                        classes or simple functions, they can be precompiled to optimize the load time of the template,
+                        etc.
+                    </p>
+                </div>
+            </div>
+            <div class="text-md-center col-lg-4">
+                <div class="media-body">
+					<span class="icon pb-10 d-inline-block">
+						<img src="assets/img/icon-lightbulb.png"/>
+					</span>
+                    <h3 class="pb-10 light">Smarty syntax compatibility</h3>
+                    <p class="text-muted">
+                        Compatible with several additions and <a href="/documentation/shortcuts.html">shortcuts</a>
+                        to speed up template writing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-					<h3>Template Inheritance</h3>
-
-					<p><a href="/documentation/1.x/template-inheritance.html">Inheritance</a> brings the concept of OOP
-						to templates, allowing you to define base templates that can be extended by child templates.</p>
-				</div>
-				<div class="feature_teaser col-sm-4 col-md-4">
-					<i class="fa fa-5x fa-puzzle-piece" aria-hidden="true"></i>
-
-					<h3>Flexible with plugins</h3>
-
-					<p><a href="/documentation/1.x/writing-your-own-plugins.html">Plugins</a> can be wrapped in
-						classes or simple functions, they can be precompiled to optimize the load time of the template,
-						etc.</p>
-				</div>
-				<div class="feature_teaser col-sm-4 col-md-4">
-					<i class="fa fa-5x fa-lightbulb-o" aria-hidden="true"></i>
-
-					<h3>Smarty syntax compatibility</h3>
-
-					<p>Compatible with several additions and <a href="/documentation/1.x/shortcuts.html">shortcuts</a>
-						to speed up template writing</p>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="clients_section wow animated fadeInUp animated">
-		<div class="container">
-			<h2 class="section_header skincolored centered">Provided Adapters
-				<small>ready to use with several frameworks</small>
-			</h2>
-			<div class="clients_list">
-				<a href="/documentation/1.x/adapters/agavi.html"><img src="images/agavi.png"></a>
-				<a href="/documentation/1.x/adapters/zend-framework.html"><img src="images/zend.png"></a>
-				<a href="/documentation/1.x/adapters/cake-php.html"><img src="images/cake.png"></a>
-				<a href="/documentation/1.x/adapters/codeigniter.html"><img src="images/codeigniter.png"></a>
-			</div>
-		</div>
-	</section>
-</div>
+<!-- Support Section -->
+<section class="support-section text-white section pb-80">
+    <div class="container">
+        <div class="row">
+            <div class="divider mb-100"><i class="fa fa-support"></i></div>
+            <header class="text-xs-center">
+                <h2 class="section-title">Get Support From Real People</h2>
+                <p class="section-subtitle">
+                    Couldn’t find what your are looking for ?<br>
+                    Why not join our support chat and let us help you.
+                </p>
+            </header>
+            <div class="text-xs-center">
+                <a href="{{ site.urls.gitter }}" target="_blank" class="btn btn-success btn-action">Discuss on Gitter</a>
+            </div>
+        </div>
+    </div>
+</section>

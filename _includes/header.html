@@ -1,31 +1,39 @@
-{% assign container = "container" %}
-{% if page.url contains "documentation" %}
-	{% assign container = "container-fluid" %}
-{% endif %}
 <header>
-	<div class="{{ container }}">
-		<div class="navbar navbar-default" role="navigation">
-			<div class="navbar-header"><a class="navbar-brand" href="/">
-				<img src="/images/logo.png" alt="optional logo" height="90" width="90"> <span
-					class="logo_title">{<strong>d</strong><small>woo</small>}</span> <span class="logo_subtitle">php template engine</span>
-			</a><a class="btn btn-navbar btn-default navbar-toggle" data-toggle="collapse"
-			       data-target=".navbar-collapse"><span class="nb_left pull-left"> <span
-					class="fa fa-reorder"></span></span> <span class="nb_right pull-right">menu</span> </a></div>
-			<div class="collapse navbar-collapse">
-				<ul class="nav pull-right navbar-nav">
-					{% for link in site.navigation %}
-						{% assign current = null %}
-						{% if page.url contains link.url %}
-							{% assign current = ' class="active"' %}
-						{% endif %}
-						<li{{ current }}><a href="{{ link.url }}">{{ link.title }}</a></li>
-					{% endfor %}
-				</ul>
-			</div>
+	<div class="container pt-30 pb-15">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">
+				<img src="/assets/img/logo.png" alt="optional logo">
+				<span class="logo_title">{<strong>d</strong><small>woo</small>}</span>
+				<span class="logo_subtitle">php template engine</span>
+			</a>
 		</div>
-		<div id="social_media_wrapper">
-			<a href="https://github.com/dwoo-project/dwoo" target="_blank"><i class="fa fa-github"></i></a>
-			<a href="https://github.com/dwoo-project/dwoo/issues/" target="_blank"><i class="fa fa-bug"></i></a>
-		</div>
+		<nav class="navbar navbar-default" role="navigation">
+			<ul class="nav nav-pills">
+				{% for link in site.navigation %}
+					{% assign current = null %}
+					{% if page.url contains link.url %}
+						{% assign current = ' active' %}
+					{% endif %}
+					<li class="nav-item{{ current }}"><a href="{{ link.url }}">{{ link.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</nav>
 	</div>
+	{% if page.masthead %}
+	<div class="masthead text-md-center pt-65 pb-80">
+		<h3 class="text-white"><strong>A PHP5.3+ template engine</strong></h3>
+		<p>Modern, flexible and Smarty compatible template engine supporting PHP5 and <strong>PHP7</strong></p>
+		<a href="https://github.com/dwoo-project/dwoo" target="_blank" class="btn btn-hero">
+			<i class="fa fa-github-alt pr-5" aria-hidden="true"></i>
+			View on Github
+			<i class="fa fa-angle-right pl-15" aria-hidden="true"></i>
+		</a>
+	</div>
+	{% endif %}
+    {% if page.dochead %}
+    <div class="masthead text-md-center pt-65 pb-80">
+        <h3 class="text-white"><strong>Welcome to the Dwoo documentation</strong></h3>
+        <p>You will find all the help you need in the different parts of this documentation.</p>
+    </div>
+    {% endif %}
 </header>

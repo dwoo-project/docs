@@ -1,0 +1,101 @@
+---
+layout: default
+dochead: true
+---
+
+<!-- Features -->
+<section class="bgc-light-gray pt-100 pb-100">
+	<div class="container ">
+		<div class="row">
+			<div class="text-md-center col-sm-4">
+				<div class="media-body">
+					<span class="icon pb-10 d-inline-block">
+							<img src="/assets/img/icon-designer.png" alt="">
+					</span>
+					<h3 class="pb-10 light">Dwoo for designers</h3>
+					<p>
+						This <a href="/documentation/dwoo-for-designers.html">section</a> describes the
+                        <a href="/documentation/syntax.html">syntax</a> and semantics of the template engine and
+                        will be most useful as reference to those creating Dwoo templates.
+					</p>
+				</div>
+			</div>
+			<div class="text-md-center col-sm-4">
+				<div class="media-body">
+					<span class="icon pb-10 d-inline-block">
+						<img src="/assets/img/icon-developer.png" alt="">
+					</span>
+					<h3 class="pb-10 light">Dwoo for developers</h3>
+					<p>
+						Find a <a href="/documentation/1.3/dwoo-for-developers.html">complete documentation</a> to
+                        start implement Dwoo in your project.
+					</p>
+				</div>
+			</div>
+			<div class="text-md-center col-sm-4">
+				<div class="media-body">
+					<span class="icon pb-10 d-inline-block">
+						<img src="/assets/img/icon-rocket.png" alt="">
+					</span>
+					<h3 class="pb-10 light">Community Support</h3>
+					<p>
+                        Support is given through <a href="{{ site.urls.gitter }}" target="_blank">Gitter</a>.<br>
+                        If you find a bug create a <a href="https://github.com/dwoo-project/dwoo/issues" target="_blank">ticket</a>
+                        on GitHub or submit a <a href="https://github.com/dwoo-project/dwoo/pulls" target="_blank">pull request</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!---->
+<section class="pb-50">
+    <div class="container">
+        <div class="row">
+            <div class="divider mb-75"><i class="fa fa-support"></i></div>
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="topics-list">
+                            <h3 class="pb-15">Main</h3>
+                            <ul class="topics-list">
+                            {% for doc in site.documentation.main %}
+                                <li><a href="/documentation/{{ doc.url }}">{{ doc.title }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="topics-list">
+                            <h3 class="pb-15">1.2 and bellow</h3>
+                            <ul class="topics-list">
+                            {% for doc in site.documentation[1.2] %}
+                                <li><a href="/documentation/1.2/{{ doc.url }}">{{ doc.title }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="topics-list">
+                            <h3 class="pb-15">1.3</h3>
+                            <ul class="topics-list">
+                            {% for doc in site.documentation[1.3] %}
+                                <li><a href="/documentation/1.3/{{ doc.url }}">{{ doc.title }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<div class="col-sm-4">
+				<div class="sidebar">
+					{% include popular.html %}
+                    {% include improve.html %}
+				</div>
+			</div>
+        </div>
+    </div>
+</section>
