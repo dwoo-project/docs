@@ -5,7 +5,7 @@ toc: true
 ---
 
 ## 1.3.1 (2016-12-16)
-* Now fully compatible with PHP7.0 and PHP7.1.
+* Now fully compatible with **PHP7.0** and **PHP7.1**.
 
 `Changed`
 * Rename class `Dwoo\Template\String` to `Dwoo\Template\Str`.
