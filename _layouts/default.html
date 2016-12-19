@@ -26,17 +26,27 @@
 {% if page.contributors %}
     <script src="//unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>
     <script>
-        var gh = new GitHub();
+        var gh = new GitHub({
+            token: '1c3d935b0ff717c7052ba4cb830942143acd5955'
+        });
         var dwoo = gh.getRepo('dwoo-project', 'dwoo');
         dwoo.getContributors(function(error, result, request) {
             if (request.status == 200) {
                 result.reverse().forEach(function (object) {
                     if (object.author.login != 'gitter-badger') {
-                        $(".contributors")
-                                .append('<li class="col-sm-4"><a href="' + object.author.html_url + '" target="_blank">' +
-                                    '<img src="' +
-                                        object.author.avatar_url + '">' + object.author.login + ' (' +
-                                        object.total + ')</a></li>');
+                        var user = gh.getUser(object.author.login);
+                        user.getProfile().then(function(obj) {
+                            var content = '<li class="col-sm-4 pb-15">';
+                            content += '<a href="' + object.author.html_url + '" target="_blank">';
+                            content += '<img src="' + object.author.avatar_url + '" class="img-responsive pr-15">';
+                            content += '<div>';
+                            content += '<div>' + obj.data.name + '</div>';
+                            content += '<small>' + object.total + ' commits</small>';
+                            content += '</div>';
+                            content += '</a>';
+                            content += '</li>';
+                            $(".contributors").append(content);
+                        });
                     }
                 });
             }

@@ -425,11 +425,18 @@ ul.list-integrations {
 /***************************** Contributors ****************************/
 .contributors {
 	li {
-	  img {
-		width: 80px;
-		-webkit-border-radius: 50%;
-		-moz-border-radius: 50%;
-		border-radius: 50%;
+	  a {
+		display: flex;
+		align-items: center;
+		img {
+		  width: 80px;
+		  height: 80px;
+		  -webkit-border-radius: 50%;
+		  -moz-border-radius: 50%;
+		  border-radius: 50%;
+		  padding: 0;
+		  margin-right: 15px;
+		}
 	  }
 	}
 }
