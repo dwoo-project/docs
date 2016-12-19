@@ -2,6 +2,7 @@
 layout: plugin
 title: spacify
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Adds spaces (or the given character(s)) between every character of a string

@@ -2,6 +2,7 @@
 layout: plugin
 title: with
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Moves the scope down into an array of values, allowing one to type `{$var}` instead of `{$array.var}` within the `{with}` block

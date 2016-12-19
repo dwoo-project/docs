@@ -2,6 +2,7 @@
 layout: plugin
 title: html_state_select
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Returns a simple HTML select element filled with a list of all US States.

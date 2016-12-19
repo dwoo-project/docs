@@ -2,6 +2,7 @@
 layout: plugin
 title: capitalize
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Uppercases the first letter of each word in the given string

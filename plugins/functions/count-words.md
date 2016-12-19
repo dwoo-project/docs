@@ -2,6 +2,7 @@
 layout: plugin
 title: count_words
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Counts the words in a string

@@ -2,6 +2,7 @@
 layout: plugin
 title: cat
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Concatenates any number of variables or strings fed into it

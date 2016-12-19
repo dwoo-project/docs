@@ -2,6 +2,7 @@
 layout: plugin
 title: block
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 block — Defines a block that can be extended by a child template

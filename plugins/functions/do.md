@@ -2,6 +2,7 @@
 layout: plugin
 title: do
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Executes whatever follows without output. This is basically a cleaner alternative to doing `{assign func("foo") var}` or to use `{capture}` to silence some output.

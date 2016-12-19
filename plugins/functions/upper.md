@@ -2,6 +2,7 @@
 layout: plugin
 title: upper
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Converts a given string to upper case.

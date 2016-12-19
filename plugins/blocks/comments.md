@@ -2,6 +2,7 @@
 layout: plugin
 title: comments
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 The comments plugin allows you to put comments in your template files. These comments are handled by Dwoo, and are 

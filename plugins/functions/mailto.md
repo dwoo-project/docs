@@ -2,6 +2,7 @@
 layout: plugin
 title: mailto
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Outputs a mailto link with optional spam-proof (okay probably not) encoding

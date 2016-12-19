@@ -2,6 +2,7 @@
 layout: plugin
 title: indent
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Indents every line of a text by the given amount of characters

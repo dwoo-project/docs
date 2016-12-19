@@ -2,6 +2,7 @@
 layout: plugin
 title: load_templates
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Checks whether a variable is not null

@@ -2,6 +2,7 @@
 layout: plugin
 title: literal
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Outputs the entire block contents without parsing them as template code.

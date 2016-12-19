@@ -2,6 +2,7 @@
 layout: plugin
 title: string-format
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Formats a string using the sprintf function

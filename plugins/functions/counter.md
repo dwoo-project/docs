@@ -2,6 +2,7 @@
 layout: plugin
 title: counter
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Initiates a counter that is incremented every time you call it

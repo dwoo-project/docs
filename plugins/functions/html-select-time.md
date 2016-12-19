@@ -2,6 +2,7 @@
 layout: plugin
 title: html_select_time
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Creates select boxes for any/all of hour, minute, seconds and meridian.

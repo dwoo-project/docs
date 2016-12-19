@@ -2,6 +2,7 @@
 layout: plugin
 title: gravatar
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Returns a link to the gravatar of someone based on his email address, see the Gravatar website if you don't know what this is about.

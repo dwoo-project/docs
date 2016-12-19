@@ -2,6 +2,7 @@
 layout: plugin
 title: tif
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Ternary if operation. This is the equivalent of the [ternary operator](http://uk2.php.net/ternary#language.operators.comparison.ternary){:target="_blank"}. It evaluates the first argument and returns the second if it's true, or the third if it's false.

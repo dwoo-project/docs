@@ -2,6 +2,7 @@
 layout: plugin
 title: escape
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Applies various escaping schemes on the given string

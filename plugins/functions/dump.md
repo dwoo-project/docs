@@ -2,6 +2,7 @@
 layout: plugin
 title: dump
 versions: [1.0, 1.1, 1.2, 1.3]
+plugin_breadcrumb: true
 ---
 
 Dumps values of the given variable, or the entire data if nothing provided
