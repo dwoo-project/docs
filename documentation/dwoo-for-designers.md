@@ -77,6 +77,7 @@ array), or the so-called **subscript** syntax `[]`:
 
 ### Global variables
 The following variables are always available in templates:
+
 * `{$.version}` : Version number of Dwoo
 * `{$.ad}` : Link to dwoo website
 * `{$.now}` : Request time to execute the page
