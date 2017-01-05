@@ -12,9 +12,27 @@ You can even extend the **Core** itself for your application.
 A global variable is like any other template variable, except that it's available in all templates.
 
 <blockquote class="blockquote">
-Actually globals are defined in the <code>Core</code> class and cannot be modified directly.
-In the <code>1.4.0</code> version, you will be able to add new <strong>globals</strong> variables.
+Actually globals are defined in the <code>Core</code> class and cannot be modified directly.<br>
+Since Dwoo <code>1.3.2</code>, this feature is now available, let's see how to use it:
 </blockquote>
+<div class="code-box">
+<header>index.php</header>
+{% highlight php %}
+<?php
+// create Core object
+$dwoo = new Dwoo\Core();
+// assing new global variable named 'text'
+$dwoo->addGlobal('text', 'value');
+{% endhighlight %}
+</div>
+
+You can now use your new global variable such as:
+<div class="code-box">
+<header>index.tpl</header>
+{% highlight smarty %}
+{$.text}
+{% endhighlight %}
+</div>
 
 ## Extending Core
 <div class="code-box">

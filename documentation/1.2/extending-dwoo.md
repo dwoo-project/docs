@@ -13,6 +13,7 @@ A global variable is like any other template variable, except that it's availabl
 
 <blockquote class="blockquote">
 Actually globals are defined in the <code>Core</code> class and cannot be modified directly.
+This feature is now available from Dwoo <code>1.3.2</code>, please upgrade your dependency!
 </blockquote>
 
 ## Extending Core
