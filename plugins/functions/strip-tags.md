@@ -15,6 +15,7 @@ strip_tags(string $value, [ bool $addspace = true ])
 
 * **value**: the string to process
 * **addspace**: if true, a space is added in place of every removed tag
+* **allowed_tags**: specify tags which should not be stripped
 
 ### Examples
 Example #1
@@ -33,3 +34,10 @@ foo bold bar
 fooboldbar
 {% endhighlight %}
 </div>
+
+## Changelog
+
+| Version | Description |
+| ------- | ----------- |
+| **1.3.3** | Added the `allowed_tags` parameter. |
+{: class="table table-striped table-bordered"}
