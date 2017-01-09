@@ -24,7 +24,7 @@ Example #1
 {% highlight smarty %}
 {strip_tags "foo<strong>bold</strong>bar"}
 {strip_tags "foo<strong>bold</strong>bar" false}
-{strip_tags "<i>foo</i><strong>bold</strong>bar" false "<strong>"}
+{strip_tags "<i>foo</i>	<strong>bold</strong>bar" false "<strong>"}
 {% endhighlight %}
 </div>
 
