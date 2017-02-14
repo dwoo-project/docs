@@ -14,6 +14,7 @@ Dwoo `1.2` and bellow requires at least **PHP 5.3** to run.
 However Dwoo <code>1.2 and bellow</code> are not compatible with <strong>PHP7</strong>.</blockquote>
 
 ## Installation
+
 ### Installing via Composer **(recommended)**
 Dwoo is available on [packagist.org](https://packagist.org/packages/dwoo/dwoo){:target="_blank"} to do so,
 install [Composer](https://getcomposer.org/download/){:target="_blank"} and run the following command to get the
@@ -32,6 +33,7 @@ composer require dwoo/dwoo 1.2.*
 4. Go to the [next section](#running-dwoo) to know how to use classes.
 
 ## Running Dwoo
+
 ### Dwoo at its simplest
 Here is the simplest way to output a Dwoo template.
 <div class="code-box">
