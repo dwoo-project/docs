@@ -15,6 +15,7 @@ Since version <code>1.3.1</code> Dwoo is now compatible with <strong>PHP7</stron
 </blockquote>
 
 ## Installation
+
 ### Installing via Composer **(recommended)**
 Dwoo is available on [packagist.org](https://packagist.org/packages/dwoo/dwoo){:target="_blank"} to do so,
 install [Composer](https://getcomposer.org/download/){:target="_blank"} and run the following command to get the
@@ -33,6 +34,7 @@ composer require dwoo/dwoo 1.3.*
 4. Go to the [next section](#running-dwoo) to know how to use classes.
 
 ## Running Dwoo
+
 ### Dwoo at its simplest
 Here is the simplest way to output a Dwoo template.
 <div class="code-box">
