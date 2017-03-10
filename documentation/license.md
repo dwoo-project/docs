@@ -1,6 +1,8 @@
 ---
 layout: documentation
 title: License
+redirect_from:
+  - /LICENSE
 ---
 
 <div dir="ltr">
