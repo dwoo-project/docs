@@ -178,6 +178,19 @@ body > header {
 	  width: 70%;
 	}
   }
+  &.symfony {
+	background: $color-symfony;
+	.navbar-header {
+	  a.navbar-brand {
+		color: $color-link-symfony;
+	  }
+	}
+	.navbar {
+	  li a {
+		color: $color-link-symfony;
+	  }
+	}
+  }
 }
 /***************************** Widgets ****************************/
 .widget {
