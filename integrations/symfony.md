@@ -3,6 +3,12 @@ layout: symfony
 title: SymfonyBundle
 ---
 
+<div class="alert alert-warning">
+  <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></strong>
+  The SymfonyBundle project is currently in beta stage, and cannot be fully fonctionnal.
+  <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></strong>
+</div>
+
 This bundle was created to support Dwoo in [Symfony](https://symfony.com){:target="_blank"}, providing an alternative
 to the [Twig](http://twig.sensiolabs.org){:target="_blank"} template engine natively supported.
 
