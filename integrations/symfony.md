@@ -15,4 +15,4 @@ to the [Twig](http://twig.sensiolabs.org){:target="_blank"} template engine nati
 ## Requirements
 * [PHP](http://php.net){:target="_blank"} 5.5.0 and up
 * [Symfony](http://symfony.com){:target="_blank"} 2.8 and up
-* [Dwoo](http://dwoo.org){:target="_blank"} 1.3.x
+* [Dwoo](http://dwoo.org){:target="_blank"} 1.3.6 and up
