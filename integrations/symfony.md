@@ -1,7 +1,20 @@
 ---
 layout: symfony
-title: SymfonyBundle
+title: SymfonyBundle 
 ---
+
+<div class="row mb-1">
+	<div class="col-md-9">
+		<a href="https://packagist.org/packages/dwoo/symfony-bundle"><img src="https://poser.pugx.org/dwoo/symfony-bundle/v/stable?format=flat-square" alt="Latest Stable Version"></a>
+		<a href="https://packagist.org/packages/dwoo/symfony-bundle"><img src="https://poser.pugx.org/dwoo/symfony-bundle/downloads?format=flat-square" alt="Total Downloads"></a>
+		<a href="https://packagist.org/packages/dwoo/symfony-bundle"><img src="https://poser.pugx.org/dwoo/symfony-bundle/license?format=flat-square" alt="License"></a>
+	</div>
+	<div class="col-md-3 text-md-right">
+		<a href="https://github.com/dwoo-project/symfonybundle" target="_blank" class="btn btn-sm btn-outline-success">
+			<i class="fa fa-github" aria-hidden="true"></i> See on GitHub
+		</a>
+	</div>
+</div>
 
 <div class="alert alert-warning">
   <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></strong>
