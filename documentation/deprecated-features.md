@@ -26,4 +26,7 @@ and no PEAR packages are provided anymore. Use [Composer](http://getcomposer.org
 * Since `1.3.0` version, **Dwoo** class has been removed. you need to use `Dwoo_Core` or `Dwoo\Core` instead!
 
 ## Core class
-* Since `1.3.0` version. method `output()` has been removed, you now need to use function `echo` with method `get()`.
+* Since `1.3.0` version, method `output()` has been removed, you now need to use function `echo` with method `get()`.
+
+## Smarty support
+* Since `1.4.0` version, Smarty support and compatibility layer has been removed. Please use dwoo syntax instead!
