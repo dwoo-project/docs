@@ -6,7 +6,7 @@ toc: true
 
 <div class="alert alert-warning">
   <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></strong>
-  Smarty support has been removed since dwoo <strong>1.4.0</strong>.
+  Smarty support has been removed since dwoo <strong>2.0</strong>.
   <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></strong>
 </div>
 
