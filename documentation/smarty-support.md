@@ -4,6 +4,12 @@ title: Smarty support
 toc: true
 ---
 
+<div class="alert alert-warning">
+  <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></strong>
+  Smarty support has been removed since dwoo <strong>1.4.0</strong>.
+  <strong><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></strong>
+</div>
+
 Dwoo supports the Smarty template syntax and extends it to provide some other possibilities.
 Read the [Syntax](/documentation/syntax.html) and [Shortcuts](/documentation/shortcuts.html) pages for more info on that.
 
