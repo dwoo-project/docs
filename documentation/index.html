@@ -52,9 +52,9 @@ dochead: true
 <!---->
 <section class="pb-50">
     <div class="container">
+        <div class="divider mb-75"><i class="fa fa-support"></i></div>
         <div class="row">
-            <div class="divider mb-75"><i class="fa fa-support"></i></div>
-            <div class="col-lg-8">
+            <div class="col-md-8">
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="topics-list">
@@ -68,7 +68,7 @@ dochead: true
                     </div>
                     <div class="col-sm-6">
                         <div class="topics-list">
-                            <h3 class="pb-15">1.3</h3>
+                            <h3 class="pb-15">1.3 <small class="badge badge-primary">Current</small></h3>
                             <ul class="topics-list">
                                 {% for doc in site.documentation[1.3] %}
                                 <li><a href="/documentation/1.3/{{ doc.url }}">{{ doc.title }}</a></li>
@@ -80,7 +80,7 @@ dochead: true
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="topics-list">
-                            <h3 class="pb-15">1.2 and bellow</h3>
+                            <h3 class="pb-15">1.2 and bellow <small class="badge badge-warning">@Deprecated</small></h3>
                             <ul class="topics-list">
                                 {% for doc in site.documentation[1.2] %}
                                 <li><a href="/documentation/1.2/{{ doc.url }}">{{ doc.title }}</a></li>
@@ -88,9 +88,19 @@ dochead: true
                             </ul>
                         </div>
                     </div>
+                    <div class="col-sm-6">
+                        <div class="topics-list">
+                            <h3 class="pb-15">2.0 <small class="badge badge-success">New</small></h3>
+                            <ul class="topics-list">
+                                {% for doc in site.documentation[2.0] %}
+                                <li><a href="/documentation/2.0/{{ doc.url }}">{{ doc.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-			<div class="col-sm-4">
+			<div class="col-md-4">
 				<div class="sidebar">
 					{% include popular.html %}
                     {% include improve.html %}
