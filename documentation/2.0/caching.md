@@ -33,7 +33,7 @@ $core = new Dwoo\Core();
 $core->setCache('./tests/temp/cache');
 
 // Output the cached result
-echo $core->get($tpl);
+echo $core->get('index.tpl');
 {% endhighlight %}
 </div>
 
@@ -57,7 +57,7 @@ $cache->setTime(60);
 $core->setCache($cache);
 
 // Output the cached result
-echo $core->get($tpl);
+echo $core->get('index.tpl');
 {% endhighlight %}
 </div>
 
@@ -82,11 +82,14 @@ $core->getCache()->clearCache();
 $core->clearCache();
 
 // Output the cached result
-echo $core->get($tpl);
+echo $core->get('index.tpl');
 {% endhighlight %}
 </div>
 
 ## Creating a custom Caching system
+As an alternative to using the default file-based caching mechanism `Cache\Filesystem`, you can create a custom cache
+handling class that will be used to `read`, `write` and `clear` cached files.
+
 <div class="code-box">
 <header>CustomCache.php</header>
 {% highlight php %}
@@ -95,8 +98,6 @@ use Dwoo\CacheInterface;
 
 /**
  * Class CustomCache
- *
- * @package Dwoo\Cache
  */
 class CustomCache implements CacheInterface
 {
@@ -120,9 +121,9 @@ class CustomCache implements CacheInterface
      *
      * @return bool|string
      */
-    public function getCachedTemplate(string $key)
+    public function read(string $key)
     {
-        // TODO: Implement getCachedTemplate() method.
+        // TODO: Implement read() method.
     }
 
     /**
@@ -145,10 +146,33 @@ class CustomCache implements CacheInterface
      *
      * @return bool true if the cache was not present or if it was deleted, false if it remains there
      */
-    public function clearCache(int $olderThan = - 1): bool
+    public function clear(int $olderThan = - 1): bool
     {
-        // TODO: Implement clearCache() method.
+        // TODO: Implement clear() method.
     }
 }
+{% endhighlight %}
+</div>
+
+After creating an object of `CustomCache` class, dwoo will now use this class to handle cached data.
+<div class="code-box">
+<header>demo.php</header>
+{% highlight php %}
+<?php
+<?php
+// Include the main class, the rest will be automatically loaded
+require 'vendor/autoload.php';
+
+// Create instance of main class of Dwoo
+$core = new Dwoo\Core();
+
+// Create instance of CustomCache class
+$cache = new CustomCache('./tests/temp/cache');
+
+// Set CustomCache class
+$core->setCache($cache);
+
+// Output the cached result
+echo $core->get('index.tpl');
 {% endhighlight %}
 </div>
