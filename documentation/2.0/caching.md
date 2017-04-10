@@ -19,6 +19,9 @@ not make sense to cache this page.
 By default caching is **disabled** and use caching class `Cache\Nullable`.
 
 ###  Enabling caching
+The first thing to do is enable caching by using `Core::setCache()` method.   
+This method accept the next values: `CacheInterface` object, `string` or `boolean`.
+
 <div class="code-box">
 <header>demo.php</header>
 {% highlight php %}
@@ -37,7 +40,14 @@ echo $core->get('index.tpl');
 {% endhighlight %}
 </div>
 
+With caching enabled, the method call to display will render the template as usual, but also saves a copy of its
+output to a file (*a cached copy*) in the **cache directory**. On the next call to display the template, the cached 
+copy will be used instead of rendering the template again.
+
 ### Setting cache lifetime
+Each cached page has a limited lifetime determined by `protected $time;`.   
+The default value is **3600** seconds, or **one hour**. After that time expires, the cache is regenerated.
+
 <div class="code-box">
 <header>demo.php</header>
 {% highlight php %}
@@ -62,6 +72,9 @@ echo $core->get('index.tpl');
 </div>
 
 ### Clearing the cache
+You can clear all the cache files with the `Core::clearCache()` method, or individual cached files with the 
+`CacheInterface::clear()` method.
+
 <div class="code-box">
 <header>demo.php</header>
 {% highlight php %}
@@ -76,7 +89,7 @@ $core = new Dwoo\Core();
 $core->setCache('./tests/temp/cache');
 
 // Clear current template cache
-$core->getCache()->clearCache();
+$core->getCache()->clearCache('index.tpl');
 
 // Clear all cache files
 $core->clearCache();
@@ -117,11 +130,9 @@ class CustomCache implements CacheInterface
      * Returns the cached template output file name, true if it's cache-able but not cached
      * or false if it's not cached.
      *
-     * @param string $key
-     *
      * @return bool|string
      */
-    public function read(string $key)
+    public function read()
     {
         // TODO: Implement read() method.
     }
@@ -129,12 +140,11 @@ class CustomCache implements CacheInterface
     /**
      * Caches the provided output into the cache file.
      *
-     * @param string $key     the template name
      * @param string $content the template output
      *
      * @return string full path of the cached file
      */
-    public function write(string $key, string $content): string
+    public function write(string $content): string
     {
         // TODO: Implement write() method.
     }
@@ -142,13 +152,26 @@ class CustomCache implements CacheInterface
     /**
      * Clears the cached template if it's older than the given time.
      *
-     * @param int $olderThan minimum time (in seconds) required for the cache to be cleared
+     * @param string $content   The template content
+     * @param int    $olderThan minimum time (in seconds) required for the cache to be cleared
      *
      * @return bool true if the cache was not present or if it was deleted, false if it remains there
      */
-    public function clear(int $olderThan = - 1): bool
+    public function clear(string $content, int $olderThan = - 1): bool
     {
         // TODO: Implement clear() method.
+    }
+    
+    /**
+     * Generates a cache key for the given template content.
+     *
+     * @param string $content The template content
+     *
+     * @return string
+     */
+    public function generateKey(string $content): string
+    {
+        // TODO: Implement generateKey() method.
     }
 }
 {% endhighlight %}
@@ -158,7 +181,6 @@ After creating an object of `CustomCache` class, dwoo will now use this class to
 <div class="code-box">
 <header>demo.php</header>
 {% highlight php %}
-<?php
 <?php
 // Include the main class, the rest will be automatically loaded
 require 'vendor/autoload.php';
@@ -176,3 +198,5 @@ $core->setCache($cache);
 echo $core->get('index.tpl');
 {% endhighlight %}
 </div>
+
+## Custom Cache Implementation
