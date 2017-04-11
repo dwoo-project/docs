@@ -72,8 +72,7 @@ ul {
 }
 /***************************** Header ****************************/
 body > header {
-  //background: $color-brand;
-  background: linear-gradient(-120deg, rgba(245, 33, 33, 0) 87%, rgba(255, 255, 255, 0.08) 15%), linear-gradient(-110deg, rgba(27, 0, 255, 0) 85%, rgba(255, 255, 255, 0.08) 15%), linear-gradient(-103deg, rgba(255, 33, 33, 0) 84%, rgba(255, 255, 255, 0.08) 15%), radial-gradient(circle, $color-brand 0%, $color-brand 100%);
+  background: linear-gradient(-74deg, transparent 90%, rgba(255, 255, 255, 0.23) 20%), linear-gradient(-74deg, transparent 83%, rgba(255, 255, 255, 0.18) 15%), linear-gradient(-74deg, transparent 76%, rgba(255, 255, 255, 0.1) 15%), linear-gradient(to top, $color-brand, $color-brand, $color-brand);
   @media (min-width: 480px) {
 	.container {
 	  display: flex;
@@ -199,13 +198,10 @@ body > header {
 	margin-top: -64px;
 	ul {
 	  list-style: none;
-	  display: block;
-	  margin: auto;
-	  text-align: center;
-	  li {
-		display: inline-block;
+	  width: 100%;
+	  > li {
 		margin: auto 15px;
-		a {
+		> a {
 		  display: block;
 		  text-transform: capitalize;
 		  padding: 26px 5px 22px 5px;
@@ -219,7 +215,7 @@ body > header {
 			background-color: transparent;
 		  }
 		}
-		a:hover, &.active a {
+		> a:hover, &.active a {
 		  color: #fff;
 		  border-bottom: 3px solid #fff;
 		  padding: 26px 5px 19px 5px;
