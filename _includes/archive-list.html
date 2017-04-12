@@ -3,7 +3,7 @@
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
         {% for item in site.data.docsarchive %}
             {% if item.name == version %}
-                Dwoo {{ item.name }} (current)
+                Dwoo {{ item.name }} {% if item.current == true %}(current){% endif %}
             {% endif %}
         {% endfor %}
         <span class="caret"></span>
@@ -11,7 +11,7 @@
     <div class="dropdown-menu">
         {% for item in site.data.docsarchive %}
             {% if item.name != version %}
-                <a class="dropdown-item" href="/documentation/{{ item.name }}/">Dwoo {{ item.name }}</a>
+                <a class="dropdown-item" href="/documentation/{{ item.name }}/">Dwoo {{ item.name }} {% if item.current == true %}(current){% endif %}</a>
             {% endif %}
         {% endfor %}
     </div>
