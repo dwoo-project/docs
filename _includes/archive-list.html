@@ -1,7 +1,8 @@
+{% assign version = page.url | remove:'documentation' | replace:'/',' ' | truncatewords: 1, "" %}
 <li class="nav-item ml-auto dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
         {% for item in site.data.docsarchive %}
-            {% if item.current == true %}
+            {% if item.name == version %}
                 Dwoo {{ item.name }} (current)
             {% endif %}
         {% endfor %}
@@ -9,7 +10,7 @@
     </a>
     <div class="dropdown-menu">
         {% for item in site.data.docsarchive %}
-            {% if item.current != true %}
+            {% if item.name != version %}
                 <a class="dropdown-item" href="/documentation/{{ item.name }}/">Dwoo {{ item.name }}</a>
             {% endif %}
         {% endfor %}
