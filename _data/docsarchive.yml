@@ -2,6 +2,5 @@
     name: v2.0
   - archive:
     name: v1.3
-    current: true
   - archive:
     name: v1.2
