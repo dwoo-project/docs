@@ -25,7 +25,21 @@
 	</div>
     {% if site.data.toc[page.nav] %}
     <div class="masthead-nav mt-50">
-        <div class="container">
+        <div class="{% if page.layout == 'documentation' %}container-fluid{% else %}container{% endif %} d-flex align-items-center">
+            {% if page.layout == 'documentation' %}
+            <div class="search-form">
+                <form class="search form-inline ng-pristine ng-valid" id="searchForm" action="/search/">
+                    <div class="input-group">
+                        <i class="input-group-addon fa fa-search text-white"></i>
+                        <input class="search-field form-control ds-input" id="st-search-input" name="q" placeholder="Search the docs" type="search" autocomplete="off" spellcheck="false" dir="auto">
+                    </div>
+                    <div id="autocompletecontainer-fluid">
+                        <div id="autocompleteResults"></div>
+                    </div>
+                    <!-- <button type="submit" class="search-submit btn btn-default">Search</button> -->
+                </form>
+            </div>
+            {% endif %}
             <ul class="nav d-flex justify-content-center">
                 {% for link in site.data.toc[page.nav] %}
                     <li class="nav-item"><a class="nav-link" href="{{ link.url }}">{{ link.title }}</a></li>

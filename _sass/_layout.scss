@@ -193,11 +193,47 @@ body > header {
 	height: 64px;
 	background-color: rgba(0, 0, 0, 0.05);
 	width: 100%;
+	.search-form {
+	  .input-group-addon {
+		background: rgba(0,0,0,0.17);
+		border: 0;
+		border-radius: 0;
+		padding: 10px 7px;
+	  }
+	  input[type=search] {
+		background: rgba(0,0,0,0.17);
+		border: 0;
+		box-shadow: none;
+		color: #fff;
+		border-radius: 0;
+		-webkit-transition: all 0.2s ease;
+		-moz-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+		min-width: 212px;
+		padding-left: 0;
+		&::-webkit-input-placeholder {
+		  color: #fff;
+		}
+		&:-moz-placeholder {
+		  color: #fff;
+		}
+		&::-moz-placeholder {
+		  color: #fff;
+		}
+		&:-ms-input-placeholder {
+		  color: #fff;
+		}
+	  }
+	}
 	ul {
 	  list-style: none;
 	  width: 100%;
 	  > li {
 		margin: auto 15px;
+		&.dropdown {
+			margin-right: 38px;
+		}
 		> a {
 		  display: block;
 		  padding: 26px 5px 22px 5px;
