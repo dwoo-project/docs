@@ -1,6 +1,6 @@
 <header>
-	<div class="container pt-30 pb-15">
-		<div class="navbar-header">
+	<div class="container pb-15">
+		<div class="navbar-header pt-15">
 			<a class="navbar-brand" href="/">
 				<img src="/assets/img/logo.png" alt="optional logo">
 				<span class="logo_title">{<strong>d</strong><small>woo</small>}</span>
@@ -9,7 +9,7 @@
 		</div>
 		<nav class="navbar navbar-default" role="navigation">
 			<ul class="nav nav-pills">
-				{% for link in site.navigation %}
+				{% for link in site.data.toc.primarynav %}
 					{% assign current = null %}
 					{% if page.url contains link.url %}
 						{% assign current = ' active' %}
@@ -19,50 +19,28 @@
 			</ul>
 		</nav>
 	</div>
-	{% if page.masthead %}
-	<div class="masthead text-md-center pt-65 pb-80">
-		<h3 class="text-white"><strong>A PHP5.3+ template engine</strong></h3>
-		<p>Modern, flexible and Smarty compatible template engine supporting PHP5 and <strong>PHP7</strong></p>
-		<a href="https://github.com/dwoo-project/dwoo" target="_blank" class="btn btn-hero">
-			<i class="fa fa-github-alt pr-5" aria-hidden="true"></i>
-			View on Github
-			<i class="fa fa-angle-right pl-15" aria-hidden="true"></i>
-		</a>
-        <p><img src="https://poser.pugx.org/dwoo/dwoo/v/stable?format=flat-square"></p>
+	<div class="masthead pb-100 pt-80 text-md-center">
+		<h3 class="text-white"><strong>{{ page.title }}</strong></h3>
+		<p>{{ page.subtitle }}</p>
+		<!--<a href="https://github.com/dwoo-project/dwoo" target="_blank" class="btn btn-hero">-->
+			<!--<i class="fa fa-github-alt pr-5" aria-hidden="true"></i>-->
+			<!--View on Github-->
+			<!--<i class="fa fa-angle-right pl-15" aria-hidden="true"></i>-->
+		<!--</a>-->
+        <!--<p><img src="https://poser.pugx.org/dwoo/dwoo/v/stable?format=flat-square"></p>-->
 	</div>
-    <div class="masthead-nav affix-top">
+    {% if site.data.toc[page.nav] %}
+    <div class="masthead-nav affix-top mt-50">
         <div class="container">
             <ul class="nav d-flex justify-content-center">
-                <li class="nav-item"><a class="nav-link" href="#developers">For Developers</a></li>
-                <li class="nav-item"><a class="nav-link" href="#production">For Designers</a></li>
-                <li class="nav-item"><a class="nav-link" href="#integrations">Integrations</a></li>
-                <li class="nav-item"><a class="nav-link" href="#support">Support</a></li>
-            </ul>
-        </div>
-    </div>
-	{% endif %}
-    {% if page.dochead %}
-    <div class="masthead text-md-center pt-65 pb-80">
-        <h3 class="text-white"><strong>Welcome to the Dwoo documentation</strong></h3>
-        <p>You will find all the help you need in the different parts of this documentation.</p>
-    </div>
-    <div class="masthead-nav affix-top">
-        <div class="container">
-            <ul class="nav d-flex justify-content-start">
-                <li class="nav-item"><a class="nav-link" href="#">Guides</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">API Reference</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Samples</a></li>
-                <li class="nav-item ml-auto dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                       aria-haspopup="true" aria-expanded="false">Dwoo v1.3.x <small class="badge badge-primary">current</small></a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Dwoo v2.x <small class="badge badge-success">new</small></a>
-                        <a class="dropdown-item" href="#">Dwoo v1.2.x <small class="badge badge-warning">deprecated</small></a>
-                    </div>
-                </li>
+                {% for link in site.data.toc[page.nav] %}
+                    <li class="nav-item"><a class="nav-link" href="{{ link.url }}">{{ link.title }}</a></li>
+                {% endfor %}
+                {% if page.nav == 'docnav' %}
+                    {% include archive-list.html %}
+                {% endif %}
             </ul>
         </div>
     </div>
     {% endif %}
-
 </header>

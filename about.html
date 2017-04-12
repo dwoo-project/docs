@@ -1,55 +1,98 @@
 ---
 layout: page
-contributors: true
+title: What is Dwoo?
+subtitle: Dwoo is a modern, flexible and object-oriented template engine
+nav: aboutnav
 ---
 
 <div class="main">
-	<section class="article-text pt-50 pb-50">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 col-md-6">
-					<h2 class="section_header fancy centered pb-30">About</h2>
-                    <h5>Dwoo is a PHP5/PHP7 Template Engine that was started in early 2008.</h5>
-					<p>The idea came from the fact that <b>Smarty</b>, a well known template engine, is getting older
-                       and older.</p>
-					<p>It carries the weight of it's age, having old features that are inconsistent compared to newer ones, being written for PHP4 its Object Oriented aspect doesn't take advantage of PHP5's more advanced features in the area, etc.</p>
-					<p>Hence Dwoo was born, hoping to provide a more up to date and stronger engine.</p>
-					<p>So far it has proven to be faster than Smarty in many areas, and it provides a compatibility layer to allow developers that have been using Smarty for years to switch their application over to Dwoo progressively.</p>
-				</div>
-				<div class="col-sm-6 col-md-6 team_members">
-					<h2 class="section_header fancy centered pb-30">Meet our Authors... <small>&nbsp;</small></h2>
-					<div class="row">
-						<div class="col-sm-6 col-md-6 team_member">
-							<figure><img
-                                    src="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-1/p200x200/13590305_10206611566471172_4638065264210024000_n.jpg?oh=76fd2dade46d9df32e7833856c69280c&oe=58B11ADE" alt="1a" class="img-responsive"></figure>
-							<h5>David Sanchez</h5>
-							<small>Developer</small>
-							<hr>
-							<div class="team_social">
-								<a href="http://davidsanchez.me" target="_blank"><i class="fa fa-home fa-2x"></i></a>
-								<a href="https://github.com/emulienfou" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-							</div>
-							<p class="short_bio">I'm a young developer creating open-sources applications in PHP, JavaScript, Java and Android. For know more about me, see my website or follow me on GitHub.</p>
-						</div>
-						<div class="col-sm-6 col-md-6 team_member">
-							<figure><img
-                                    src="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-1/c40.154.504.504/s200x200/208591_1812545548186_6931716_n.jpg?oh=b6316c6bf075b8fdbe7fb4a2d5fc9b12&oe=58E7CF6D" alt="2a" class="img-responsive"></figure>
-							<h5>Jordi Boggiano</h5>
-							<small>Developer / Founder</small>
-							<hr>
-							<div class="team_social">
-								<a href="http://seld.be/" target="_blank"><i class="fa fa-home fa-2x"></i></a>
-								<a href="https://github.com/Seldaek" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-							</div>
-							<p class="short_bio">Jordi Boggiano has been involved in web development since roughly 2000, working mostly with open source technologies, programming in PHP, JavaScript and ActionScript, and learning day and night how the web works.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+    <section id="overview" class="pb-30 pt-80">
+        <div class="container">
+            <h2 class="mb-15">Overview</h2>
+            <p>Dwoo is a PHP5/PHP7 Template Engine that was started in early 2008.</p>
+        </div>
+    </section>
+    <section id="history" class="pb-30 pt-30">
+        <div class="container">
+            <h2 class="mb-15">A bit of history</h2>
+            <p>
+                The idea came from the fact that <b>Smarty</b>, a well known template engine, is getting older and
+                older. It carries the weight of it's age, having old features that are inconsistent compared to newer
+                ones, being written for PHP4 its Object Oriented aspect doesn't take advantage of PHP5's more advanced
+                features in the area, etc.<br>Hence Dwoo was born, hoping to provide a more up to date and stronger
+                engine. So far it has proven to be faster than Smarty in many areas, and it provides a compatibility
+                layer to allow developers that have been using Smarty for years to switch their application over to Dwoo
+                progressively.
+            </p>
+        </div>
+    </section>
+    <section id="authors" class="pb-30 pt-30">
+        <div class="container">
+            <h2 class="mb-15">Meet the authors...</h2>
             <div class="row">
-                <h2 class="pb-30">Contributors</h2>
-                <ul class="list-unstyled contributors"></ul>
+                <div class="col-sm-12 col-md-12 col-lg-4 offset-lg-2">
+                    <div class="card card-profile m-b-0">
+                        <div class="card-heading"></div>
+                        <div class="card-block text-center">
+                            <img class="card-profile-img img-responsive" src="/assets/img/emulienfou.jpg">
+                            <h5 class="card-title">David Sanchez</h5>
+                            <p class="card-text m-b">
+                                Maintainer of Dwoo since 2013,<br>create releases since <strong>v.1.2</strong>.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="//github.com/emulienfou" target="_blank" class="btn btn-success btn-sm m-b">
+                                <span class="fa fa-github"></span> View GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4 offset-lg-2">
+                    <div class="card card-profile m-b-0">
+                        <div class="card-heading"></div>
+                        <div class="card-block text-center">
+                            <img class="card-profile-img img-responsive" src="/assets/img/seldaek.jpg">
+                            <h5 class="card-title">Jordi Boggiano</h5>
+                            <p class="card-text m-b">
+                                Creator of Dwoo,<br>create releases until <strong>v1.1.1</strong>.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="//github.com/Seldaek" target="_blank" class="btn btn-success btn-sm m-b">
+                                <span class="fa fa-github"></span> View GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-		</div>
-	</section>
+        </div>
+    </section>
+    <section id="contributors" class="pb-30 pt-30">
+        <div class="container">
+            <h2 class="mb-15">Contributors</h2>
+            <ul class="media-list media-list-users list-group mb-20">
+                {% for contributor in site.data.contributors %}
+                <li class="list-group-item">
+                    <div class="media w-100">
+                        <img class="media-object rounded-circle mr-3"
+                             src="https://avatars3.githubusercontent.com/u/{{ contributor.id }}?v=3&s=42">
+                        <div class="media-body align-self-center">
+                            <a href="https://github.com/{{ contributor.uid }}" target="_blank"
+                               class="btn btn-outline-success btn-sm float-right">
+                                <span class="icon icon-add-user"></span> View GitHub
+                            </a>
+                            <strong>{{ contributor.name }}</strong>
+                            <small>@{{ contributor.uid }}</small>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            <p>
+                Get involved with Dwoo development by
+                <a href="https://github.com/dwoo-project/dwoo/issues/new" target="_blank">opening an issue</a>
+                or submitting a pull request.
+            </p>
+        </div>
+    </section>
 </div>

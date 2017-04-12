@@ -1,0 +1,41 @@
+primarynav:
+  - title: What is Dwoo?
+    url: /about.html
+  - title: Home
+    url: /index.html
+  - title: Blog
+    url: /blog.html
+  - title: Integrations
+    url: /integrations/
+  - title: Plugins
+    url: /plugins.html
+  - title: Documentation
+    url: /documentation/
+
+horizontalnav:
+  - title: For Developers
+    url: /#/developers
+  - title: For Designers
+    url: /#/designers
+  - title: Integrations
+    url: /#/integration
+  - title: Support
+    url: /#/support
+
+aboutnav:
+  - title: Overview
+    url: "#/overview"
+  - title: A bit of history
+    url: "#/history"
+  - title: Meet the authors...
+    url: "#/authors"
+  - title: Contributors
+    url: "#/contributors"
+
+docnav:
+  - title: Guides
+    url:
+  - title: API References
+    url:
+  - title: Samples
+    url:

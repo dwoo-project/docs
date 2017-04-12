@@ -12,7 +12,9 @@
 
 <!-- Scripts -->
 <script src="//code.jquery.com/jquery-latest.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="/assets/js/tether.min.js"></script>
+<script src="/assets/js/jquery.ba-bbq.min.js"></script>
+<script src="/assets/js/jquery.smooth-scroll.min.js"></script>
 <script src="/assets/js/bootstrap.min.js"></script>
 <script src="/assets/js/jquery.ui.totop.js"></script>
 <script src="/assets/js/easing.js"></script>
@@ -27,35 +29,6 @@
 	ga('create', 'UA-46176060-1', 'auto');
 	ga('send', 'pageview');
 </script>
-
-{% if page.contributors %}
-    <script src="//unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>
-    <script>
-        var gh = new GitHub();
-        var dwoo = gh.getRepo('dwoo-project', 'dwoo');
-        dwoo.getContributors(function(error, result, request) {
-            if (request.status == 200) {
-                result.reverse().forEach(function (object) {
-                    if (object.author.login != 'gitter-badger') {
-                        var user = gh.getUser(object.author.login);
-                        user.getProfile().then(function(obj) {
-                            var content = '<li class="col-sm-4 pb-15">';
-                            content += '<a href="' + object.author.html_url + '" target="_blank">';
-                            content += '<img src="' + object.author.avatar_url + '" class="img-responsive pr-15">';
-                            content += '<div>';
-                            content += '<div>' + obj.data.name + '</div>';
-                            content += '<small>' + object.total + ' commits</small>';
-                            content += '</div>';
-                            content += '</a>';
-                            content += '</li>';
-                            $(".contributors").append(content);
-                        });
-                    }
-                });
-            }
-        });
-    </script>
-{% endif %}
 
 {% if page.comments %}
     <!-- Disqus -->

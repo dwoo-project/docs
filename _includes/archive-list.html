@@ -1,0 +1,8 @@
+<li class="nav-item ml-auto dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+        {% for item in site.data.docsarchive %}{% if item.current == true %}Dwoo {{ item.name }} (current) {% endif %} {% endfor %}<span class="caret"></span>
+    </a>
+    <div class="dropdown-menu">
+        {% for item in site.data.docsarchive %}{% if item.current != true %}<a class="dropdown-item" href="/{{ item.name }}/">Dwoo {{ item.name }}</a>{% endif %}{% endfor %}
+    </div>
+</li>

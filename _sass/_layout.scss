@@ -119,7 +119,6 @@ body > header {
 	li a {
 	  color: $color-white;
 	  font-size: 16px;
-	  font-weight: 500;
 	  padding-right: 20px;
 	  &:hover, &:focus {
 		background-color: transparent;
@@ -195,7 +194,6 @@ body > header {
 	height: 64px;
 	background-color: rgba(0, 0, 0, 0.05);
 	width: 100%;
-	margin-top: -64px;
 	ul {
 	  list-style: none;
 	  width: 100%;
@@ -203,7 +201,6 @@ body > header {
 		margin: auto 15px;
 		> a {
 		  display: block;
-		  text-transform: capitalize;
 		  padding: 26px 5px 22px 5px;
 		  color: rgba(255, 255, 255, 0.8);
 		  font-size: 14px;

@@ -5,13 +5,6 @@ gems:
   - jekyll-sitemap
 urls:
   gitter: 'https://gitter.im/dwoo_project/support?utm_source=share-link&utm_medium=link&utm_campaign=share-link'
-navigation:
-  - {title: Home, url: "/index.html"}
-  - {title: Blog, url: "/blog.html"}
-  - {title: Integrations, url: "/integrations/"}
-  - {title: Plugins, url: "/plugins.html"}
-  - {title: Documentation, url: "/documentation/"}
-  - {title: About, url: "/about.html"}
 documentation:
   main:
     - {title: "Dwoo for designers", url: "dwoo-for-designers.html"}
