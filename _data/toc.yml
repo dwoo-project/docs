@@ -32,8 +32,8 @@ aboutnav:
 
 docnav:
   - title: Guides
-    url:
+    url: /documentation/
   - title: API References
-    url:
+    url: /api/
   - title: Samples
-    url:
+    url: /samples/
