@@ -2,24 +2,20 @@
 layout: page
 ---
 
-<section class="mt-50 mb-50">
-	<div class="container">
-		<div class="row">
-			<div class="doc col-lg-8">
-                <header>
-                    <h1>{{ page.title }}</h1>
-                    {% if page.subtitle != null %}<h2>{{ page.subtitle }}</h2>{% endif %}
-                </header>
-				{{ content }}
-			</div>
-            <div class="col-lg-4">
-                <div class="sidebar">
-                    {% include gitter.html %}
-                    {% if page.toc %}
-                        {% include toc.html %}
-                    {%endif %}
-                </div>
-            </div>
-		</div>
-	</div>
-</section>
+<div class="col-body">
+    <nav class="col-nav pt-20">
+        Navigation
+    </nav>
+    <main class="col-content pt-5 pl-30 pr-30 pb-25">
+        <section class="section">
+            {{ content }}
+        </section>
+    </main>
+     <div class="col-side mt-5 mr-5">
+        {% include gitter.html %}
+        {% include improve.html %}
+        {% if page.toc %}
+            {% include toc.html %}
+        {%endif %}
+    </div>
+</div>
