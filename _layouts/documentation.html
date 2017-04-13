@@ -5,7 +5,7 @@ layout: page
 {% assign version = page.url | remove:'documentation' | replace:'/',' ' | truncatewords: 1, "" | remove: 'v' | times: 1 %}
 <div class="col-body">
     <nav class="col-nav pt-20">
-        <ul class="nav affix" data-spy="affix" data-offset-top="490">
+        <ul class="affix" data-spy="affix" data-offset-top="490">
             {% for link in site.data.toc.doc[version] %}
             <li><a href="{{ link.url }}">{{ link.title }}</a></li>
             {% endfor %}
