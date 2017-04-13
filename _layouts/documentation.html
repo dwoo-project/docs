@@ -2,9 +2,14 @@
 layout: page
 ---
 
+{% assign version = page.url | remove:'documentation' | replace:'/',' ' | truncatewords: 1, "" | remove: 'v' | times: 1 %}
 <div class="col-body">
     <nav class="col-nav pt-20">
-        Navigation
+        <ul class="nav affix" data-spy="affix" data-offset-top="490">
+            {% for link in site.data.toc.doc[version] %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+        </ul>
     </nav>
     <main class="col-content pt-5 pl-30 pr-30 pb-25">
         <section class="section">
