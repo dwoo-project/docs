@@ -1,0 +1,7 @@
+toc:
+  - {title: "Installation", url: "installation.html"}
+  - {title: "Basic Usage / Tips & Tricks", url: "basic-usage.html"}
+  - {title: "Cookbook", url: "cookbook.html"}
+  - {title: "DwooBundle Plugins", url: "dwoo-bundle-plugins.html"}
+  - {title: "Configuration Reference", url: "configuration-reference.html"}
+  - {title: "Changelog", url: "changelog.html"}

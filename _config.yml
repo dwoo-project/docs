@@ -6,48 +6,12 @@ gems:
 urls:
   gitter: 'https://gitter.im/dwoo_project/support?utm_source=share-link&utm_medium=link&utm_campaign=share-link'
 documentation:
-  main:
-    - {title: "Dwoo for designers", url: "dwoo-for-designers.html"}
-    - {title: "Template Inheritance", url: "template-inheritance.html"}
-    - {title: "Shortcuts", url: "shortcuts.html"}
-    - {title: "Iterator variables", url: "iterator-variables.html"}
-    - {title: "Deprecated features", url: "deprecated-features.html"}
-    - {title: "License", url: "license.html"}
-    - {title: "Syntax", url: "syntax.html"}
-    - {title: "Smarty support", url: "smarty-support.html"}
-    - {title: "Reserved variables", url: "dwoo-variables.html"}
-    - {title: "Changelog", url: "changelog.html"}
-  1.2:
-    - {title: "Getting started", url: "getting-started.html"}
-    - {title: "Dwoo for developers", url: "dwoo-for-developers.html"}
-    - {title: "Smarty adapter", url: "smarty-adapter.html"}
-    - {title: "Extending Dwoo", url: "extending-dwoo.html"}
-    - {title: "Writing your own plugin", url: "writing-your-own-plugins.html"}
-#    - {title: "Dwoo internals", url: "dwoo-internals.html"}
-  1.3:
-    - {title: "Getting started", url: "getting-started.html"}
-    - {title: "Dwoo for developers", url: "dwoo-for-developers.html"}
-    - {title: "Smarty adapter", url: "smarty-adapter.html"}
-    - {title: "Extending Dwoo", url: "extending-dwoo.html"}
-    - {title: "Writing your own plugin", url: "writing-your-own-plugins.html"}
-#    - {title: "Dwoo internals", url: "dwoo-internals.html"}
-  2.0:
-    - {title: "Prerequisites & Installation", url: "prerequisites-installation.html"}
-    - {title: "Getting started", url: "getting-started.html"}
-    - {title: "Caching", url: "caching.html"}
   popular:
     - {title: "Getting started", url: "1.3/getting-started.html"}
     - {title: "Dwoo for developers", url: "1.3/dwoo-for-developers.html"}
     - {title: "Dwoo for designers", url: "dwoo-for-designers.html"}
     - {title: "Template Inheritance", url: "template-inheritance.html"}
     - {title: "Shortcuts", url: "shortcuts.html"}
-symfony:
-  - {title: "Installation", url: "installation.html"}
-  - {title: "Basic Usage / Tips & Tricks", url: "basic-usage.html"}
-  - {title: "Cookbook", url: "cookbook.html"}
-  - {title: "DwooBundle Plugins", url: "dwoo-bundle-plugins.html"}
-  - {title: "Configuration Reference", url: "configuration-reference.html"}
-  - {title: "Changelog", url: "changelog.html"}
 
 # Assets
 #
