@@ -11,24 +11,30 @@ primarynav:
     url: /plugins/
   - title: Documentation
     url: /documentation/
+  - title: About
+    url: /about/
 
-horizontalnav:
-  - title: For Developers
-    url: /#/developers
-  - title: For Designers
-    url: /#/designers
-  - title: Integrations
-    url: /#/integration
-  - title: Support
-    url: /#/support
+whatdwoonav:
+  - title: Overview
+    url: "#/overview"
+  - title: What is a Template Engine?
+    url: "#/template-engine"
+  - title: Dwoo for Developers
+    url: "#/for-developers"
+  - title: Dwoo for Designers
+    url: "#/for-designers"
+  - title: Integrations support
+    url: "#/integrations"
 
 aboutnav:
   - title: Overview
     url: "#/overview"
-  - title: Meet the authors...
+  - title: Meet the Authors...
     url: "#/authors"
   - title: Contributors
     url: "#/contributors"
+  - title: Milestones
+    url: "#/milestones"
 
 docnav:
   - title: Guides
