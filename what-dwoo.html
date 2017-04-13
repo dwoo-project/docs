@@ -2,93 +2,62 @@
 layout: page
 title: What is Dwoo?
 subtitle: Dwoo is a modern, flexible and object-oriented template engine
-nav: aboutnav
+nav: whatdwoonav
 ---
 
 <div class="main">
-    <section id="overview" class="pb-30 pt-80">
+    <section id="overview" class="bgc-light-gray pb-30 pt-80">
         <div class="container">
             <h2 class="mb-15">Overview</h2>
-            <p>Dwoo is a PHP5/PHP7 Template Engine that was started in early 2008.<br>
-               The idea came from the fact that <b>Smarty</b>, a well known template engine, is getting older and
-               older. It carries the weight of it's age, having old features that are inconsistent compared to newer
-               ones, being written for PHP4 its Object Oriented aspect doesn't take advantage of PHP5's more advanced
-               features in the area, etc.<br>Hence Dwoo was born, hoping to provide a more up to date and stronger
-               engine. So far it has proven to be faster than Smarty in many areas, and it provides a compatibility
-               layer to allow developers that have been using Smarty for years to switch their application over to Dwoo
-               progressively.
+            <p>
+                Dwoo is a <strong>PHP5</strong> and <strong>PHP7</strong> compatible Template Engine that was started
+                in early 2008 by <a href="//github.com/Seldaek" target="_blank">Jordi Boggiano</a>.<br><br>
+                The idea came from the fact that <b>Smarty</b>, a well known template engine, is getting older and
+                older. It carries the weight of it's age, having old features that are inconsistent compared to newer
+                ones, being written for PHP4 its Object Oriented aspect doesn't take advantage of PHP5's more advanced
+                features in the area, etc.<br>Hence Dwoo was born, hoping to provide a more up to date and stronger
+                engine. So far it has proven to be faster than Smarty in many areas, and it provides a compatibility
+                layer to allow developers that have been using Smarty for years to switch their application over to Dwoo
+                progressively.
             </p>
         </div>
     </section>
-    <section id="authors" class="pb-30 pt-30">
+    <section id="template-engine" class="pb-30 pt-80">
         <div class="container">
-            <h2 class="mb-15">Meet the authors...</h2>
+            <h2 class="mb-15">What is a Template Engine?</h2>
             <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-4 offset-lg-2">
-                    <div class="card card-profile m-b-0">
-                        <div class="card-heading"></div>
-                        <div class="card-block text-center">
-                            <img class="card-profile-img img-responsive"
-                                 src="https://avatars3.githubusercontent.com/u/84061?v=3&s=100">
-                            <h5 class="card-title">David Sanchez</h5>
-                            <p class="card-text m-b">
-                                Maintainer of Dwoo since 2013,<br>creating releases since <strong>v.1.2</strong>.
-                            </p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="//github.com/emulienfou" target="_blank" class="btn btn-success btn-sm m-b">
-                                <span class="fa fa-github"></span> View GitHub
-                            </a>
-                        </div>
-                    </div>
+                <div class="col-xs-12 col-sm-7 col-md-6">
+                    <p>
+                        As we continue to develop complex web applications, it is becoming more important to have a wall
+                        of separation between <em>application logic</em> and <em>display logic</em> so that back-end
+                        developers and front-end developers can collaborate on the same areas of the website without
+                        having to step around each other’s code.<br>
+                        A template engine solves this situation by providing a concise syntax front-end developers can
+                        use to display data prepared by back-end developers. The front-end developers experience the
+                        benefit of clean and pretty views they can read and modify, and in-turn the back-end developers
+                        can free themselves of the responsibility of maintaining the views.<br>
+                        It’s a win-win.
+                    </p>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-4 offset-lg-2">
-                    <div class="card card-profile m-b-0">
-                        <div class="card-heading"></div>
-                        <div class="card-block text-center">
-                            <img class="card-profile-img img-responsive"
-                                 src="https://avatars3.githubusercontent.com/u/183678?v=3&s=100">
-                            <h5 class="card-title">Jordi Boggiano</h5>
-                            <p class="card-text m-b">
-                                Creator of Dwoo,<br>creating releases until <strong>v1.1.1</strong>.
-                            </p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="//github.com/Seldaek" target="_blank" class="btn btn-success btn-sm m-b">
-                                <span class="fa fa-github"></span> View GitHub
-                            </a>
-                        </div>
-                    </div>
+                <div class="col-xs-12 col-sm-5 col-md-5 offset-md-1">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a2/TempEngWeb016.svg">
                 </div>
             </div>
         </div>
     </section>
-    <section id="contributors" class="pb-30 pt-30">
+    <section id="for-developers" class="bgc-light-gray pb-30 pt-80">
         <div class="container">
-            <h2 class="mb-15">Contributors</h2>
-            <ul class="media-list media-list-users list-group mb-20">
-                {% for contributor in site.data.contributors %}
-                <li class="list-group-item">
-                    <div class="media w-100">
-                        <img class="media-object rounded-circle mr-3"
-                             src="https://avatars3.githubusercontent.com/u/{{ contributor.id }}?v=3&s=42">
-                        <div class="media-body align-self-center">
-                            <a href="https://github.com/{{ contributor.uid }}" target="_blank"
-                               class="btn btn-outline-success btn-sm float-right">
-                                <span class="icon icon-add-user"></span> View GitHub
-                            </a>
-                            <strong>{{ contributor.name }}</strong>
-                            <small>@{{ contributor.uid }}</small>
-                        </div>
-                    </div>
-                </li>
-                {% endfor %}
-            </ul>
-            <p>
-                Get involved with Dwoo development by
-                <a href="https://github.com/dwoo-project/dwoo/issues/new" target="_blank">opening an issue</a>
-                or submitting a pull request.
-            </p>
+            <h2 class="mb-15">Dwoo for Developers</h2>
+        </div>
+    </section>
+    <section id="for-designers" class="pb-30 pt-80">
+        <div class="container">
+            <h2 class="mb-15">Dwoo for Designers</h2>
+        </div>
+    </section>
+    <section id="integrations" class="bgc-light-gray pb-30 pt-80">
+        <div class="container">
+            <h2 class="mb-15">Integration Adapters</h2>
         </div>
     </section>
 </div>
