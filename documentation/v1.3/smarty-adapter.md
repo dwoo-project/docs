@@ -1,7 +1,9 @@
 ---
 layout: documentation
 title: Smarty adapter
-doc_breadcrumb: true
+---
+
+# Smarty adapter
 
 ---
 

@@ -1,7 +1,10 @@
 ---
 layout: documentation
 title: Smarty adapter
-doc_breadcrumb: true
+---
+
+# Smarty adapter
+
 ---
 
 Here is an article to convert from Smarty smoothly using the SmartyAdapter.   

@@ -1,8 +1,10 @@
 ---
 layout: documentation
 title: Writing your own plugin
-doc_breadcrumb: true
-toc: true
+---
+
+# Writing your own plugin
+
 ---
 
 Dwoo plugins come in different flavours, **blocks**, **filters**, **functions**, **helpers**, **processors**.   

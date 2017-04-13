@@ -4,6 +4,8 @@
 <body>
 {% if page.layout == 'symfony' %}
     {% include header_symfony.html %}
+{% elsif page.header == 'docs' %}
+    {% include header_docs.html %}
 {% else %}
     {% include header.html %}
 {% endif %}

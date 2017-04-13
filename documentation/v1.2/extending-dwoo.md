@@ -1,8 +1,10 @@
 ---
 layout: documentation
 title: Extending Dwoo
-doc_breadcrumb: true
-toc: true
+---
+
+# Extending Dwoo
+
 ---
 
 Dwoo can be extended in many ways; you can add extra **blocks**, **functions** and **filters***.

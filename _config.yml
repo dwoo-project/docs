@@ -19,3 +19,19 @@ documentation:
 sass:
   sass_dir: _sass
   style: :compressed
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+  -
+    scope:
+      path: documentation
+    values:
+      header: docs
+      nav: docnav
+      toc: true
+

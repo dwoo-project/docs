@@ -32,7 +32,7 @@
     });
 
     /* ********* heronav section ********* */
-    var $mastheadNav = $('.masthead-nav');
+    var $mastheadNav = $('.masthead-nav.affix');
     if ($(window).width() > 991 ) {
         if ($mastheadNav.length > 0) {
             $mastheadNav.affix({

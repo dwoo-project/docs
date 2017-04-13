@@ -473,6 +473,20 @@ ul.list-integrations {
 	flex: 0 0 17em;
 	background-color: #f9f9f9;
 	border-right: 1px solid #eeeeee;
+	ul {
+	  list-style: none;
+	  padding: 0;
+	  text-align: left;
+	  li {
+		position: relative;
+		display: block;
+		a {
+		  position: relative;
+		  display: block;
+		  padding: 10px 15px;
+		}
+	  }
+	}
   }
   .col-side {
 	flex: 0 0 21.875em;

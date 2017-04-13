@@ -1,8 +1,10 @@
 ---
 layout: documentation
 title: Dwoo for developers
-doc_breadcrumb: true
-toc: true
+---
+
+# Dwoo for developers
+
 ---
 
 This chapter describes the API to Dwoo and not the template language.

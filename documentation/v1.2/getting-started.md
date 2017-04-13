@@ -1,8 +1,10 @@
 ---
 layout: documentation
 title: Getting started
-doc_breadcrumb: true
-toc: true
+---
+
+# Getting started
+
 ---
 
 Dwoo relies on plugins to provide useful functionality, examples may include: **if**, **else** blocks, **include**
