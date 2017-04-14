@@ -1,0 +1,12 @@
+version: '2'
+services:
+  jekyll:
+    build: .
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/app
+    working_dir: /app
+    environment:
+      - LANG=C.UTF-8
+      - JEKYLL_GITHUB_TOKEN=f2480a1f0e6fd06966766b08639f073bed5787ac
