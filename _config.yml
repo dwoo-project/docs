@@ -3,6 +3,7 @@ highlighter: rouge
 gems:
   - jekyll-redirect-from
   - jekyll-sitemap
+  - jekyll-github-metadata
 urls:
   gitter: 'https://gitter.im/dwoo_project/support?utm_source=share-link&utm_medium=link&utm_campaign=share-link'
 documentation:
@@ -34,3 +35,9 @@ defaults:
       header: docs
       nav: docnav
       toc: true
+
+repository: dwoo-project/dwoo
+
+jekyll_get:
+  data: packagist
+  json: 'https://packagist.org/packages/dwoo/dwoo.json'
