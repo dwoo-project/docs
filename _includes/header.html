@@ -24,7 +24,7 @@
 		<p>{{ page.subtitle }}</p>
 	</div>
     {% if site.data.toc[page.nav] %}
-    <div class="masthead-nav">
+    <div class="masthead-nav" data-spy="affix" data-offset-top="430">
         <div class="{% if page.layout == 'documentation' %}container-fluid{% else %}container{% endif %} d-flex align-items-center">
             {% if page.layout == 'documentation' %}
             <div class="search-form">
