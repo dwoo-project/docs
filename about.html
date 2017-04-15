@@ -5,7 +5,6 @@ subtitle:
 nav: aboutnav
 ---
 
-<!-- https://packagist.org/packages/dwoo/dwoo.json -->
 <div class="main">
     <section id="overview" class="bgc-light-gray pb-30 pt-30">
         <div class="container">
@@ -14,14 +13,14 @@ nav: aboutnav
                 <div class="col-md-4 text-center">
                     <div class="item">
                         <img src="/assets/img/stars.png" alt="GitHub Stars" title="GitHub Stars" class="mb-10">
-                        <h2 class="mb-10">125</h2>
+                        <h2 class="mb-10">{{ site.data.packagist.package.github_stars }}</h2>
                         <p>GitHub Stars</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-center">
                     <div class="item">
                         <img src="/assets/img/download.png" alt="Docker Container Downloads" title="Dwoo Downloads" class="mb-10">
-                        <h2 class="mb-10">5,431</h2>
+                        <h2 class="mb-10">{{ site.data.packagist.package.downloads.total }}</h2>
                         <p>Dwoo Downloads</p>
                     </div>
                 </div>
@@ -83,21 +82,24 @@ nav: aboutnav
         <div class="container">
             <h2 class="mb-50 mt-50 text-center">Contributors</h2>
             <ul class="media-list media-list-users list-group mb-20">
-                {% for contributor in site.data.contributors %}
-                <li class="list-group-item">
-                    <div class="media w-100">
-                        <img class="media-object rounded-circle mr-3"
-                             src="https://avatars3.githubusercontent.com/u/{{ contributor.id }}?v=3&s=42">
-                        <div class="media-body align-self-center">
-                            <a href="https://github.com/{{ contributor.uid }}" target="_blank"
-                               class="btn btn-outline-success btn-sm float-right">
-                                <span class="icon icon-add-user"></span> View GitHub
-                            </a>
-                            <strong>{{ contributor.name }}</strong>
-                            <small>@{{ contributor.uid }}</small>
+                {% for contributor in site.github.contributors %}
+                    {% if contributor.id != 8518239 %}
+                    <li class="list-group-item">
+                        <div class="media w-100">
+                            <img class="media-object rounded-circle mr-3" src="{{ contributor.avatar_url }}&s=42">
+                            <div class="media-body align-self-center">
+                                <a href="{{ contributor.html_url }}" target="_blank"
+                                   class="btn btn-outline-success btn-sm float-right">
+                                    <span class="icon icon-add-user"></span> View GitHub
+                                </a>
+                                {% for c in site.data.contributors %}
+                                <strong>{{ c[contributor.id].name }}</strong>
+                                {% endfor %}
+                                <small>@{{ contributor.login }}</small>
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
+                    {% endif %}
                 {% endfor %}
             </ul>
             <p>
