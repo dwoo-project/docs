@@ -7,18 +7,16 @@ layout: default
 <!-- Content -->
 <main class="pt-40">
 	<div class="container">
-		<div class="col-lg-8">
-			<article class="post">
-				<h1>{{ page.title }}</h1>
-                <ul class="meta">
-                    <li><span>Publication date:</span> {{ page.date | date_to_long_string }}</li>
-                </ul>
-                {{ content }}
+        <article class="post">
+            <h1>{{ page.title }}</h1>
+            <ul class="meta">
+                <li><span>Publication date:</span> {{ page.date | date_to_long_string }}</li>
+            </ul>
+            {{ content }}
 
-                {% if page.comments %}
-                    <div id="disqus_thread"></div>
-                {% endif %}
-			</article>
-		</div>
+            {% if page.comments %}
+                <div id="disqus_thread"></div>
+            {% endif %}
+        </article>
 	</div>
 </main>
