@@ -115,15 +115,20 @@ body > header {
 	.brand img {
 	  padding-top: 11px;
 	}
-	li a {
-	  color: $color-white;
-	  font-size: 16px;
-	  padding-right: 20px;
-	  &:hover, &:focus {
-		background-color: transparent;
-		opacity: 0.8;
-		text-decoration: none;
-		outline: medium none;
+	li {
+	  a {
+		color: $color-white;
+		font-size: 16px;
+		padding-right: 20px;
+		&:hover, &:focus {
+		  background-color: transparent;
+		  opacity: 0.8;
+		  text-decoration: none;
+		  outline: medium none;
+		}
+	  }
+	  &.active {
+		text-decoration: underline;
 	  }
 	}
 	.nav-btn {
@@ -195,13 +200,13 @@ body > header {
 	width: 100%;
 	.search-form {
 	  .input-group-addon {
-		background: rgba(0,0,0,0.17);
+		background: rgba(0, 0, 0, 0.17);
 		border: 0;
 		border-radius: 0;
 		padding: 10px 7px;
 	  }
 	  input[type=search] {
-		background: rgba(0,0,0,0.17);
+		background: rgba(0, 0, 0, 0.17);
 		border: 0;
 		box-shadow: none;
 		color: $color-white;
@@ -232,7 +237,7 @@ body > header {
 	  > li {
 		margin: auto 15px;
 		&.dropdown {
-			margin-right: 38px;
+		  margin-right: 38px;
 		}
 		> a {
 		  display: block;
