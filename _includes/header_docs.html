@@ -7,25 +7,10 @@
                          title="Dwoo Docs"></a>
             </div>
             {% if page.layout == 'documentation' %}
-            <div class="search-form">
-                <form class="search form-inline ng-pristine ng-valid" id="searchForm" action="/search/">
-                    <div class="input-group">
-                        <i class="input-group-addon fa fa-search text-white"></i>
-                        <input class="search-field form-control ds-input" id="st-search-input" name="q" placeholder="Search the docs" type="search" autocomplete="off" spellcheck="false" dir="auto">
-                    </div>
-                    <div id="autocompletecontainer-fluid">
-                        <div id="autocompleteResults"></div>
-                    </div>
-                </form>
-            </div>
+            {% include search_form.html %}
             {% endif %}
             <ul class="nav d-flex justify-content-center">
-                {% for link in site.data.toc[page.nav] %}
-                    <li class="nav-item"><a class="nav-link" href="{{ link.url }}">{{ link.title }}</a></li>
-                {% endfor %}
-                {% if page.nav == 'docnav' %}
-                    {% include archive-list.html %}
-                {% endif %}
+                {% include treebuilder.html %}
             </ul>
         </div>
     </div>
