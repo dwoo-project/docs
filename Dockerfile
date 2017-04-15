@@ -7,9 +7,6 @@ RUN apt-get -qq update && \
 	gem install -q bundler && \
 	gem install -q hash-joiner
 
-RUN export LC_CTYPE="en_US.UTF-8" && \
-    export LANG="en_US.UTF-8"
-
 RUN mkdir -p /etc/jekyll && \
 	echo 'source "https://rubygems.org"' >> /etc/jekyll/Gemfile && \
 	echo 'gem "github-pages"' >> /etc/jekyll/Gemfile && \
