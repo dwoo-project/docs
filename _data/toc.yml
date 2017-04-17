@@ -1,10 +1,10 @@
 primarynav:
   - title: What is Dwoo?
-    url: /what-dwoo/
+    url: /what-dwoo.html
   - title: Home
     url: /
   - title: Blog
-    url: /blog/
+    url: /blog.html
   - title: Integrations
     url: /integrations/
   - title: Plugins
@@ -12,7 +12,7 @@ primarynav:
   - title: Documentation
     url: /documentation/
   - title: About
-    url: /about/
+    url: /about.html
 
 whatdwoonav:
   - title: Overview
