@@ -1,7 +1,7 @@
 <footer class="pt-20 pb-20">
 	<section class="copyright">
-		<div class="container">
-			<div class="row">
+		<div class="{% if page.layout == 'documentation' %}container-fuild{% else %}container{% endif %}">
+			<div class="row{% if page.layout == 'documentation' %} mr-0 ml-0{% endif %}">
 				<p class="col-sm-6 col-md-6">Copyright&copy; 2013-{{ site.time | date: '%Y' }}
 					<a href="http://davidsanchez.me" target="_blank">David Sanchez</a>. All rights reserved.
 				</p>
