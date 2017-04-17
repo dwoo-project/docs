@@ -259,6 +259,10 @@ body > header {
 		  transition: none;
 		  background-color: transparent;
 		}
+		> .dropdown-menu {
+		  left: auto;
+		  right: 0;
+		}
 	  }
 	}
 	&.affix {
