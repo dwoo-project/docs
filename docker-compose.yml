@@ -1,7 +1,9 @@
-version: '2'
+version: '3'
 services:
   jekyll:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile-jekyll
     ports:
       - "4000:4000"
     volumes:
@@ -9,4 +11,14 @@ services:
     working_dir: /app
     environment:
       - LANG=C.UTF-8
-      - JEKYLL_GITHUB_TOKEN=f2480a1f0e6fd06966766b08639f073bed5787ac
+      - JEKYLL_GITHUB_TOKEN=c4fac3b4c874d817a7db3df42fd475c64891ae0c
+
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile-nginx
+    ports:
+      - "80:80"
+    volumes:
+      - .:/app
+    working_dir: /app
