@@ -1,7 +1,6 @@
 ---
 layout: documentation
 title: Caching
-doc_breadcrumb: true
 toc: true
 ---
 

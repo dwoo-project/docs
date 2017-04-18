@@ -1,7 +1,6 @@
 ---
 layout: documentation
 title: Prerequisites & Installation
-doc_breadcrumb: true
 toc: true
 ---
 

@@ -1,7 +1,6 @@
 ---
 layout: documentation
 title: Getting started
-doc_breadcrumb: true
 toc: true
 ---
 

@@ -3,10 +3,6 @@ layout: documentation
 title: Writing your own plugin
 ---
 
-# Writing your own plugin
-
----
-
 Dwoo plugins come in different flavours, **blocks**, **filters**, **functions**, **helpers**, **processors**.   
 Most of those can be built using simple PHP **functions** or more complex PHP **classes**.
 

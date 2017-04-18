@@ -3,10 +3,6 @@ layout: documentation
 title: Extending Dwoo
 ---
 
-# Extending Dwoo
-
----
-
 Dwoo can be extended in many ways; you can add extra **blocks**, **functions** and **filters***.
 You can even extend the **Core** itself for your application.
 

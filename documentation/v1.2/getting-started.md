@@ -3,10 +3,6 @@ layout: documentation
 title: Getting started
 ---
 
-# Getting started
-
----
-
 Dwoo relies on plugins to provide useful functionality, examples may include: **if**, **else** blocks, **include**
 functionality, **string manipulation** and **loops**. For a full list see the [plugins](/plugins.html) page.
 

@@ -3,10 +3,6 @@ layout: documentation
 title: Smarty adapter
 ---
 
-# Smarty adapter
-
----
-
 Here is an article to convert from Smarty smoothly using the SmartyAdapter.   
 
 It is perfectly understandable that some people are relunctant to leave Smarty because they have a big codebase using
