@@ -117,64 +117,13 @@ nav: aboutnav
             <h2 class="mb-20 mt-20 pt-80 text-center">Dwoo Milestones</h2>
             <div class="timeline">
                 <ul>
-                    <li class="featured primary wow fadeInLeft">
-                        <div>
-                            <h5>
-                                March 28, 2017: DwooBundle for Symfony <strong>public beta</strong> released,
-                                <a href="/integrations/symfony.html">SymfonyBundle section</a> pushed online.
-                            </h5>
-                        </div>
-                    </li>
-                    <li class="wow fadeInRight"><p>March 27, 2017: Dwoo <strong>1.3.6</strong> released</p></li>
-                    <li class="wow fadeInRight"><p>March 16, 2017: Dwoo <strong>1.3.5</strong> released</p></li>
-                    <li class="wow fadeInRight"><p>March 07, 2017: Dwoo <strong>1.3.4</strong> released</p></li>
-                    <li class="wow fadeInRight"><p>January 09, 2017: Dwoo <strong>1.3.3</strong> released</p></li>
-                    <li class="wow fadeInRight"><p>January 05, 2017: Dwoo <strong>1.3.2</strong> released</p></li>
-                    <li class="wow fadeInRight"><p>December 16, 2016: Dwoo <strong>1.3.1</strong> released</p></li>
-                    <li class="featured error wow fadeInLeft">
-                        <div><h5>October 01, 2016: Dwoo <strong>2.0beta1</strong> has been dropped!</h5></div>
-                    </li>
-                    <li class="featured primary wow fadeInLeft">
-                        <div><h5>September 25, 2016: Dwoo <strong>1.3.0</strong> released</h5></div>
-                    </li>
-                    <li class="wow fadeInRight"><p>September 15, 2016: Dwoo <strong>1.2.3</strong> released</p></li>
-                    <li class="wow fadeInRight"><p>September 10, 2016: Dwoo <strong>1.2.2</strong> released</p></li>
-                    <li class="wow fadeInRight"><p>September 08, 2016: Dwoo <strong>1.2.1</strong> released</p></li>
-                    <li class="featured warning wow fadeInLeft">
-                        <div>
-                            <h5>November 05, 2015: <a href="/2015/11/05/dwoo-is-looking-better.html">Dwoo.org is looking better</a></h5>
-                        </div>
-                    </li>
-                    <li class="featured success wow fadeInLeft">
-                        <div><h5>January 02, 2014: Dwoo is now available on
-                            <a href="//packagist.org/packages/dwoo/dwoo" target="_blank">Packagist.org</a></h5></div>
-                    </li>
-                    <li class="featured primary wow fadeInLeft">
-                        <div><h5>December 29, 2013: Dwoo <strong>2.0beta1</strong> released</h5></div>
-                    </li>
-                    <li class="featured warning wow fadeInLeft">
-                        <div>
-                            <h5>December 28, 2013: <a href="/2013/12/28/website-updated.html">Dwoo changes ownership, this made the website design was restylized.</a></h5>
-                        </div>
-                    </li>
-                    <li class="featured primary wow fadeInLeft">
-                        <div><h5>February 15, 2013: Dwoo <strong>1.2.0</strong> released</h5></div>
-                    </li>
-                    <li class="wow fadeInRight"><p>February 07, 2010: Dwoo <strong>1.1.1</strong> released</p></li>
-                    <li class="featured primary wow fadeInLeft">
-                        <div><h5>July 18, 2009: Dwoo <strong>1.1.0</strong> released</h5></div>
-                    </li>
-                    <li class="wow fadeInRight"><p>December 23, 2008: Dwoo <strong>1.0.1</strong> released</p></li>
-                    <li class="featured primary wow fadeInLeft">
-                        <div><h5>October 24, 2008: Dwoo <strong>1.0.0</strong> released</h5></div>
-                    </li>
-                    <li class="wow fadeInRight"><p>September 07, 2008: Dwoo <strong>1.0.0beta</strong> released</p></li>
-                    <li class="wow fadeInRight"><p>August 03, 2008: Dwoo <strong>0.9.3</strong> released</p></li>
-                    <li class="wow fadeInRight"><p>June 27, 2008: Dwoo <strong>0.9.2</strong> released</p></li>
-                    <li class="wow fadeInRight"><p>May 29, 2008: Dwoo <strong>0.9.1</strong> released</p></li>
-                    <li class="wow fadeInRight"><p>May 10, 2008: Dwoo <strong>0.9.0</strong> released</p></li>
-                    <li class="wow fadeInRight"><p>April 08, 2008: Dwoo <strong>0.3.4</strong> released</p></li>
-                    <li class="wow fadeInRight"><p>March 29, 2008: Dwoo <strong>0.3.3</strong> released</p></li>
+                    {% for milestone in site.data.milestones %}
+                        {% if milestone.type == 'released' %}
+                            <li class="wow fadeInRight"><p>{{ milestone.date | date: "%B %-d, %Y" }}: {{ milestone.text }}</p></li>
+                        {% else %}
+                            <li class="featured {{ milestone.type }} wow fadeInLeft"><div><h5>{{ milestone.date | date: "%B %-d, %Y" }}: {{ milestone.text }}</h5></div></li>
+                        {% endif %}
+                    {% endfor %}
                 </ul>
             </div>
         </div>
