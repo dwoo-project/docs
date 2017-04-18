@@ -36,13 +36,13 @@
   type: released
 - date: 2015-11-05
   text: <a href="/2015/11/05/dwoo-is-looking-better.html">Dwoo.org is looking better</a>
-  type: warning
+  type: success
 - date: 2013-12-29
   text: Dwoo <strong>2.0beta1</strong> released
   type: primary
 - date: 2013-12-28
   text: <a href="/2013/12/28/website-updated.html">Dwoo changes ownership, this made the website design was restylized.</a>
-  type: warning
+  type: success
 - date: 2013-02-15
   text: Dwoo <strong>1.2.0</strong> released
   type: primary
