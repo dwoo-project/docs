@@ -11,7 +11,7 @@ services:
     working_dir: /app
     environment:
       - LANG=C.UTF-8
-      - JEKYLL_GITHUB_TOKEN=c4fac3b4c874d817a7db3df42fd475c64891ae0c
+      - JEKYLL_GITHUB_TOKEN=8c27ff6645069ca7ef248958312bdfcca2880514
 
   nginx:
     build:
