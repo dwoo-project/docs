@@ -1,5 +1,9 @@
 {% for link in site.data.toc[page.nav] %}
-    <li class="nav-item"><a class="nav-link" href="{{ link.url }}">{{ link.title }}</a></li>
+    {% assign current = null %}
+    {% if page.url contains link.url %}
+        {% assign current = ' active' %}
+    {% endif %}
+    <li class="nav-item{{ current }}"><a class="nav-link" href="{{ link.url }}">{{ link.title }}</a></li>
 {% endfor %}
 {% if page.nav == 'docnav' %}
     {% include archive-list.html %}
