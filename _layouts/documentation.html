@@ -7,7 +7,7 @@ layout: page
     <nav class="col-nav pt-20">
         <ul class="affix" data-spy="affix" data-offset-top="490">
             {% for link in site.data.toc.doc[version] %}
-            <li><a href="{{ page.url }}{{ link.url }}">{{ link.title }}</a></li>
+            <li><a href="{{ page.basename }}{{ link.url }}">{{ link.title }}</a></li>
             {% endfor %}
         </ul>
     </nav>

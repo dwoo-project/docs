@@ -11,7 +11,7 @@
     <div class="dropdown-menu">
         {% for item in site.data.docsarchive %}
             {% if item.name != version %}
-                <a class="dropdown-item" href="/documentation/{{ item.name }}/">Dwoo {{ item.name }} {% if item.current == true %}(current){% endif %}</a>
+                <a class="dropdown-item" href="/documentation/{{ item.name }}/index.html">Dwoo {{ item.name }} {% if item.current == true %}(current){% endif %}</a>
             {% endif %}
         {% endfor %}
     </div>

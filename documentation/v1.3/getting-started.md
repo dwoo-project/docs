@@ -1,6 +1,7 @@
 ---
 layout: documentation
 title: Getting started
+toc: true
 ---
 
 # Getting started
