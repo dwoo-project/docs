@@ -4,10 +4,11 @@
             <div class="navbar-header">
                 <a href="/documentation/">
                     <img class="logo" src="https://docs.docker.com/edge/images/docker-docs-logo.svg" alt="Dwoo Docs"
-                         title="Dwoo Docs"></a>
+                         title="Dwoo Docs">
+                </a>
             </div>
             {% if page.layout == 'documentation' %}
-            {% include search_form.html %}
+                {% include search_form.html %}
             {% endif %}
             <ul class="nav d-flex justify-content-center">
                 {% include treebuilder.html %}
