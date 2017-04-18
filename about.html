@@ -13,7 +13,9 @@ nav: aboutnav
                 <div class="col-md-4 text-center">
                     <div class="item">
                         <img src="/assets/img/icon-stars.png" alt="GitHub Stars" title="GitHub Stars" class="mb-10">
-                        <h2 class="mb-10">{{ site.data.packagist.package.github_stars }}</h2>
+                        <h2 class="mb-10">
+                            {% for repo in site.github.public_repositories %}{% if repo.name == 'dwoo' %}{{ repo.stargazers_count }}{% endif %}{% endfor %}
+                        </h2>
                         <p>GitHub Stars</p>
                     </div>
                 </div>
