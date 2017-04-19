@@ -15,9 +15,11 @@ strong {
 /***************************** Buttons ****************************/
 .btn {
   &.btn-success {
-	background-color: $color-brand;
 	border: medium none;
-	color: $color-white;
+	&:not(:hover) {
+	  background-color: $color-brand;
+	  color: $color-white;
+	}
   }
   &.btn-default {
 	color: #43484d;
