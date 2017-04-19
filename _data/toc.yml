@@ -33,6 +33,8 @@ aboutnav:
     url: "#/contributors"
   - title: Milestones
     url: "#/milestones"
+  - title: License
+    url: "#/license"
 
 docnav:
   - title: Guides
