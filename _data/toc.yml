@@ -39,8 +39,6 @@ aboutnav:
 docnav:
   - title: Guides
     url: /documentation/
-  - title: API References
-    url: /documentation/api/
 
 doc:
   1.2:
