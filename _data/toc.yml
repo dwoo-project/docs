@@ -41,8 +41,6 @@ docnav:
     url: /documentation/
   - title: API References
     url: /documentation/api/
-  - title: Samples
-    url: /documentation/samples/
 
 doc:
   1.2:
