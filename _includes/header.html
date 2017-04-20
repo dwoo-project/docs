@@ -19,10 +19,12 @@
 			</ul>
 		</nav>
 	</div>
+    {% if page.masthead != false %}
 	<div class="masthead pb-100 pt-80 text-md-center">
 		<h3 class="text-white"><strong>{{ page.title }}</strong></h3>
 		<p>{{ page.subtitle }}</p>
 	</div>
+    {% endif %}
     {% if site.data.toc[page.nav] %}
     <div class="masthead-nav" data-spy="affix" data-offset-top="430">
         <div class="{% if page.layout == 'documentation' %}container-fluid{% else %}container{% endif %} d-flex align-items-center">
