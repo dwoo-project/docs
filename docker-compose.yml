@@ -1,6 +1,7 @@
 version: '3'
 services:
   jekyll:
+    container_name: dwoo.org_jekyll
     build:
       context: .
       dockerfile: Dockerfile-jekyll
@@ -14,6 +15,7 @@ services:
       - JEKYLL_GITHUB_TOKEN=8c27ff6645069ca7ef248958312bdfcca2880514
 
   nginx:
+    container_name: dwoo.org_nginx
     build:
       context: .
       dockerfile: Dockerfile-nginx
