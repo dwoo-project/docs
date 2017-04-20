@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 services:
   jekyll:
     container_name: dwoo.org_jekyll
