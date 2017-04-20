@@ -54,7 +54,6 @@ doc:
     - {title: "Shortcuts", url: "shortcuts.html"}
     - {title: "Iterator variables", url: "iterator-variables.html"}
     - {title: "Deprecated features", url: "deprecated-features.html"}
-    - {title: "License", url: "license.html"}
     - {title: "Syntax", url: "syntax.html"}
     - {title: "Smarty support", url: "smarty-support.html"}
     - {title: "Reserved variables", url: "dwoo-variables.html"}
@@ -70,7 +69,6 @@ doc:
     - {title: "Shortcuts", url: "shortcuts.html"}
     - {title: "Iterator variables", url: "iterator-variables.html"}
     - {title: "Deprecated features", url: "deprecated-features.html"}
-    - {title: "License", url: "license.html"}
     - {title: "Syntax", url: "syntax.html"}
     - {title: "Smarty support", url: "smarty-support.html"}
     - {title: "Reserved variables", url: "dwoo-variables.html"}
