@@ -6,7 +6,7 @@ toc: true
 
 Dwoo relies on plugins to provide useful functionality, such as **tags**, **functions**, **helpers**, **filters** and
  **processors**.   
-For a full list see the [plugins](/plugins.html) page.
+For a full list see the [plugins](/plugins/) page.
 
 ## Prerequisites
 Dwoo `2.0` is only compatible with **PHP 7.x**.   
