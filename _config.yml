@@ -52,7 +52,7 @@ defaults:
 #
 # The number should be the maximum number of Posts you’d like to
 # be displayed per-page in the generated site.
-paginate: 5
+paginate: 8
 paginate_path: "/blog/page:num/"
 
 repository: dwoo-project/dwoo
