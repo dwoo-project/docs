@@ -6,14 +6,6 @@ title: Extending Dwoo
 Dwoo can be extended in many ways; you can add extra **blocks**, **functions** and **filters***.
 You can even extend the **Core** itself for your application.
 
-## Globals
-A global variable is like any other template variable, except that it's available in all templates.
-
-<blockquote class="blockquote">
-Actually globals are defined in the <code>Core</code> class and cannot be modified directly.
-This feature is now available from Dwoo <code>1.3.2</code>, please upgrade your dependency!
-</blockquote>
-
 ## Extending Core
 <div class="code-box">
 <header>MyTemplate.php</header>

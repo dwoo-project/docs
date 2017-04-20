@@ -97,8 +97,8 @@ $dwoo->get($tpl, $data);
 </div>
 
 ### Using a Compiler object
-If you want to use [custom pre-processors or post-processors](/plugins.html#processors), you need to instantiate a
-[Dwoo_Compiler](dwoo-compiler.html) and add the processors to it.
+If you want to use [custom pre-processors or post-processors](/plugins/#processors), you need to instantiate a
+`Dwoo_Compiler` and add the processors to it.
 <div class="code-box">
 <header>index.php</header>
 {% highlight php %}
