@@ -1,12 +1,22 @@
+# Project name
 name: "dwoo.org"
-#url: http://dwoo.org
+
+# Project URL
+url: http://dwoo.org
+
+# Highlighter used
 highlighter: rouge
+
+# Loaded Jekyll plugins
 gems:
   - jekyll-redirect-from
   - jekyll-sitemap
   - jekyll-github-metadata
+  - jekyll-paginate
+
 urls:
   gitter: 'https://gitter.im/dwoo_project/support?utm_source=share-link&utm_medium=link&utm_campaign=share-link'
+
 # Assets
 #
 # We specify the directory for Jekyll so we can use @imports.
@@ -14,6 +24,11 @@ sass:
   sass_dir: _sass
   style: :compressed
 
+# Front Matter defaults
+#
+# The defaults key holds an array of scope/values pairs that
+# define what defaults should be set for a particular file path,
+# and optionally, a file type in that path.
 defaults:
   -
     scope:
@@ -32,6 +47,13 @@ defaults:
       path: plugins
     values:
       masthead: false
+
+# Pagination
+#
+# The number should be the maximum number of Posts you’d like to
+# be displayed per-page in the generated site.
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 repository: dwoo-project/dwoo
 
