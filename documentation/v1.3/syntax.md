@@ -159,4 +159,4 @@ However, if we do :
 would output **ba dc** as with the `@`, reverse was not applied to the array but to 'ab' and then to 'cd', reversing each character sequence.
 
 ### Shortcuts
-Read more about [shortcuts](/documentation/shortcuts.html) to write templates faster.
+Read more about [shortcuts](shortcuts.html) to write templates faster.

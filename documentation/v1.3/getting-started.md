@@ -5,7 +5,7 @@ toc: true
 ---
 
 Dwoo relies on plugins to provide useful functionality, examples may include: **if**, **else** blocks, **include**
-functionality, **string manipulation** and **loops**. For a full list see the [plugins](/plugins.html) page.
+functionality, **string manipulation** and **loops**. For a full list see the [plugins](/plugins/) page.
 
 ## Prerequisites
 Dwoo `1.3` requires at least **PHP 5.3** to run.
@@ -44,13 +44,13 @@ Here is the simplest way to output a Dwoo template.
 require 'vendor/autoload.php';
 
 // Create the controller, it is reusable and can render multiple templates
-$dwoo = new Dwoo\Core();
+$core = new Dwoo\Core();
 
 // Create some data
 $data = array('a'=>5, 'b'=>6);
 
 // Output the result
-echo $dwoo->get('path/to/index.tpl', $data);
+echo $core->get('path/to/index.tpl', $data);
 {% endhighlight %}
 </div>
 
@@ -78,7 +78,7 @@ represents a template file in your application.
 require 'vendor/autoload.php';
 
 // Create the controller, it is reusable and can render multiple templates
-$dwoo = new Dwoo\Core();
+$core = new Dwoo\Core();
 
 // Load a template file, this is reusable if you want to render multiple times the same template with different data
 $tpl = new Dwoo\Template\File('path/to/index.tpl');
@@ -90,20 +90,20 @@ $data->assign('foo', 'BAR');
 $data->assign('bar', 'BAZ');
 
 // Output the result
-echo $dwoo->output($tpl, $data);
+echo $core->output($tpl, $data);
 {% endhighlight %}
 </div>
 
 ### Using a Compiler object
-If you want to use [custom pre-processors or post-processors](/plugins.html#processors), you need to instantiate a
-[Dwoo\Compiler](dwoo-compiler.html) and add the processors to it.
+If you want to use [custom pre-processors or post-processors](/plugins/#processors), you need to instantiate a
+`Dwoo\Compiler` and add the processors to it.
 <div class="code-box">
 <header>index.php</header>
 {% highlight php %}
 <?php
 require 'vendor/autoload.php';
 
-$dwoo = new Dwoo\Core();
+$core = new Dwoo\Core();
 $tpl = new Dwoo\Template\File('path/to/index.tpl');
 $data = array('a'=>5, 'b'=>6);
 
@@ -115,7 +115,7 @@ $compiler->addPreProcessor('Processor_Name', true);
 $compiler->addPreProcessor('Processor_Function_Name');
 
 // Output the result and provide the compiler to use
-echo $dwoo->get($tpl, $data, $compiler);
+echo $core->get($tpl, $data, $compiler);
 {% endhighlight %}
 </div>
 
@@ -143,7 +143,7 @@ You will then use this template to render all the articles.
 <?php
 require 'vendor/autoload.php';
 
-$dwoo = new Dwoo\Core();
+$core = new Dwoo\Core();
 // Load the "article" template
 $tpl = new Dwoo\Template\File('path/to/article.tpl');
 
@@ -155,7 +155,7 @@ foreach($articles as $article) {
     // Output each article using their data (assuming it is an
     // associative array containing "title", "content", "author"
     // and "date" keys)
-    echo $dwoo->get($tpl, $article);
+    echo $core->get($tpl, $article);
 }
 {% endhighlight %}
 </div>
@@ -184,13 +184,13 @@ The variables page_title and page_content are passed to the template rendering A
 <header>index.php</header>
 {% highlight php %}
 <?php
-$dwoo = new Dwoo\Core();
+$core = new Dwoo\Core();
  
 $params = array();
 $params['page_title']   = 'The next social networking website';
 $params['page_content'] = 'Make friends online? Y/N';
  
-echo $dwoo->get("code_snippet.tpl", $params);
+echo $core->get("code_snippet.tpl", $params);
 {% endhighlight %}
 </div>
 In the above example the $params array is loaded with parameters that are substituted in the Dwoo code snippet.
@@ -217,7 +217,7 @@ The second is the array that contains the page content. This snippet is setup wi
 <header>index.php</header>
 {% highlight php %}
 <?php
-$dwoo = new Dwoo\Core();
+$core = new Dwoo\Core();
  
 /* We hard code the parameters in here but in a real world app this would come from 
  * an authenticating module using a DB or maybe from an LDAP server. 
@@ -236,7 +236,7 @@ $params = array();
 $params['auth']    = $auth;
 $params['page'] = $page;
  
-echo $dwoo->get("code_snippet.tpl", $params);
+echo $core->get("code_snippet.tpl", $params);
 {% endhighlight %}
 </div>
 The above two snippets generate roughly the same HTML as the first example using simple variables.
@@ -274,7 +274,7 @@ initialized and setup with the following PHP:
 <header>index.php</header>
 {% highlight php %}
 <?php
-$dwoo = new Dwoo\Core();
+$core = new Dwoo\Core();
  
 /* Although we are populating this by hand it will usually come from a DB in practice.  */
  
@@ -290,7 +290,7 @@ $params = array();
 $params['type_id']            = 1;           // from a DB...
 $params['licensee_type_list'] = $type_list
  
-echo $dwoo->get("code_snippet.tpl", $params);
+echo $core->get("code_snippet.tpl", $params);
 {% endhighlight %}
 </div>
 The above Dwoo snippet and PHP code extract will give the following HTML output:

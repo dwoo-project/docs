@@ -38,7 +38,7 @@ Below is a minimal template that illustrates a few basics. We will cover the det
 
 ## Delimiters
 All Dwoo template tags are enclosed within delimiters.
-By default these are `{` and `}`, but they can be [changed](1.3/dwoo-internals.html#change-delimiters).
+By default these are `{` and `}`, but they can be [changed](dwoo-internals.html#change-delimiters).
 
 For the examples in this article, we will assume that you are using the default delimiters.
 
@@ -160,7 +160,7 @@ illustrates:
 The most powerful part of Dwoo is template inheritance.
 Template inheritance allows you to build a base **skeleton** template that contains all the common elements of your
 site and defines blocks that child templates can override.   
-Find a complete guide about template inheritance in a [dedicated article](/documentation/template-inheritance.html).
+Find a complete guide about template inheritance in a [dedicated article](template-inheritance.html).
 
 ## Template
 Templates are comparable with **functions** in regular programming languages.   

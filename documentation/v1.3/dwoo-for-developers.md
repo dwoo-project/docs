@@ -16,13 +16,13 @@ are creating Dwoo templates.
 require 'vendor/autoload.php';
 
 // Create a Dwoo core object
-$dwoo = new Dwoo\Core();
+$core = new Dwoo\Core();
 
 // Create some data
 $data = array('a'=>5, 'b'=>6);
 
 // Output the result
-echo $dwoo->get('path/to/index.tpl', $data);
+echo $core->get('path/to/index.tpl', $data);
 {% endhighlight %}
 </div>
 
@@ -33,7 +33,7 @@ echo $dwoo->get('path/to/index.tpl', $data);
 <?php
 require 'vendor/autoload.php';
 
-$dwoo = new Dwoo\Core();
+$core = new Dwoo\Core();
 
 // Load a template file, this is reusable if you want to render multiple times the same template with different data
 $tpl = new Dwoo\Template\File('path/to/index.tpl');
@@ -46,7 +46,7 @@ $data->assign('foo', 'BAR');
 $data->assign('bar', 'BAZ');
 
 // Output the result
-echo $dwoo->get($tpl, $data);
+echo $core->get($tpl, $data);
 {% endhighlight %}
 </div>
 
@@ -57,7 +57,7 @@ echo $dwoo->get($tpl, $data);
 <?php
 require 'vendor/autoload.php';
 
-$dwoo = new Dwoo\Core();
+$core = new Dwoo\Core();
 $tpl = new Dwoo\Template\File('path/to/index.tpl');
 $data = array('a' => 5, 'b' => 6);
  
@@ -69,7 +69,7 @@ $compiler->addPreProcessor('Processor_Name', true);
 $compiler->addPreProcessor('Processor_Function_Name');
  
 // Output the result and provide the compiler to use
-echo $dwoo->get($tpl, $data, $compiler);
+echo $core->get($tpl, $data, $compiler);
 {% endhighlight %}
 </div>
 
@@ -83,16 +83,16 @@ In this example, we wild see how to use `setCompileDir` and `setTemplateDir` met
 require 'vendor/autoload.php';
 
 // Create a Dwoo core object
-$dwoo = new Dwoo\Core();
+$core = new Dwoo\Core();
 
 // Configure directories
-$dwoo->setCompileDir('path/to/compiled/dir/'); // Folder to store compiled templates
-$dwoo->setTemplateDir('path/to/your/template/dir/'); // Folder containing .tpl files
+$core->setCompileDir('path/to/compiled/dir/'); // Folder to store compiled templates
+$core->setTemplateDir('path/to/your/template/dir/'); // Folder containing .tpl files
 
 // Create some data
 $data = array('a'=>5, 'b'=>6);
 
 // Output the result
-echo $dwoo->get('index.tpl', $data);
+echo $core->get('index.tpl', $data);
 {% endhighlight %}
 </div>

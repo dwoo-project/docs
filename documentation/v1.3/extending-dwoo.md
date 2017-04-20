@@ -18,9 +18,9 @@ Since Dwoo <code>1.3.2</code>, this feature is now available, let's see how to u
 {% highlight php %}
 <?php
 // create Core object
-$dwoo = new Dwoo\Core();
+$core = new Dwoo\Core();
 // assing new global variable named 'text'
-$dwoo->addGlobal('text', 'value');
+$core->addGlobal('text', 'value');
 {% endhighlight %}
 </div>
 
@@ -54,13 +54,13 @@ To illustrate, consider the following script, which sets up a simple plugin to m
 {% highlight php %}
 <?php
 // create Core object
-$dwoo = new Dwoo\Core();
+$core = new Dwoo\Core();
 
 // read template file
 $tpl = new Dwoo\Template\File('tmpl/plugin.tpl');
 
 // add custom plugin
-$dwoo->addPlugin('email_safe', function (Dwoo\Core $core, $str) {
+$core->addPlugin('email_safe', function (Dwoo\Core $core, $str) {
    return str_replace(
      array('@', '.', '-'), 
      array(' at ', ' dot ', ' dash '), 
@@ -73,7 +73,7 @@ $data['string']= 'vikram@example.com';
 
 // interpolate values into template
 // send interpolated result to output device
-echo $dwoo->get($tpl, $data);
+echo $core->get($tpl, $data);
 {% endhighlight %}
 </div>
 
@@ -95,6 +95,6 @@ If you want add more than one custom plugin, you can specify to the loader a cus
 <header>index.php</header>
 {% highlight php %}
 <?php
-$dwoo->getLoader()->addDirectory(__DIR__ . 'Views/plugins/');
+$core->getLoader()->addDirectory(__DIR__ . 'Views/plugins/');
 {% endhighlight %}
 </div>

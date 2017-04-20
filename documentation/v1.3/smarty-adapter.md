@@ -38,4 +38,4 @@ $smarty->show_compat_errors = true;
 
 You are set. You can now try to run your site using Dwoo, it should (if you used that last line) trigger errors when
 it encounters a missing Smarty feature. If that happens, go read
-[the smarty support list](/documentation/smarty-support.html) to figure out what you can do about it.
+[the smarty support list](smarty-support.html) to figure out what you can do about it.

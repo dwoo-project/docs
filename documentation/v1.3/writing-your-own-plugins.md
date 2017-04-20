@@ -107,7 +107,7 @@ class PluginUpper extends Dwoo\Block\Plugin implements Dwoo\ICompilable\Block
 </div>
 
 ### Filter
-* Filters are added to the Dwoo instance through `$dwoo->addFilter()`, and are called after the template is fully
+* Filters are added to the Dwoo instance through `$core->addFilter()`, and are called after the template is fully
  rendered, right before it is cached (if cache is in use).
 * You can use those to do some work on the HTML output. For example Dwoo includes an
  [html_format](/plugins/filters/html-format.html) filter that correctly indents the html of your page so that the
@@ -118,14 +118,14 @@ class PluginUpper extends Dwoo\Block\Plugin implements Dwoo\ICompilable\Block
 <header>activate_mailto_links.php</header>
 {% highlight php %}
 <?php
-function activate_mailto_links(Dwoo\Core $dwoo, $str) {
+function activate_mailto_links(Dwoo\Core $core, $str) {
   return preg_replace('/([a-zA-Z0-9]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+)/', '&lt;a href="mailto:$1"&gt;$1&lt;/a&gt;', $str);
 }
 
 // create Dwoo object
-$dwoo = new Dwoo\Core();
+$core = new Dwoo\Core();
 
-$dwoo->addFilter('activate_mailto_links');
+$core->addFilter('activate_mailto_links');
 
 // read template file
 $tpl = new Dwoo\Template\File('tmpl/filter.tpl');
@@ -135,7 +135,7 @@ $data['string']= 'Press enquiries: press@example-domain.com or call 1-800-1234. 
 
 // interpolate values into template
 // send interpolated result to output device
-$dwoo->get($tpl, $data);
+$core->get($tpl, $data);
 {% endhighlight %}
 </div>
 
@@ -165,7 +165,7 @@ first argument must be of type Dwoo and will always be the Dwoo instance that ru
 <header>upper.php</header>
 {% highlight php %}
 <?php
-function PluginUpper(Dwoo\Core $dwoo, $value)
+function PluginUpper(Dwoo\Core $core, $value)
 {
     return strtoupper($value);
 }
@@ -179,7 +179,7 @@ it to work.
 <header>exampleplugin.php</header>
 {% highlight php %}
 <?php
-function PluginExampleplugin(Dwoo\Core $dwoo, array $rest=array())
+function PluginExampleplugin(Dwoo\Core $core, array $rest=array())
 {
     return var_export($rest);
 }
@@ -293,7 +293,7 @@ tracking code or anything.
 <?php
 function PluginTimestamp(Dwoo\Compiler $compiler, $template)
 {
-    return $template . '{date_format $dwoo.now "%Y-%m-%d"}';
+    return $template . '{date_format $core.now "%Y-%m-%d"}';
 }
 {% endhighlight %}
 </div>
@@ -308,7 +308,7 @@ class PluginTimestamp extends Dwoo\Processor
     public function process($input)
     {
         // you can access the compiler in here through $this->compiler
-        return $input . '{date_format $dwoo.now "%Y-%m-%d"}';
+        return $input . '{date_format $core.now "%Y-%m-%d"}';
     }
 }
 {% endhighlight %}
