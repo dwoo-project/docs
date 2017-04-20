@@ -2,7 +2,7 @@ primarynav:
   - title: What is Dwoo?
     url: /what-dwoo.html
   - title: Blog
-    url: /blog.html
+    url: /blog/
   - title: Integrations
     url: /integrations/
   - title: Plugins
