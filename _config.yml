@@ -1,9 +1,6 @@
 # Project name
 name: "dwoo.org"
 
-# Project URL
-url: http://dwoo.org
-
 # Highlighter used
 highlighter: rouge
 
