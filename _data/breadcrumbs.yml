@@ -1,0 +1,4 @@
+post:
+  - {title: Blog, url: /blog/}
+plugin:
+  - {title: Plugins, url: /plugins/}
