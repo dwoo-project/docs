@@ -4,14 +4,14 @@ MAINTAINER Peter Etelej <peter@etelej.com>
 RUN apt-get -qq update && \
 	apt-get -qq install nodejs -y && \
 	apt-get install -y locales && \
-	gem install -q bundler && \
-	gem install -q hash-joiner
+	gem install -q bundler
 
 RUN mkdir -p /etc/jekyll && \
 	echo 'source "https://rubygems.org"' >> /etc/jekyll/Gemfile && \
 	echo 'gem "github-pages"' >> /etc/jekyll/Gemfile && \
 	echo 'gem "execjs"' >> /etc/jekyll/Gemfile && \
-	echo 'gem "rouge"\ngem "hash-joiner"' >> /etc/jekyll/Gemfile && \
+	echo 'gem "rouge"' >> /etc/jekyll/Gemfile && \
+	echo 'gem "hash-joiner"' >> /etc/jekyll/Gemfile && \
 	echo 'gem "jekyll-github-metadata"' >> /etc/jekyll/Gemfile && \
 	printf "\nBuilding required Ruby gems.\n\n" && \
 	bundle install --gemfile /etc/jekyll/Gemfile --clean
