@@ -26,6 +26,11 @@
                         {% endif %}
                     {% endunless %}
                 {% endfor %}
+            {% elsif page.layout == 'symfony' %}
+                {% for crumb in site.data.symfony.breadcrumb %}
+                    <li><a href="{{ crumb.url }}">{{ crumb.title }}</a></li>
+                {% endfor %}
+                <li class="active">{{ page.title }}</li>
             {% else %}
                 {% assign crumbs = page.url | split: '/' %}
                 {% assign crumbstotal = crumbs | size %}
