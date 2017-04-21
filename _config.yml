@@ -52,6 +52,11 @@ defaults:
       type: posts
     values:
       breadcrumb: true
+  -
+    scope:
+      path: integrations/symfony
+    values:
+      breadcrumb: true
 
 # Pagination
 #
