@@ -3,6 +3,7 @@
 <html class="no-js" lang="en">
 {% include head.html %}
 <body>
+<!-- Header -->
 {% if page.layout == 'symfony' %}
     {% include header_symfony.html %}
 {% elsif page.header == 'docs' %}
@@ -10,7 +11,16 @@
 {% else %}
     {% include header.html %}
 {% endif %}
+
+<!-- Breadcrumb -->
+{% if page.breadcrumb == true %}
+    {% include breadcrumb.html %}
+{% endif %}
+
+<!-- Content -->
 {{ content }}
+
+<!-- Footer -->
 {% include footer.html %}
 
 <!-- Scripts -->
