@@ -45,6 +45,7 @@ defaults:
       path: plugins
     values:
       masthead: false
+      breadcrumb: true
   -
     scope:
       path: ""
