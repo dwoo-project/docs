@@ -40,10 +40,17 @@ defaults:
       header: docs
       nav: docnav
       toc: true
-  - scope:
+  -
+    scope:
       path: plugins
     values:
       masthead: false
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      breadcrumb: true
 
 # Pagination
 #
