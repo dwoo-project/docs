@@ -5,3 +5,6 @@ toc:
   - {title: "DwooBundle Plugins", url: "dwoo-bundle-plugins.html"}
   - {title: "Configuration Reference", url: "configuration-reference.html"}
   - {title: "Changelog", url: "changelog.html"}
+breadcrumb:
+  - {title: "Integrations", url: "/integrations/"}
+  - {title: "SymfonyBundle", url: "/integrations/symfony/"}
