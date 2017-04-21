@@ -19,7 +19,7 @@ strong {
 	background-color: $color-brand;
 	color: $color-white;
 	&:hover {
-	  background-color: #449d44;
+	  background-color: $color-brand-active;
 	  border-color: #398439;
 	}
   }
@@ -79,5 +79,12 @@ ul.topics-list {
 	border: 3px solid #fff;
 	border-radius: 100%;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  }
+}
+/***************************** Dropdown menu ****************************/
+.dropdown-item {
+  &.active,
+  &:active {
+	background-color: $color-brand-active;
   }
 }
