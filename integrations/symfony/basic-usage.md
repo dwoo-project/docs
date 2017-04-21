@@ -1,7 +1,6 @@
 ---
 layout: symfony
 title: Basic Usage / Tips & Tricks
-symfony_breadcrumb: true
 ---
 
 ## Basic usage

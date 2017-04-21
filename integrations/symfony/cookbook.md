@@ -1,7 +1,6 @@
 ---
 layout: symfony
 title: Cookbook
-symfony_breadcrumb: true
 ---
 
 ## Injecting variables into all templates (i.e. Global Variables)

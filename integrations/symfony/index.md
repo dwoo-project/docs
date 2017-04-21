@@ -1,6 +1,6 @@
 ---
 layout: symfony
-title: SymfonyBundle 
+title: SymfonyBundle
 ---
 
 <div class="row mb-1">

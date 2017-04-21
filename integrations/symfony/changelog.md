@@ -1,7 +1,6 @@
 ---
 layout: symfony
 title: Changelog
-symfony_breadcrumb: true
 toc: true
 ---
 

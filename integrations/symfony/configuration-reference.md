@@ -1,7 +1,6 @@
 ---
 layout: symfony
 title: Configuration Reference
-symfony_breadcrumb: true
 ---
 
 The example below uses YAML format. Please adapt the example if using XML or PHP.

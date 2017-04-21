@@ -1,7 +1,6 @@
 ---
 layout: symfony
 title: DwooBundle Extension
-symfony_breadcrumb: true
 ---
 
 ## Assets Extension

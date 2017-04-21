@@ -1,7 +1,6 @@
 ---
 layout: symfony
 title: Installation
-symfony_breadcrumb: true
 ---
 
 ## Download DwooBundle
