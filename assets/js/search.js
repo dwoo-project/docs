@@ -175,9 +175,9 @@ function hookupTOCEvents()
           resultsOutput.push("</div>");
           resultsShown++;
         }
-        var resultsShownText = (resultsShown > 1) ? resultsShown + " of " + results.length + " docs" : "doc";
-        resultsOutput.push("<div id='autocompleteShowAll' class='pb-10'><ul class='autocompleteList pa-0 ma-0'><li" + " class='autocompleteTitle' id='autoSeeAll'><a href='/search?q=" + searchVal + "'><b>Showing top " + resultsShownText + ". See all results...</b></a></li></ul></div>")
-        resultsOutput.push("</div>");
+        // var resultsShownText = (resultsShown > 1) ? resultsShown + " of " + results.length + " docs" : "doc";
+        // resultsOutput.push("<div id='autocompleteShowAll' class='pb-10'><ul class='autocompleteList pa-0 ma-0'><li" + " class='autocompleteTitle' id='autoSeeAll'><a href='/search?q=" + searchVal + "'><b>Showing top " + resultsShownText + ". See all results...</b></a></li></ul></div>")
+        // resultsOutput.push("</div>");
         $("#autocompleteResults").css("display","block");
         $("#autocompleteResults").html(resultsOutput.join(""));
         autoCompleteShowing = true;
