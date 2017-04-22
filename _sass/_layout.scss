@@ -217,6 +217,7 @@ body > header {
 		transition: all 0.2s ease;
 		min-width: 212px;
 		padding-left: 0;
+
 		&:focus {
 		  background: $color-white;
 		  outline: 0;
@@ -234,6 +235,9 @@ body > header {
 		&:-ms-input-placeholder {
 		  color: $color-white;
 		}
+	  }
+	  &:hover {
+		background: rgba(0, 0, 0, 0.17);
 	  }
 	}
 	ul {
@@ -900,6 +904,7 @@ footer {
 		a {
 		  color: $color-brand;
 		  padding: 0;
+		  border: 0;
 		}
 	  }
 	}
