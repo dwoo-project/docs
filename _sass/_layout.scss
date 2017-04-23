@@ -363,9 +363,13 @@ body > header {
   background: url("../assets/img/icon-dash.png") repeat-x;
 }
 /***************************** Home ****************************/
-@media (max-width: 480px) {
-  .media-body {
+.media-body {
+  @media (max-width: 480px) {
 	text-align: center;
+  }
+  .icon {
+	height: 80px;
+	box-sizing: content-box;
   }
 }
 /***************************** Blog ****************************/
