@@ -5,7 +5,7 @@ toc: true
 ---
 
 ## Variables
-Those are the simplest thing to handle in Dwoo, you just need to know the variable name and you can output it like that : {$name}. So let's say you have a variable called date, you would output it using `{$date}`.
+Those are the simplest thing to handle in Dwoo, you just need to know the variable name and you can output it like that : `{$name}`. So let's say you have a variable called date, you would output it using `{$date}`.
 
 To handle arrays, if you have for example a variable called article that contains three items, title, author and content, you can access the sub-items by separating the array name and the sub-item by a dot (.) so that it looks like this for example:
 <div class="code-box">
