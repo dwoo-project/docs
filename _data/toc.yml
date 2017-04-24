@@ -21,8 +21,8 @@ whatdwoonav:
     url: "#/for-developers"
   - title: Dwoo for Designers
     url: "#/for-designers"
-  - title: Integrations support
-    url: "#/integrations"
+  - title: Adapters
+    url: "#/adapters"
 
 aboutnav:
   - title: Overview
