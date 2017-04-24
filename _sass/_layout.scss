@@ -283,6 +283,15 @@ body > header {
 	  background-color: rgba(19, 19, 19, 0.62);
 	  margin-top: 0;
 	}
+	a.navbar-brand {
+	  height: auto;
+	  width: auto;
+	  img {
+		width: auto;
+		height: 50px;
+		margin-right: 15px;
+	  }
+	}
   }
 }
 /***************************** Widgets ****************************/
