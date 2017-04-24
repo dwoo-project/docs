@@ -526,6 +526,19 @@ ul.list-integrations {
 	border-bottom: 1px solid #eee;
 	margin-bottom: 10px;
   }
+  .component {
+	height: 100%;
+	background: #fbfbfc;
+	.icon {
+	  height: 90px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  img {
+		max-height: 80px;
+	  }
+	}
+  }
 }
 .code-box {
   border: 1px solid #BFBFBF;
