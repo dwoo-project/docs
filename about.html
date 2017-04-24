@@ -43,7 +43,7 @@ redirect_from:
             <hr class="mt-0">
             <h2 class="mb-50 mt-50 text-center">Meet the authors...</h2>
             <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-4 offset-lg-1">
+                <div class="col-sm-12 col-md-12 col-lg-4 offset-lg-1 pb-15">
                     <div class="card card-profile m-b-0">
                         <div class="card-heading"></div>
                         <div class="card-block text-center">
@@ -61,7 +61,7 @@ redirect_from:
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-4 offset-lg-2">
+                <div class="col-sm-12 col-md-12 col-lg-4 offset-lg-2 pb-15">
                     <div class="card card-profile m-b-0">
                         <div class="card-heading"></div>
                         <div class="card-block text-center">
@@ -97,7 +97,9 @@ redirect_from:
                                     <span class="icon icon-add-user"></span> View GitHub
                                 </a>
                                 {% for c in site.data.contributors %}
-                                <strong>{{ c[contributor.id].name }}</strong>
+                                    {% if c[contributor.id].name %}
+                                        <strong>{{ c[contributor.id].name }}</strong>
+                                    {% endif %}
                                 {% endfor %}
                                 <small>@{{ contributor.login }}</small>
                             </div>

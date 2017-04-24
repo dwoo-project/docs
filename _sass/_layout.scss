@@ -43,7 +43,7 @@ ul {
   @media (min-width: 480px) {
 	font-size: 52px;
   }
-  @media (max-width: 480px) {
+  @media (max-width: $media-sm) {
 	text-align: center;
   }
   font-weight: 300;
@@ -59,6 +59,12 @@ ul {
 }
 .img-responsive {
   max-width: 100%;
+}
+section {
+  @media (max-width: $media-sm) {
+	padding-left: 15px;
+	padding-right: 15px;
+  }
 }
 /***************************** Colors ****************************/
 .text-white {
@@ -116,7 +122,7 @@ body > header {
 	  padding-top: 11px;
 	}
 	ul.nav {
-	  @media (max-width: 480px) {
+	  @media (max-width: $media-sm) {
 		display: inline-block;
 	  }
 	  li {
@@ -165,6 +171,10 @@ body > header {
   .masthead {
 	text-align: center;
 	color: $color-white;
+	@media (max-width: $media-sm) {
+	  padding-top: 0;
+	  padding-bottom: 15px;
+	}
 	.btn-hero {
 	  color: $color-white;
 	  border: 3px solid $color-white;
@@ -205,6 +215,13 @@ body > header {
 	height: 64px;
 	background-color: rgba(0, 0, 0, 0.05);
 	width: 100%;
+	@media (max-width: $media-sm) {
+	  overflow-y: hidden;
+	  display: block;
+	  visibility: visible;
+	  white-space: nowrap;
+	  padding: 0;
+	}
 	.search-form {
 	  .input-group-addon {
 		background: rgba(0, 0, 0, 0.17);
@@ -250,6 +267,12 @@ body > header {
 	ul {
 	  list-style: none;
 	  width: 100%;
+	  @media (max-width: $media-sm) {
+		-webkit-box-pack: start !important;
+		-webkit-justify-content: flex-start !important;
+		-ms-flex-pack: start !important;
+		justify-content: flex-start !important;
+	  }
 	  > li {
 		margin: auto 15px;
 		&.dropdown {
@@ -380,8 +403,11 @@ body > header {
 }
 /***************************** Home ****************************/
 .media-body {
-  @media (max-width: 480px) {
+  @media (max-width: $media-sm) {
 	text-align: center;
+	strong {
+	  display: block;
+	}
   }
   .icon {
 	height: 80px;
@@ -397,6 +423,13 @@ body > header {
   .post {
 	h2.post_title {
 	  font-weight: 500;
+	}
+  }
+  .pagination {
+	.page-item:not(.disabled) {
+	  a.page-link {
+		color: $color-brand;
+	  }
 	}
   }
 }
@@ -444,7 +477,7 @@ ul.list-integrations {
   li {
 	float: left;
 	border: 1px solid #e2e2e2;
-	@media (min-width: 480px) {
+	@media (min-width: $media-sm) {
 	  border-right: none;
 	  width: calc(100% / 3 - 1px);
 	}
@@ -484,7 +517,7 @@ ul.list-integrations {
 		text-transform: uppercase;
 	  }
 	}
-	@media (min-width: 480px) {
+	@media (min-width: $media-sm) {
 	  &:nth-of-type(n+4) {
 		border-top: none
 	  }
@@ -624,7 +657,7 @@ ul.list-integrations {
 	a {
 	  display: flex;
 	  align-items: center;
-	  @media (max-width: 480px) {
+	  @media (max-width: $media-sm) {
 		justify-content: center;
 	  }
 	  img {
@@ -678,7 +711,7 @@ footer {
   p {
 	margin-bottom: 0;
   }
-  @media (max-width: 480px) {
+  @media (max-width: $media-sm) {
 	.copyright {
 	  text-align: center;
 	}
