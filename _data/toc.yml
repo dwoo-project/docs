@@ -71,7 +71,3 @@ doc:
     - {title: "Smarty support", url: "smarty-support.html"}
     - {title: "Reserved variables", url: "dwoo-variables.html"}
     - {title: "Changelog", url: "changelog.html"}
-  2.0:
-    - {title: "Prerequisites & Installation", url: "prerequisites-installation.html"}
-    - {title: "Getting started", url: "getting-started.html"}
-    - {title: "Caching", url: "caching.html"}
