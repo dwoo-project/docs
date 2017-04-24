@@ -3,7 +3,7 @@
         <div class="{% if page.layout == 'documentation' %}container-fluid{% else %}container{% endif %} d-flex align-items-center">
             <div class="navbar-header">
                 <a class="navbar-brand" href="/">
-                    <img src="/assets/img/logo.png" alt="optional logo">
+                    {% include logo.html %}
                 </a>
             </div>
             {% if page.layout == 'documentation' %}

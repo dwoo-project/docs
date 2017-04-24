@@ -115,20 +115,25 @@ body > header {
 	.brand img {
 	  padding-top: 11px;
 	}
-	li {
-	  a {
-		color: $color-white;
-		font-size: 16px;
-		padding-right: 20px;
-		&:hover, &:focus {
-		  background-color: transparent;
-		  opacity: 0.8;
-		  text-decoration: none;
-		  outline: medium none;
-		}
+	ul.nav {
+	  @media (max-width: 480px) {
+		display: inline-block;
 	  }
-	  &.active {
-		text-decoration: underline;
+	  li {
+		a {
+		  color: $color-white;
+		  font-size: 16px;
+		  padding-right: 20px;
+		  &:hover, &:focus {
+			background-color: transparent;
+			opacity: 0.8;
+			text-decoration: none;
+			outline: medium none;
+		  }
+		}
+		&.active {
+		  text-decoration: underline;
+		}
 	  }
 	}
 	.nav-btn {
@@ -141,6 +146,9 @@ body > header {
 		background: $color-brand;
 		opacity: 0.9;
 	  }
+	}
+	.navbar-toggler {
+	  top: -20px;
 	}
   }
   .navbar-toggle {

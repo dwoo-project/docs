@@ -2,7 +2,7 @@
     <div class="container pt-30 pb-15">
         <div class="navbar-header">
             <a class="navbar-brand" href="/">
-                <img src="/assets/img/logo.png" alt="optional logo">
+                {% include logo.html %}
                 <span class="logo_title">{<strong>d</strong><small>woo</small>}</span>
                 <span class="logo_subtitle">php template engine</span>
             </a>
@@ -10,11 +10,11 @@
         <nav class="navbar navbar-default" role="navigation">
             <ul class="nav nav-pills">
                 {% for link in site.navigation %}
-                {% assign current = null %}
-                {% if page.url contains link.url %}
-                {% assign current = ' active' %}
-                {% endif %}
-                <li class="nav-item{{ current }}"><a href="{{ link.url }}">{{ link.title }}</a></li>
+                    {% assign current = null %}
+                    {% if page.url contains link.url %}
+                        {% assign current = ' active' %}
+                    {% endif %}
+                    <li class="nav-item{{ current }}"><a href="{{ link.url }}">{{ link.title }}</a></li>
                 {% endfor %}
             </ul>
         </nav>
