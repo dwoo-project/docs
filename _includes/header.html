@@ -1,5 +1,35 @@
 <header>
-	<div class="container pb-15">
+    <!-- mobile navigation -->
+    <div class="hidden-md-up">
+        <div class="navbar-inverse">
+            <button class="navbar-toggler navbar-toggler-left mt-10" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">
+                    {% include logo.html %}
+                    <span class="logo-title">{<strong>d</strong><small>woo</small>}</span>
+                    <span class="logo-subtitle">php template engine</span>
+                </a>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse pb-45" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                {% for link in site.data.toc.primarynav %}
+                    {% assign current = null %}
+                    {% if page.url contains link.url %}
+                        {% assign current = ' active' %}
+                    {% endif %}
+                    <li class="nav-item pa-5 text-center{{ current }}"><a href="{{ link.url }}">{{ link.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <!-- mobile navigation end -->
+    <!-- full width navigation -->
+	<div class="container pb-15 hidden-sm-down">
 		<div class="navbar-header pt-15">
 			<a class="navbar-brand" href="/">
                 {% include logo.html %}
@@ -7,24 +37,19 @@
 				<span class="logo-subtitle">php template engine</span>
 			</a>
 		</div>
-        <nav class="navbar navbar-toggleable-md navbar-inverse" role="navigation">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="nav nav-pills">
-                    {% for link in site.data.toc.primarynav %}
-                        {% assign current = null %}
-                        {% if page.url contains link.url %}
-                            {% assign current = ' active' %}
-                        {% endif %}
-                        <li class="nav-item{{ current }}"><a href="{{ link.url }}">{{ link.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div>
+        <nav class="navbar" role="navigation">
+            <ul class="nav nav-pills">
+                {% for link in site.data.toc.primarynav %}
+                    {% assign current = null %}
+                    {% if page.url contains link.url %}
+                        {% assign current = ' active' %}
+                    {% endif %}
+                    <li class="nav-item{{ current }}"><a href="{{ link.url }}">{{ link.title }}</a></li>
+                {% endfor %}
+            </ul>
         </nav>
 	</div>
+    <!-- full width navigation end -->
     {% if page.masthead != false %}
 	<div class="masthead pb-100 pt-80 text-md-center">
 		<h3 class="text-white"><strong>{{ page.title }}</strong></h3>

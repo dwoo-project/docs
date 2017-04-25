@@ -115,6 +115,15 @@ body > header {
 		display: block;
 	  }
 	}
+	@media (max-width: $media-sm) {
+	  z-index: 9;
+	  left: 50%;
+	  top: 10px;
+	  display: inline-block;
+	  position: absolute;
+	  -webkit-transform: translateX(-50%);
+	  transform: translateX(-50%);
+	}
   }
   .navbar {
 	padding: 30px 0 30px 0;
@@ -172,7 +181,7 @@ body > header {
 	text-align: center;
 	color: $color-white;
 	@media (max-width: $media-sm) {
-	  padding-top: 0;
+	  padding-top: 120px;
 	  padding-bottom: 15px;
 	}
 	.btn-hero {
@@ -320,6 +329,29 @@ body > header {
 		width: auto;
 		height: 50px;
 		margin-right: 15px;
+	  }
+	}
+  }
+  .navbar-inverse {
+	.navbar-toggler {
+	  z-index: 9;
+	}
+  }
+  .navbar-collapse {
+	background: #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 8;
+	.navbar-nav {
+	  padding-top: 130px;
+	  li {
+		a {
+		  color: $color-white;
+		  font-weight: bold;
+		}
 	  }
 	}
   }
