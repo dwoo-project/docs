@@ -230,6 +230,7 @@ body > header {
 	  visibility: visible;
 	  white-space: nowrap;
 	  padding: 0;
+	  height: auto;
 	}
 	.search-form {
 	  .input-group-addon {
@@ -599,6 +600,11 @@ ul.list-integrations {
   }
   .col-side {
 	flex: 0 0 21.875em;
+	@media (max-width: $media-sm) {
+	  margin: 0 !important;
+	  padding: 0 30px;
+	}
+
   }
 }
 .doc {
