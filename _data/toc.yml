@@ -38,7 +38,7 @@ aboutnav:
 
 docnav:
   - title: Guides
-    url: /documentation/
+    url: /documentation/%v/
 
 doc:
   1.2:
