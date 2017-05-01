@@ -18,7 +18,8 @@ for(string $name, mixed $from, [ int $to = null, [ int $step = 1, [ int $skip = 
 * **to**: value to stop iterating at (if you set an array in `$from`, this is automatically set to `count($array))`
 * **step**: defines the incrementation of the pointer at each iteration
 
-> Note that this plugin supports [iterator variables](/documentation/1.2.x/iterator-variables.html) through the name parameter and also supports the else plugin
+> Note that this plugin supports [iterator variables](/documentation/v1.3/iterator-variables.html) through the name 
+parameter and also supports the else plugin
 
 
 ### Examples

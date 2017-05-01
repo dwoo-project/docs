@@ -19,7 +19,8 @@ foreach(array $from, [ string $key = null, [ string $item = null, [ string $name
 * **name**: foreach name to access it's iterator variables
 * **implode**: if provided, this will be added between every item
 
-> Note that this plugin supports [iterator variables](/documentation/1.2.x/iterator-variables.html) through the name parameter and also supports the [else](/documentation/1.2.x/blocks/else.html) plugin.
+> Note that this plugin supports [iterator variables](/documentation/v1.3/iterator-variables.html) through the name 
+parameter and also supports the [else](/plugins/blocks/else.html) plugin.
 
 
 ### Examples

@@ -13,7 +13,8 @@ load_templates(string $file)
 {% endhighlight %}
 </div>
 
-* **file**: the resource/template name to parse for sub-templates (those are defined using [{template}](/documentation/1.2.x/blocks/template.html))
+* **file**: the resource/template name to parse for sub-templates (those are defined using
+[{template}](/plugins/blocks/template.html))
 
 > Templates are only visible in the file they are loaded, so if you include another file you have to call `load_templates` there also.
 
