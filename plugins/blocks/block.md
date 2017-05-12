@@ -17,4 +17,4 @@ block(string $name)
 
 * **name**: block name, create a new block with that same name in the child template to override it
 
-Read the [template inheritance](/documentation/template-inheritance.html) page for more details and examples.
+Read the [template inheritance](/documentation/v1.3/template-inheritance.html) page for more details and examples.

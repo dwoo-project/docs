@@ -13,7 +13,8 @@ loop(array $from [, $name = "default ] )
 {% endhighlight %}
 </div>
 
-> Note that this plugin supports [iterator variables](/documentation/iterator-variables.html) through the name parameter and also supports the [else](/plugins/blocks/else.html) plugin
+> Note that this plugin supports [iterator variables](/documentation/v1.3/iterator-variables.html) through the name 
+parameter and also supports the [else](/plugins/blocks/else.html) plugin
 
 ### Examples
 Example #1
@@ -50,4 +51,4 @@ The above example will output:
 To access the array key you have to use the `{$_key}` var within the loop, its name is not user-definable to keep this plugin as simple as possible.
 
 ## Extra reads
-* [Using iterator variables](/documentation/iterator-variables.html)
+* [Using iterator variables](/documentation/v1.3/iterator-variables.html)
