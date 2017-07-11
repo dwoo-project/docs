@@ -93,6 +93,30 @@ For example with the function `date_format`:
 {% endhighlight %}
 </div>
 
+### PHP native functions
+Dwoo allow users to use PHP native functions within the template.   
+Default allowed PHP functions are:
+* str_repeat
+* number_format
+* htmlentities
+* htmlspecialchars
+* long2ip
+* strlen
+* list
+* empty
+* count
+* sizeof
+* in_array
+* is_array
+
+To use a PHP function within your template, you can use them like the next examples:
+<div class="code-box">
+{% highlight smarty %}
+{number_format $foo 2 "," " "}
+{str_repeat "-=" 10}
+{% endhighlight %}
+</div>
+
 ## Named Arguments
 Using named arguments makes your templates more explicit about the meaning of the values you pass as arguments:
 <div class="code-box">

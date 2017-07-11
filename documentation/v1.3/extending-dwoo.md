@@ -98,3 +98,33 @@ If you want add more than one custom plugin, you can specify to the loader a cus
 $core->getLoader()->addDirectory(__DIR__ . 'Views/plugins/');
 {% endhighlight %}
 </div>
+
+## Allow/Disallow PHP native functions
+Dwoo allow users to use PHP native functions within the template.   
+Default allowed PHP functions are:
+* str_repeat
+* number_format
+* htmlentities
+* htmlspecialchars
+* long2ip
+* strlen
+* list
+* empty
+* count
+* sizeof
+* in_array
+* is_array
+
+However, developers can decide to _allow more_ but also _disallow less_ PHP functions to be used within template.   
+To do so, you just need to follow this example:
+<div class="code-box">
+<header>index.php</header>
+{% highlight php %}
+<?php
+// Allow `str_pad` PHP function
+$core->getSecurityPolicy()->allowPhpFunction('str_pad');
+
+// Disallow `sizeof` PHP function
+$core->getSecurityPolicy()->disallowPhpFunction('sizeof');
+{% endhighlight %}
+</div>
